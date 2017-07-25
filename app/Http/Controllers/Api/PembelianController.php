@@ -34,6 +34,7 @@ class PembelianController extends Controller
         return [
             'error' => false,
             'status' => 'success',
+            'diterima_at' => $orderDetail->diterima_at,
         ];
     }
 }
