@@ -91,8 +91,8 @@ class Nasabah extends Authenticatable
 		 return $order;
 	}
 
-	public function pembelian(){
-		$orders = $this->order()->orderBy('status_kode')->latest()->get();
+	public function pembelian($keyword = '*'){
+		$orders = $this->order()->whereRaw("kode LIKE '%$keyword%'")->orderBy('status_kode')->latest()->get();
 		foreach ($orders as $order) {
 			$order->orderDetail = $order->orderDetail()->withTrashed()->with('produk.kategori_produk', 'produk.lapak')->get();
 			$order->jumlah = $order->orderDetail()->sum('total');

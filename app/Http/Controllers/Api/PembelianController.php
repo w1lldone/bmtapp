@@ -11,7 +11,7 @@ use App\Order;
 class PembelianController extends Controller
 {
     public function index(Nasabah $nasabah){
-        return $nasabah->pembelian();
+        return $nasabah->pembelian(request('keyword'));
     }
 
     public function view(Order $order){
