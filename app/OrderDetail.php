@@ -17,6 +17,12 @@ class OrderDetail extends Model
     	return $this->belongsTo('App\Order');
     }
 
+    public function reduceStock()
+    {
+        $stok = $this->produk->stok <= $this->quantity ? 0 : $this->produk->stok - $this->quantity ;
+        return $this->produk->update(['stok' => $stok]);
+    }
+
     public function ada(){
     	return $this->update(['sedia' => 1]);
     }
