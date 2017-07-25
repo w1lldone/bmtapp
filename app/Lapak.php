@@ -55,6 +55,17 @@ class Lapak extends Model
 
     }
 
+    public function penjualan($keyword = '*')
+    {
+        return $this->orderDetail()
+                    ->whereHas('produk', function($query) use ($keyword)
+                    {
+                        $query->whereRaw("name LIKE '%$keyword%'");
+                    })
+                    ->orWhere('catatan', 'like', "%$keyword%")
+                    ->latest()->with('produk', 'order.nasabah')->get();
+    }
+
     protected $guarded=['id'];
     protected $fillable=['name', 'alamat', 'foto'];
 }

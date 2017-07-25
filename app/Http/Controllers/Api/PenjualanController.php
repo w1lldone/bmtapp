@@ -10,7 +10,7 @@ Use App\OrderDetail;
 class PenjualanController extends Controller
 {
     public function index(Lapak $lapak){
-    	return $lapak->orderDetail()->latest()->with('produk', 'order.nasabah')->get();
+    	return $lapak->penjualan(request('keyword'));
     }
 
     public function update(OrderDetail $orderDetail, Request $request){
