@@ -37,6 +37,7 @@ class PenjualanController extends Controller
         }
 
         $orderDetail->update(['dikirim_at' => \Carbon\Carbon::now()]);
+        $orderDetail->reduceStock();
 
         return [
             'error' => false,
