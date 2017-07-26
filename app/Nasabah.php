@@ -169,6 +169,10 @@ class Nasabah extends Authenticatable
 							->orWhereHas('layananDetail.produkLayanan', function($query) use($key)
 							{
 								$query->whereRaw($key);
+							})
+							->orWhereHas('layananDetail', function($query) use($keyword)
+							{
+								$query->whereRaw($this->keyword('nomer', $keyword));
 							});
 					})
 					->orderBy('status_kode')
