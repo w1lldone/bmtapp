@@ -10,7 +10,7 @@ use App\Layanan;
 class LayananController extends Controller
 {
     public function index(Nasabah $nasabah){
-    	return $nasabah->layanan->load('layananDetail.produkLayanan.katLayanan');
+    	return $nasabah->layananList(request('keyword'));
     }
 
     public function view(Layanan $layanan){
