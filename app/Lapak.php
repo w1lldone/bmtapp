@@ -55,14 +55,37 @@ class Lapak extends Model
 
     }
 
+    public function keyword($coloumn, $sentence)
+    {
+        $query = '';
+        $i = 0;
+        $keywords = explode(' ', $sentence);
+        foreach ($keywords as $keyword) {
+            $query .= "$coloumn LIKE '%$keyword%'";
+
+            $i++;
+
+            if ($i != count($keywords)) {
+                $query .= " OR ";
+            }
+        }
+
+        return $query;
+    }
+
     public function penjualan($keyword = '*')
     {
+        $key = $this->keyword('name', $keyword);
         return $this->orderDetail()
-                    ->whereHas('produk', function($query) use ($keyword)
+                    ->whereHas('produk', function($query) use ($key)
                     {
-                        $query->whereRaw("name LIKE '%$keyword%'");
+                        $query->whereRaw($key);
                     })
-                    ->orWhere('catatan', 'like', "%$keyword%")
+                    ->orWhereHas('order.nasabah', function($query) use ($key)
+                    {
+                       $query->whereRaw($key);
+                    })
+                    ->orWhereRaw($this->keyword('catatan', $keyword))
                     ->latest()->with('produk', 'order.nasabah')->get();
     }
 
