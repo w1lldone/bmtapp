@@ -80,15 +80,19 @@ class Lapak extends Model
     {
         $key = $this->keyword('name', $keyword);
         return $this->orderDetail()
-                    ->whereHas('produk', function($query) use ($key)
+                    ->where(function($q) use ($keyword, $key)
                     {
-                        $query->whereRaw($key);
+                        $q->whereHas('produk', function($query) use ($key)
+                        {
+                            $query->whereRaw($key);
+                        })
+                        ->orWhereHas('order.nasabah', function($query) use ($key)
+                        {
+                           $query->whereRaw($key);
+                        })
+                        ->orWhereRaw($this->keyword('catatan', $keyword));
                     })
-                    ->orWhereHas('order.nasabah', function($query) use ($key)
-                    {
-                       $query->whereRaw($key);
-                    })
-                    ->orWhereRaw($this->keyword('catatan', $keyword))
+                    
                     ->latest()->with('produk', 'order.nasabah')->get();
     }
 
