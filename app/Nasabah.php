@@ -91,8 +91,42 @@ class Nasabah extends Authenticatable
 		 return $order;
 	}
 
+	/*
+	* method for make sql where LIKE query from each words of sentence
+	*/
+	public function keyword($coloumn, $sentence)
+    {
+        $query = '';
+        $i = 0;
+        $keywords = explode(' ', $sentence);
+        foreach ($keywords as $keyword) {
+            $query .= "$coloumn LIKE '%$keyword%'";
+
+            $i++;
+
+            if ($i != count($keywords)) {
+                $query .= " OR ";
+            }
+        }
+
+        return $query;
+    }
+
 	public function pembelian($keyword = '*'){
-		$orders = $this->order()->whereRaw("kode LIKE '%$keyword%'")->orderBy('status_kode')->latest()->get();
+		$key = $this->keyword('name', $keyword);
+		$orders = $this->order()
+					->whereRaw($this->keyword('kode', $keyword))
+					->orWhereHas('orderDetail.produk', function($query) use ($key)
+					{
+						$query->whereRaw($key);
+					})
+					->orWhereHas('orderDetail.produk.lapak', function($query) use ($key)
+					{
+						$query->whereRaw($key);
+					})
+					->orderBy('status_kode')
+					->latest()
+					->get();
 		foreach ($orders as $order) {
 			$order->orderDetail = $order->orderDetail()->withTrashed()->with('produk.kategori_produk', 'produk.lapak')->get();
 			$order->jumlah = $order->orderDetail()->sum('total');

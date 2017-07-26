@@ -55,6 +55,9 @@ class Lapak extends Model
 
     }
 
+    /*
+    * method for make sql where LIKE query from each words of sentence
+    */
     public function keyword($coloumn, $sentence)
     {
         $query = '';
