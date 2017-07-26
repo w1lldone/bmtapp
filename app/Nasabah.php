@@ -115,14 +115,17 @@ class Nasabah extends Authenticatable
 	public function pembelian($keyword = '*'){
 		$key = $this->keyword('name', $keyword);
 		$orders = $this->order()
-					->whereRaw($this->keyword('kode', $keyword))
-					->orWhereHas('orderDetail.produk', function($query) use ($key)
+					->where(function($query) use ($keyword, $key)
 					{
-						$query->whereRaw($key);
-					})
-					->orWhereHas('orderDetail.produk.lapak', function($query) use ($key)
-					{
-						$query->whereRaw($key);
+						$query->whereRaw($this->keyword('kode', $keyword))
+							->orWhereHas('orderDetail.produk', function($query) use ($key)
+							{
+								$query->whereRaw($key);
+							})
+							->orWhereHas('orderDetail.produk.lapak', function($query) use ($key)
+							{
+								$query->whereRaw($key);
+							});
 					})
 					->orderBy('status_kode')
 					->latest()
@@ -154,6 +157,24 @@ class Nasabah extends Authenticatable
 		event(new \App\Events\LayananNotification($layanan));
 
 		return $layanan;
+	}
+
+	public function layananList($keyword = '*')
+	{
+		$key = $this->keyword('name', $keyword);
+		return $this->layanan()
+					->where(function($q) use ($key, $keyword)
+					{
+						$q->whereRaw($this->keyword('kode', $keyword))
+							->orWhereHas('layananDetail.produkLayanan', function($query) use($key)
+							{
+								$query->whereRaw($key);
+							});
+					})
+					->orderBy('status_kode')
+					->latest()
+					->with('layananDetail.produkLayanan.katLayanan')
+					->get();
 	}
 
     protected $guarded=['id'];
