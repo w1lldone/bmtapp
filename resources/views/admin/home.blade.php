@@ -35,15 +35,28 @@
                 </div>
             </div>
         </div>
+        {{-- BAYAR KREDIT --}}
         <div class="col-sm-4 p-2">
             <div class="card">
                 <div class="card-header" data-background-color="orange">
-                    <h4 class="title">Pengingat Pembayaran Kredit</h4>
+                  <h4 class="title">Pengingat Pembayaran Kredit</h4>
                 </div>
                 <div class="card-content">
                     <div class="row">
                         <div class="col-lg-12">
-                            
+                          <form action="/nasabah/create" method="POST">
+                            {{ csrf_field() }}
+                            <div class="row">
+                              <div class="col-md-12">
+                                  <div class="form-group label-floating">
+                                      <label class="control-label">Masukkan tanggal</label>
+                                      <input class="form-control" id="date" name="date" type="text"/>
+                                  </div>
+                              </div>
+                            </div>
+                            <button type="submit" class="btn btn-success pull-right">Proses</button>
+                            <div class="clearfix"></div>
+                          </form> 
                         </div>
                     </div>
                 </div>
@@ -71,7 +84,6 @@
                 </div>
             </div>
         </div>
-
     </div>
 	<div class="row">
 		<div class="col-lg-6 col-md-12 p-2">
@@ -152,4 +164,17 @@
 
 @section('modal')
     @include('layouts.modals')
+@endsection
+
+@section('script')
+  <script>
+      $(document).ready(function(){
+          var date_input=$('input[name="date"]'); //our date input has the name "date"
+          date_input.datepicker({
+              format: 'yyyy-mm-dd',
+              todayHighlight: true,
+              autoclose: true,
+          })
+      })
+  </script>
 @endsection

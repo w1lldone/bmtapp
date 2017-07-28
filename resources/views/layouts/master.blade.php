@@ -20,6 +20,9 @@
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="{{ asset('/assets/css/demo.css')}}" rel="stylesheet" />
 
+     <!--  Date picker css bootstrap -->
+    <link href="{{ asset('/assets/css/bootstrap-datepicker3.css')}}" rel="stylesheet" />
+
     <link rel="stylesheet" type="text/css" href="/css/notification.css">
 
     <!--     Fonts and icons     -->
@@ -75,6 +78,9 @@
 
 	<!-- Material Dashboard DEMO methods, don't include it in your project! -->
 	<script src="{{ asset('/assets/js/demo.js')}}"></script>
+
+	<!-- Datepicker JS -->
+	<script src="{{ asset('/assets/js/bootstrap-datepicker.min.js')}}"></script>
 
 	{{-- pusher library --}}
 	<script src="//js.pusher.com/3.1/pusher.min.js"></script>
