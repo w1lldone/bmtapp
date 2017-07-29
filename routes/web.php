@@ -97,6 +97,10 @@ Route::group(['prefix' => 'biaya', 'middleware' => 'auth'], function(){
     Route::post('/', 'BiayaController@store');
 });
 
+Route::group(['prefix' => 'reminder', 'middleware' => 'auth'], function(){
+    Route::get('/', 'ReminderController@index');
+});
+
 Route::group(['prefix' => 'ajax'], function(){
 	Route::get('/order', 'AjaxController@order');
 });

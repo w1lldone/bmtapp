@@ -44,7 +44,7 @@
                 <div class="card-content">
                     <div class="row">
                         <div class="col-lg-12">
-                          <form action="/nasabah/create" method="POST">
+                          <form action="/reminder" method="GET">
                             {{ csrf_field() }}
                             <div class="row">
                               <div class="col-md-12">

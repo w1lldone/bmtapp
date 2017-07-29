@@ -6,5 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Reminder extends Model
 {
-    //
+	/*
+	* Relation section
+	*/
+    public function detail()
+    {
+        return $this->hasMany('App\ReminderDetail', 'reminder_id', 'id');
+    }
+    
 }
