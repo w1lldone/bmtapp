@@ -22,4 +22,6 @@ class Reminder extends Model
     	return static::where('tanggal', $tanggal)->get()->isEmpty();
     }
     
+    protected $dates = ['tanggal'];
+    protected $guarded = ['id'];
 }

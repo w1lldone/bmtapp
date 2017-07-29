@@ -5,9 +5,21 @@ namespace App\Http\Controllers;
 use App\Reminder;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use Validator;
 
 class ReminderController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function validator($request)
+    {
+        return Validator::make($request, [
+            'tanggal' => 'required|date',
+        ]);
+    }
     /**
      * Display a listing of the resource.
      *
@@ -38,7 +50,11 @@ class ReminderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validator($request->all())->validate();
+
+        $reminder = Reminder::create(request(['tanggal']));
+
+        return redirect('/home')->with('success', 'Reminder kredit berhasi diproses!');
     }
 
     /**

@@ -99,6 +99,8 @@ Route::group(['prefix' => 'biaya', 'middleware' => 'auth'], function(){
 
 Route::group(['prefix' => 'reminder', 'middleware' => 'auth'], function(){
     Route::get('/', 'ReminderController@index');
+    Route::post('/', 'ReminderController@store');
+    Route::get('/create', 'ReminderController@create');
 });
 
 Route::group(['prefix' => 'ajax'], function(){

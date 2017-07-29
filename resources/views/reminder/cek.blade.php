@@ -22,6 +22,7 @@
 							<h4 class="text-muted">Reminder sudah selesai!</h4>
 							<p class="text-muted">Kredit tanggal <strong>{{ $tanggal }}</strong> sudah diingatkan. <br>Ingatkan sekali lagi?</p>
                 <form method="POST" action="/reminder">
+                  {{ csrf_field() }}
                   <input type="hidden" name="tanggal" value="{{ request('tanggal') }}">
                   <button type="submit" class="btn btn-success">Ya</button>
                   <button onclick="history.go(-1)" class="btn btn-warning">Tidak</button>
@@ -33,6 +34,7 @@
               <h4 class="text-muted">Konfirmasi Reminder</h4>
               <p class="text-muted">Anda akan mengingatkan kredit tanggal <strong>{{ $tanggal }}</strong>.<br>Lanjutkan?</p>
                 <form method="POST" action="/reminder">
+                  {{ csrf_field() }}
                   <input type="hidden" name="tanggal" value="{{ request('tanggal') }}">
                   <button type="submit" class="btn btn-success">Ya</button>
                   <button onclick="history.go(-1)" class="btn btn-warning">Tidak</button>
