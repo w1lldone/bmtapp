@@ -44,13 +44,13 @@
                 <div class="card-content">
                     <div class="row">
                         <div class="col-lg-12">
-                          <form action="/reminder" method="GET">
+                          <form action="/reminder/create" method="GET">
                             {{ csrf_field() }}
                             <div class="row">
                               <div class="col-md-12">
                                   <div class="form-group label-floating">
                                       <label class="control-label">Masukkan tanggal</label>
-                                      <input class="form-control" id="date" name="date" type="text"/>
+                                      <input class="form-control" id="date" name="tanggal" type="text"/>
                                   </div>
                               </div>
                             </div>
@@ -169,7 +169,7 @@
 @section('script')
   <script>
       $(document).ready(function(){
-          var date_input=$('input[name="date"]'); //our date input has the name "date"
+          var date_input=$('input[name="tanggal"]'); //our date input has the name "date"
           date_input.datepicker({
               format: 'yyyy-mm-dd',
               todayHighlight: true,

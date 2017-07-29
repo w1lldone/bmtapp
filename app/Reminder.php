@@ -13,5 +13,13 @@ class Reminder extends Model
     {
         return $this->hasMany('App\ReminderDetail', 'reminder_id', 'id');
     }
+
+    /*
+	* Custom method section
+    */
+    public static function cekTanggal($tanggal)
+    {
+    	return static::where('tanggal', $tanggal)->get()->isEmpty();
+    }
     
 }
