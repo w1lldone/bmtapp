@@ -54,7 +54,7 @@ class ReminderController extends Controller
 
         $reminder = Reminder::create(request(['tanggal']));
 
-        return redirect('/home')->with('success', 'Reminder kredit berhasi diproses!');
+        return redirect('/home')->with('status', 'Reminder kredit berhasi diproses!');
     }
 
     /**
