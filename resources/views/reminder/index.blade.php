@@ -39,19 +39,11 @@
 								<td>{{ $reminder->tanggal->formatLocalized('%d %B %Y') }}</td>
 								<td>{{ $reminder->detail->count() }}</td>
 								<td>{{ $reminder->created_at->formatLocalized('%d %B %Y') }}</td>
-								<td></td>
-{{-- 								<td class="td-actions text-right">
-									<a type="button" href="/nasabah/{{$reminder->id}}/edit" rel="tooltip" title="Edit nasabah" class="btn btn-primary btn-simple btn-xs">
-										<i class="material-icons">edit</i>
+								<td class="td-actions text-right">
+									<a type="button" href="/reminder/{{$reminder->id}}/view" rel="tooltip" title="Lihat detail" class="btn btn-info btn-simple">
+										<i class="material-icons" style="font-size: 24px;">info</i>
 									</a>
-									<form action="/nasabah/{{$reminder->id}}" method="POST">
-										{{ csrf_field() }}
-										{{ method_field('DELETE') }}
-										<button type="submit" onclick="return confirm('Anda Yakin akan menghapus nasabah?')" rel="tooltip" title="Hapus" class="btn btn-danger btn-simple btn-xs">
-											<i class="material-icons">close</i>
-										</button>
-									</form>
-								</td> --}}
+								</td>
 							</tr>
 						@endforeach
 					</tbody>

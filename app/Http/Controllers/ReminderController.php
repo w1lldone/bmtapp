@@ -39,6 +39,7 @@ class ReminderController extends Controller
      */
     public function create()
     {
+        $this->validator(request()->all())->validate();
         $reminder = Reminder::where('tanggal', request('tanggal'))->get();
         $tanggal = Carbon::createFromFormat('Y-m-d', request('tanggal'))->formatLocalized('%d %B %Y');
         return view('reminder.cek', compact(['reminder', 'tanggal']));
@@ -70,7 +71,7 @@ class ReminderController extends Controller
      */
     public function show(Reminder $reminder)
     {
-        //
+        return view('reminder.view', compact('reminder'));
     }
 
     /**

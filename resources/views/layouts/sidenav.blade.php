@@ -46,6 +46,12 @@
                           <p>Kategori</p>
                       </a>
                   </li>
+                  <li class="@if (Route::currentRouteName() == 'reminder'){{ 'active' }} @endif">
+                      <a href="/reminder">
+                          <i class="material-icons">announcement</i>
+                          <p>Reminder</p>
+                      </a>
+                  </li>
                   <hr class="hidden-md hidden-lg separator">
                   <li class="dropdown hidden-md hidden-lg">
                     <a href="/setting">
