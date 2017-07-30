@@ -121,8 +121,6 @@
         		</div>
             </div>
 		</div>
-
-
 		<div class="col-lg-6 col-md-12 p-2">
 			<div class="card">
                 <div class="card-header" data-background-color="bmt-green">
