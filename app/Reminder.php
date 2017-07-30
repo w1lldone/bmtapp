@@ -27,6 +27,5 @@ class Reminder extends Model
         return $this->detail()->create(['nasabah_id' => $nasabahId]);
     }
     
-    protected $dates = ['tanggal'];
     protected $guarded = ['id'];
 }
