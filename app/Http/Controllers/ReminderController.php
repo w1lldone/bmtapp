@@ -28,7 +28,8 @@ class ReminderController extends Controller
      */
     public function index()
     {
-        //
+        $reminders = Reminder::latest()->paginate(5);
+        return view('reminder.index', compact('reminders'));
     }
 
     /**

@@ -28,4 +28,5 @@ class Reminder extends Model
     }
     
     protected $guarded = ['id'];
+    protected $dates = ['tanggal'];
 }
