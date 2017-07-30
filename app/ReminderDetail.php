@@ -18,4 +18,6 @@ class ReminderDetail extends Model
     {
         return $this->belongsTo('App\Nasabah');
     }
+
+    protected $guarded = ['id'];
 }

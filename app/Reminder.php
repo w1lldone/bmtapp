@@ -21,6 +21,11 @@ class Reminder extends Model
     {
     	return static::where('tanggal', $tanggal)->get()->isEmpty();
     }
+
+    public function addDetail($nasabahId)
+    {
+        return $this->detail()->create(['nasabah_id' => $nasabahId]);
+    }
     
     protected $dates = ['tanggal'];
     protected $guarded = ['id'];
