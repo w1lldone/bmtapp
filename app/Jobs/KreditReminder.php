@@ -47,9 +47,9 @@ class KreditReminder implements ShouldQueue
             if (!empty($nasabah)) {
                 // add reminder detail
                 $reminder->addDetail($nasabah->id);
-
                 // send notification
 
+                
             }
         }
     }
