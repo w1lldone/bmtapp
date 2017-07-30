@@ -46,7 +46,7 @@
                           <p>Kategori</p>
                       </a>
                   </li>
-                  <li class="@if (Route::currentRouteName() == 'reminder'){{ 'active' }} @endif">
+                  <li class="@if (substr(Route::currentRouteName(),0 ,8) == 'reminder'){{ 'active' }} @endif">
                       <a href="/reminder">
                           <i class="material-icons">announcement</i>
                           <p>Reminder</p>
