@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Reminder;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
+use App\Jobs\KreditReminder;
 use Validator;
 
 class ReminderController extends Controller
@@ -53,6 +54,9 @@ class ReminderController extends Controller
         $this->validator($request->all())->validate();
 
         $reminder = Reminder::create(request(['tanggal']));
+
+        // check dates on BMT database and send notification to registered nasabah
+        dispatch(new KreditReminder($reminder));
 
         return redirect('/home')->with('status', 'Reminder kredit berhasi diproses!');
     }
