@@ -50,7 +50,7 @@
                               <div class="col-md-12">
                                   <div class="form-group label-floating">
                                       <label class="control-label">Masukkan tanggal</label>
-                                      <input class="form-control" id="date" name="tanggal" type="text"/>
+                                      <input class="form-control" id="date" required name="tanggal" type="text"/>
                                   </div>
                               </div>
                             </div>
