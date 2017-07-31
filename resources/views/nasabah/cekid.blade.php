@@ -41,6 +41,7 @@
 	                        </div>
 	                        <input type="hidden" name="nasabah_id" value="{{$tabung->NASABAH_ID}}">
 	                         <input type="hidden" name="no_rekening" value="{{$no_rekening}}">
+	                         <input type="hidden" name="cabang_id" value="{{$cabang->id}}">
 	                        <button type="submit" class="btn btn-primary pull-right">Lanjutkan Pendaftaran</button>
 	                        <div class="clearfix"></div>
 	                    </form>

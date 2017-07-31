@@ -56,12 +56,6 @@
 										<input type="text" class="form-control" name="kontak" required>
 									</div>
 	                            </div>
-	                            <div class="col-md-6">
-									<div class="form-group label-floating">
-										<label class="control-label">Kantor Cabang</label>
-										<input type="text" class="form-control" name="cabang" required>
-									</div>
-	                            </div>
                             </div>
                             <div class="row">
 	                             <div class="col-md-12">
@@ -70,6 +64,7 @@
 										<input type="text" class="form-control" name="alamat" required>
 										<input type="hidden" name="nasabah_id" value="{{ $nasabah_id }}">
 										<input type="hidden" name="no_rekening" value="{{ $no_rekening }}">
+										<input type="hidden" name="cabang_id" value="{{ $cabang_id }}">
 									</div>
 	                            </div>
 	                        </div>
