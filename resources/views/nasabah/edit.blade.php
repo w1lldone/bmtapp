@@ -74,7 +74,13 @@
 			                            <div class="col-md-6">
 											<div class="form-group label-floating">
 												<label class="control-label">Kantor Cabang</label>
-												<input type="text" class="form-control" name="cabang" value="{{ $nasabah->cabang }}" required>
+												{{-- <input type="text" class="form-control" name="cabang" value="{{ $nasabah->cabang }}" required> --}}
+												<select name="cabang" id="cabang" class="form-control">
+													<option value="">-- Pilih cabang --</option>
+													@foreach (\App\Cabang::all() as $cabang)
+														<option value="{{$cabang->id}}">{{$cabang->name}}</option>
+													@endforeach
+												</select>
 											</div>
 			                            </div>
 		                            </div>
@@ -86,7 +92,6 @@
 											</div>
 			                            </div>
 			                        </div>
-
 			                        <button type="submit" class="btn btn-primary pull-right">Update</button>
 			                        <div class="clearfix"></div>
 			                    </form>
@@ -135,7 +140,7 @@
 		                        		<div class="alert alert-warning alert-with-icon" data-notify="container">
 									        <button type="button" aria-hidden="true" class="close" data-dismiss="alert">×</button>
 									        <i data-notify="icon" class="material-icons">error</i>
-									        <span data-notify="message">Setelah mengubah Password, Harap Hubungi : <strong>{{ $nasabah->kontak }}</bold></span>
+									        <span data-notify="message">Setelah mengubah Password, Harap Hubungi : <strong>{{ $nasabah->kontak }}</strong></span>
 									    </div>
 		                        	</div>
 		                        </div>
@@ -147,4 +152,12 @@
 				</div>
 			</div>				
 		</div>
+@endsection
+
+@section('script')
+	<script type="text/javascript">
+		$(function(){
+			$("#cabang").val("{{ $cabang->id }}");
+		});
+	</script>
 @endsection
