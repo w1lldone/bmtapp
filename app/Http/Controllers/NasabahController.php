@@ -15,8 +15,9 @@ class NasabahController extends Controller
     public function create(Request $request){
         $no_rekening = request('no_rekening');
         $nasabah_id = request('nasabah_id');
+        $cabang_id = request('cabang_id');
 
-        return view('nasabah.create', compact(['no_rekening', 'nasabah_id']));
+        return view('nasabah.create', compact(['no_rekening', 'nasabah_id', 'cabang_id']));
     }
 
     public function index(){
@@ -34,13 +35,13 @@ class NasabahController extends Controller
                 'nasabah_id' => $request->nasabah_id,
                 'kontak' => $request->kontak,
                 'alamat' => $request->alamat,
-                'cabang_id' => auth()->user()->cabang_id,
+                'cabang_id' => $request->cabang_id,
             ]);
 
-        Storage::copy('/public/default.png', "/public/$nasabah->id/default.png");
-        Storage::copy('/public/tokoDefault.jpg', "/public/$nasabah->id/tokoDefault.jpg");
+        Storage::disk('uploads')->copy('default.png', "/$nasabah->id/default.png");
+        Storage::disk('uploads')->copy('tokoDefault.jpg', "/$nasabah->id/tokoDefault.jpg");
 
-        $nasabah->update(['foto' => "/public/$nasabah->id/default.png"]);
+        $nasabah->update(['foto' => "/uploads/$nasabah->id/default.png"]);
 
         $nasabah->addLapak($nasabah->id);
 

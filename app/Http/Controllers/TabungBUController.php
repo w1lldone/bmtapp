@@ -19,6 +19,6 @@ class TabungBUController extends Controller
 		$tabungBU = new TabungBU($cabang->connection);
     	$tabung = $tabungBU->where('NO_REKENING', $request->no_rekening)->first();
     	$no_rekening = $request->no_rekening;
-        return view('nasabah.cekid', compact(['tabung', 'no_rekening']));
+        return view('nasabah.cekid', compact(['tabung', 'no_rekening', 'cabang']));
     }
 }
