@@ -10,7 +10,7 @@ class TabungBU extends Model
 	protected $connection;
 	protected $table = 'tabung';
 
-	public function __construct($cabang = 'bmt_godean')
+	public function __construct($cabang = 'bmtbu')
 	{
 		$this->connection = $cabang;
 	}

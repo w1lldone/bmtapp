@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class KretransBU extends Model
 {
     
-    protected $connection = 'bmtbufake';
+    protected $connection = 'bmtbu';
     protected $table = 'kretrans';
 }
