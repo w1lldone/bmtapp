@@ -75,6 +75,9 @@ class NasabahController extends Controller
         $this->validate($request,[
             'password' => 'confirmed|required',
         ]);
+        if (!Hash::check($request->password_admin, auth()->user()->password)) {
+            return back()->with('warning', 'Password admin salah');
+        }
         $nasabah->update(['password' => Hash::make($request->password)]);
         return back()->with('status', "Password berhasil dirubah, Harap hubungi $nasabah->kontak");
     }       
