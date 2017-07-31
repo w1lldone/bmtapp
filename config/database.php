@@ -69,11 +69,11 @@ return [
 
         'bmt_godean' => [
             'driver' => 'mysql',
-            'host' => 'localhost',
+            'host' => 'kantorgodean.ddns.net',
             'port' => '3306',
-            'database' => 'bmt_godean',
-            'username' => 'root',
-            'password' => '',
+            'database' => 'bu',
+            'username' => 'patpat',
+            'password' => 'bmtmobile',
             'charset' => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix' => '',
