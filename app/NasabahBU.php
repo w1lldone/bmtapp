@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class NasabahBU extends Model
 {
-    protected $connection
+    protected $connection;
 
 	public function __construct($cabang = 'bmtbu')
 	{
