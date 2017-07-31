@@ -27,7 +27,7 @@ class UpdateNasabah extends FormRequest
             'name' => 'required',
             'no_rekening' => 'required',
             'kontak' => 'required',
-            'cabang' => 'required',
+            'cabang_id' => 'required',
             'alamat' => 'required',
         ];
     }

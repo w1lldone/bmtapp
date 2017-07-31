@@ -54,7 +54,7 @@ class NasabahController extends Controller
     }
 
     public function update(Nasabah $nasabah, UpdateNasabah $request){
-        $nasabah->update(request(['name', 'no_rekening', 'kontak', 'cabang', 'alamat']));
+        $nasabah->update(request(['name', 'no_rekening', 'kontak', 'cabang_id', 'alamat']));
         return back()->with('status', 'Profil berhasil dirubah!');
     }
 
