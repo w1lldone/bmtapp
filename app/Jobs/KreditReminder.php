@@ -35,7 +35,7 @@ class KreditReminder implements ShouldQueue
     public function handle()
     {
         // get all nasabah from kretrans
-        $kredits = KretransBU::where('TGL_TRANS', $this->reminder->tanggal->toDateString())->get();
+        $kredits = KretransBU::where('TGL_TRANS', $this->reminder->tanggal->toDateString())->where('MY_KODE_TRANS', 200)->get();
 
         foreach ($kredits as $kredit) {
             // check registered nasabah
