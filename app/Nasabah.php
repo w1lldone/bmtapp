@@ -44,6 +44,10 @@ class Nasabah extends Authenticatable
 		return $this->hasMany('App\Device');
 	}
 
+	public function mku(){
+		return $this->belongsTo('App\Mku');
+	}
+
 	public function addLapak($id){
 		return $this->lapak()->create([
 			'name' => 'Toko saya',
