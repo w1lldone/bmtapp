@@ -13,11 +13,7 @@ use Illuminate\Support\Facades\Storage;
 class NasabahController extends Controller
 {
     public function create(Request $request){
-        $no_rekening = request('no_rekening');
-        $nasabah_id = request('nasabah_id');
-        $cabang_id = request('cabang_id');
-
-        return view('nasabah.create', compact(['no_rekening', 'nasabah_id', 'cabang_id']));
+        return view('nasabah.create');
     }
 
     public function index(){
@@ -32,10 +28,12 @@ class NasabahController extends Controller
                 'username' => $request->username,
                 'password' => bcrypt($request->password),
                 'no_rekening' =>$request->no_rekening,
+                'no_rekening_kredit' =>$request->no_rekening_kredit,
                 'nasabah_id' => $request->nasabah_id,
                 'kontak' => $request->kontak,
                 'alamat' => $request->alamat,
                 'cabang_id' => $request->cabang_id,
+                'mku_id' => $request->mku_id,
             ]);
 
         Storage::disk('uploads')->copy('default.png', "/$nasabah->id/default.png");

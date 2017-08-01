@@ -56,19 +56,51 @@
 										<input type="text" class="form-control" name="kontak" required>
 									</div>
 	                            </div>
+	                            <div class="col-md-6">
+									<div class="form-group label-floating">
+										<label class="control-label">Pilih Cabang</label>
+										<select name="cabang_id" id="cabang_id" class="form-control">
+											<option value=""></option>
+											@foreach (\App\Cabang::all() as $cabang)
+												<option value="{{$cabang->id}}">{{$cabang->name}}</option>
+											@endforeach
+										</select>
+									</div>
+	                            </div>
                             </div>
                             <div class="row">
 	                             <div class="col-md-12">
 									<div class="form-group label-floating">
 										<label class="control-label">Alamat</label>
 										<input type="text" class="form-control" name="alamat" required>
-										<input type="hidden" name="nasabah_id" value="{{ $nasabah_id }}">
-										<input type="hidden" name="no_rekening" value="{{ $no_rekening }}">
-										<input type="hidden" name="cabang_id" value="{{ $cabang_id }}">
 									</div>
 	                            </div>
 	                        </div>
-
+	                        <div class="row">
+	                            <div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label">Rekening tabungan</label>
+										<input type="text" class="form-control" name="no_rekening" minlength="12" maxlength="12" placeholder="1.234.567890">
+									</div>
+	                            </div>
+	                             <div class="col-md-6">
+									<div class="form-group">
+										<label class="control-label">Rekening kredit</label>
+										<input type="text" class="form-control" name="no_rekening_kredit" minlength="12" maxlength="12" placeholder="1.234.567890">
+									</div>
+	                            </div>
+                            </div>
+                            <div class="row">
+	                            <div class="col-md-12">
+									<div class="form-group label-floating">
+										<label class="control-label">Anggota MKU</label>
+										<select name="mku_id" id="mku_id" class="form-control">
+											<option value=""></option>
+											<option value="1">MKU Godean</option>
+										</select>
+									</div>
+	                            </div>
+                            </div>
 	                        <button type="submit" class="btn btn-primary pull-right">Submit</button>
 	                        <div class="clearfix"></div>
 	                    </form>

@@ -48,8 +48,8 @@ Route::group(['prefix' => 'setting', 'middleware' => 'auth'], function(){
 
 Route::group(['prefix' =>  'nasabah', 'middleware' => 'auth'], function(){
 	Route::get('/', 'NasabahController@index')->name('nasabah');
-	Route::post('/cek', 'TabungBUController@view');
-    Route::get('/cek', 'NasabahController@create')->name('cek_rekening');
+	// Route::post('/cek', 'TabungBUController@view');
+    // Route::get('/cek', 'NasabahController@create')->name('cek_rekening');
     Route::get('/create', 'NasabahController@create');
 	Route::post('/create', 'NasabahController@store');
     Route::get('/{nasabah}/edit', 'NasabahController@edit');

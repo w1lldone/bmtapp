@@ -19,10 +19,12 @@ class CreateNasabahTable extends Migration
             $table->string('username', 20)->unique();
             $table->string('password', 250);
             $table->string('no_rekening', 12)->nullable();
+            $table->string('no_rekening_kredit', 12)->nullable();
             $table->string('nasabah_id', 12)->nullable();
             $table->string('kontak', 100)->nullable();
             $table->string('alamat', 150)->nullable();
             $table->integer('cabang_id')->unsigned();
+            $table->integer('mku_id')->unsigned();
             $table->string('foto', 200)->nullable();
             $table->string('device_token', 200)->nullable();
             $table->rememberToken();

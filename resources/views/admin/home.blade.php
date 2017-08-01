@@ -19,10 +19,10 @@
                 </div>
                 <div class="card-content" style="padding-right: 0; padding-left: 0;">
                     <div class="list-group" style="margin-bottom: 0;">
-                      <button data-toggle="modal" data-target="#CekRekening" type="button" class="list-group-item list-icons">
+                      <a href="/nasabah/create" type="button" class="list-group-item list-icons">
                           <div class="items"><i background="bmt-green" style="box-shadow: none" class="material-icons circle">person</i></div>
                           <div class="items"><h4>Mendaftarkan nasabah</h4></div>
-                      </button>
+                      </a>
                       <button data-toggle="modal" data-target="#newKategori" type="button" class="list-group-item list-icons">
                         <div class="items"><i background="blue" style="box-shadow: none" class="material-icons circle">store</i></div>
                         <div class="items"><h4>Tambah kategori</h4></div>

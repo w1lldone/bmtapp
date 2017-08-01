@@ -30,6 +30,7 @@ class StoreNasabah extends FormRequest
             'password' => 'required|confirmed',
             'kontak' => 'required',
             'alamat' => 'required',
+            'cabang_id' => 'required|numeric',
         ];
     }
 }
