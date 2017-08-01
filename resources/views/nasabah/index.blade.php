@@ -20,7 +20,7 @@
 						<p class="category">BMT Bina Umah Godean</p>
 					</div>
 					<div class="col-xs-6">
-						<a data-toggle="modal" data-target="#CekRekening" class="btn btn-round btn-just-icon pull-right" rel="tooltip" style="background: WhiteSmoke;;" title="Tambah nasabah"><i class="material-icons" style="color: rgba(84, 217, 93, 255);">add</i></a>
+						<a href="/nasabah/create" class="btn btn-round btn-just-icon pull-right" rel="tooltip" style="background: WhiteSmoke;;" title="Tambah nasabah"><i class="material-icons" style="color: rgba(84, 217, 93, 255);">add</i></a>
 					</div>
 				</div>
 			</div>
