@@ -105,5 +105,9 @@ Route::group(['prefix' => 'reminder', 'middleware' => 'auth'], function(){
 });
 
 Route::group(['prefix' => 'ajax'], function(){
-	Route::get('/order', 'AjaxController@order');
+    Route::get('/order', 'AjaxController@order');
+});
+
+Route::group(['prefix' => 'mku'], function(){
+	Route::get('/create', 'MkuController@create');
 });
