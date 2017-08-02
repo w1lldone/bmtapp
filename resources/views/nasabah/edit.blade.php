@@ -103,7 +103,9 @@
     										<label >Anggota MKU</label>
     										<select name="mku_id" id="mku_id" class="form-control">
     											<option value=""></option>
-    											<option value="1">MKU Godean</option>
+    											@foreach (\App\Mku::all() as $mku)
+    												<option value="{{ $mku->id }}">{{ $mku->name }}</option>
+    											@endforeach
     										</select>
     									</div>
     	                            </div>
