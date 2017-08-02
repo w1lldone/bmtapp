@@ -110,4 +110,5 @@ Route::group(['prefix' => 'ajax'], function(){
 
 Route::group(['prefix' => 'mku'], function(){
 	Route::get('/create', 'MkuController@create');
+    Route::post('/', 'MkuController@store');
 });

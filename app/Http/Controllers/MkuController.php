@@ -40,7 +40,13 @@ class MkuController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'required|string',
+        ]);
+
+        $mku = Mku::create(request(['name']));
+
+        return redirect('/home')->with('status', 'Berhasil membuat MKU!');
     }
 
     /**
