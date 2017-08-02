@@ -113,4 +113,5 @@ Route::group(['prefix' => 'mku'], function(){
     Route::post('/', 'MkuController@store');
     Route::get('/', 'MkuController@index');
     Route::get('/{mku}/edit', 'MkuController@edit');
+    Route::put('/{mku}', 'MkuController@update');
 });

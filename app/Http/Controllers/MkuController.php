@@ -47,7 +47,7 @@ class MkuController extends Controller
 
         $mku = Mku::create(request(['name']));
 
-        return redirect('/home')->with('status', 'Berhasil membuat MKU!');
+        return redirect('/mku')->with('status', 'Berhasil membuat MKU!');
     }
 
     /**
@@ -81,7 +81,11 @@ class MkuController extends Controller
      */
     public function update(Request $request, Mku $mku)
     {
-        //
+        $this->validate($request, ['name' => 'required']);
+
+        $mku->update(request(['name']));
+
+        return redirect('/mku')->with('status', 'Berhasil mengubah MKU!');
     }
 
     /**
