@@ -19,7 +19,8 @@ class MkuController extends Controller
      */
     public function index()
     {
-        //
+        $mkus = Mku::all();
+        return view('mku.index', compact('mkus'));
     }
 
     /**

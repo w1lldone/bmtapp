@@ -27,30 +27,34 @@
                       </a>
                   </li>
                   <li class="@if (substr(Route::currentRouteName(),0 ,9) == 'transaksi'){{ 'active' }} @endif ">
-                      <a href="/transaksi">
-                          <i class="material-icons">shopping_cart</i>
-                          <p>Transaksi <span id="count-layan" class="badge notification-badge hidden-lg hidden-md">{{ $count }}</span></p>
-                      </a>
-                    </li>
+                    <a href="/transaksi">
+                        <i class="material-icons">shopping_cart</i>
+                        <p>Transaksi <span id="count-layan" class="badge notification-badge hidden-lg hidden-md">{{ $count }}</span></p>
+                    </a>
                   </li>
                   <li class="@if (substr(Route::currentRouteName(),0 ,7) == 'layanan'){{ 'active' }} @endif ">
-                      <a href="/layanan">
-                          <i class="material-icons">account_balance_wallet</i>
-                          <p>Layanan <span id="count-layan" class="badge notification-badge hidden-lg hidden-md">{{ $count_l }}</span></p>
-                      </a>
-                    </li>
+                    <a href="/layanan">
+                        <i class="material-icons">account_balance_wallet</i>
+                        <p>Layanan <span id="count-layan" class="badge notification-badge hidden-lg hidden-md">{{ $count_l }}</span></p>
+                    </a>
                   </li>
                   <li class="@if (Route::currentRouteName() == 'kategori'){{ 'active' }} @endif">
-                      <a href="/kategori">
-                          <i class="material-icons">store</i>
-                          <p>Kategori</p>
-                      </a>
+                    <a href="/kategori">
+                        <i class="material-icons">store</i>
+                        <p>Kategori</p>
+                    </a>
                   </li>
                   <li class="@if (substr(Route::currentRouteName(),0 ,8) == 'reminder'){{ 'active' }} @endif">
-                      <a href="/reminder">
-                          <i class="material-icons">announcement</i>
-                          <p>Reminder</p>
-                      </a>
+                    <a href="/reminder">
+                        <i class="material-icons">announcement</i>
+                        <p>Reminder</p>
+                    </a>
+                  </li>
+                  <li class="@if (substr(Route::currentRouteName(),0 ,3) == 'mku'){{ 'active' }} @endif">
+                    <a href="/mku">
+                        <i class="material-icons">groups</i>
+                        <p>MKU</p>
+                    </a>
                   </li>
                   <hr class="hidden-md hidden-lg separator">
                   <li class="dropdown hidden-md hidden-lg">
