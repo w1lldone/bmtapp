@@ -114,4 +114,5 @@ Route::group(['prefix' => 'mku'], function(){
     Route::get('/', 'MkuController@index');
     Route::get('/{mku}/edit', 'MkuController@edit');
     Route::put('/{mku}', 'MkuController@update');
+    Route::delete('/{mku}', 'MkuController@destroy');
 });

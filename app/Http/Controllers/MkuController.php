@@ -96,6 +96,7 @@ class MkuController extends Controller
      */
     public function destroy(Mku $mku)
     {
-        //
+        $mku->delete();
+        return redirect('/mku')->with('status', 'Berhasil menghapus MKU!');
     }
 }
