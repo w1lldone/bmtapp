@@ -29,7 +29,7 @@ class LoginController extends Controller
             $keranjang = $nasabah->keranjang()->count();
             return response()->json([
                     'error' => false,
-                    'user' => $nasabah->load(['lapak']),
+                    'user' => $nasabah->load(['lapak', 'cabang']),
                     'keranjang' => $keranjang,
             ]);
         }
