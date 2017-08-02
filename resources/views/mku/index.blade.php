@@ -30,7 +30,7 @@
 									<td>{{ $loop->index+1 }}</td>
 									<td>{{ $mku->name }}</td>
 									<td class="td-actions text-right">
-										<a href="/mku/{{ $mku->id }}/edit" type="button" rel="tooltip" title="Edit kategori" class="btn btn-primary btn-simple btn-xs">
+										<a href="/mku/{{ $mku->id }}/edit" type="button" rel="tooltip" title="Edit MKU" class="btn btn-primary btn-simple btn-xs">
 											<i class="material-icons">edit</i>
 										</a>
 										<form action="/mku/{{$mku->id}}" method="POST">

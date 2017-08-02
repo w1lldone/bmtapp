@@ -69,7 +69,7 @@ class MkuController extends Controller
      */
     public function edit(Mku $mku)
     {
-        //
+        return view('mku.edit', compact('mku'));
     }
 
     /**
