@@ -8,6 +8,7 @@ use App\Jobs\ProdukOrderNotification;
 use App\Keranjang;
 use App\Produk;
 use Carbon\Carbon;
+use App\Jobs\SendFirebaseNotification;
 
 class Order extends Model
 {
@@ -175,6 +176,19 @@ class Order extends Model
         }
 
         return static::whereRaw($query)->orderBy($col, $sort);
+    }
+
+    public function sendNotification()
+    {
+        foreach ($this->orderDetail as $orderDetail) {
+            foreach ($orderDetail->produk->lapak->nasabah->device as $device) {
+                $data = [
+                    'kode' => 1,
+                    'object' => $orderDetail,
+                ];
+                dispatch(new SendFirebaseNotification('BMT Mobile App', 'Barang anda dipesan!', $data, $device->device_id));
+            }
+        }
     }
 
     protected $guarded=['id'];
