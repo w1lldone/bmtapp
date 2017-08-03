@@ -129,8 +129,22 @@ Route::get('/sendnotification', function()
     ];
 
     $notif = \App\Firebase\Notification::send('Ini judul', 'ini pesan', $data);
-    return [
-        'data' => $data,
-        'notif_status' => $notif,
+    return $notif;
+});
+
+Route::get('/sendprivate', function()
+{
+    // $order = \App\Order::first()->load('orderDetail.produk.lapak');
+    $data = [
+        'kode' => 2,
+        'object' => [
+            'id' => 1,
+            'action' => 'test',
+        ],
     ];
+
+    $nasabah = \App\Nasabah::find(11);
+
+    $notif = \App\Firebase\Notification::sendTo('Ini judul', 'ini pesan', $data, 'fKB5jnpOfx4:APA91bHvmS_zW6R-GpdkoEmpc4LjA8G14wyprRNjARLIe7_Hl4RuIZ9-bCEQcO-EqFmPZRYwLgUy0CZCY0GuXe7RQFvRpmDKYzkY7FHgwXmFH2JW0WOgDCnh5U78xEGE5SLgo6Z1Y2PW');
+    return $notif;
 });
