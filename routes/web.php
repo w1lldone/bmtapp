@@ -119,7 +119,6 @@ Route::group(['prefix' => 'mku'], function(){
 
 Route::get('/sendnotification', function()
 {
-    // $order = \App\Order::first()->load('orderDetail.produk.lapak');
     $data = [
         'kode' => 2,
         'object' => [

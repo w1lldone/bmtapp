@@ -13,6 +13,11 @@ class PenjualanController extends Controller
     	return $lapak->penjualan(request('keyword'));
     }
 
+    public function show(OrderDetail $orderDetail)
+    {
+        return $orderDetail->load('produk.kategori_produk', 'order.nasabah');
+    }
+
     public function update(OrderDetail $orderDetail, Request $request){
     	if ($request->sedia == 1) {
     		$orderDetail->ada();

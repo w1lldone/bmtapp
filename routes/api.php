@@ -60,6 +60,7 @@ Route::group(['prefix' => 'pembelian'], function(){
 
 Route::group(['prefix' => 'penjualan'], function(){
 	Route::get('/{lapak}', 'Api\PenjualanController@index');
+	Route::get('/{orderDetail}/view', 'Api\PenjualanController@show');
 	Route::put('/sedia/{orderDetail}', 'Api\PenjualanController@update');
 	Route::put('/siap/{orderDetail}', 'Api\PenjualanController@siap');
 });
