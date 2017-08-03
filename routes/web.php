@@ -116,3 +116,18 @@ Route::group(['prefix' => 'mku'], function(){
     Route::put('/{mku}', 'MkuController@update');
     Route::delete('/{mku}', 'MkuController@destroy');
 });
+
+Route::get('/sendnotification', function()
+{
+    $order = \App\Order::first()->load('orderDetail.produk.lapak');
+    $data = [
+        'kode' => 2,
+        'object' => $order,
+    ];
+
+    $notif = \App\Firebase\Notification::send('Ini judul', 'ini pesan', $data);
+    return [
+        'data' => $data,
+        'notif_status' => $notif,
+    ];
+});
