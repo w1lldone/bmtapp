@@ -5,16 +5,32 @@ namespace App\Firebase;
 use App\Firebase\Push;
 use App\Firebase\Firebase;
 
-
-/**
-* 
-*/
 class Notification
 {
-    function __construct($foo = null)
+    public static function test()
     {
-        $this->foo = $foo;
+        return 'test';
     }
+    public static function sendto($title, $message, $data, $to){
+
+        $push = new Push;
+
+        $push->setTitle($title);
+        $push->setMessage($message);
+        $push->setImage('');
+        $push->setIsBackground(FALSE);
+        $push->setPayload($data);
+
+        $json = '';
+        $response = '';
+
+        $firebase = new Firebase;
+
+        $json = $push->getPush();
+        $response = $firebase->send($to, $json);
+        return $response;
+    }
+
 	public static function send($title, $message, $data = array()){
 
         $push = new Push;
@@ -36,24 +52,5 @@ class Notification
             'status' => $response,
             'isi' => $json,
         ];
-    }
-
-    public static function sendTo($title, $message, $data = array(), $to){
-        $push = new Push;
-
-        $push->setTitle($title);
-        $push->setMessage($message);
-        $push->setImage('');
-        $push->setIsBackground(FALSE);
-        $push->setPayload($data);
-
-        $json = '';
-        $response = '';
-
-        $firebase = new Firebase;
-
-        $json = $push->getPush();
-        $response = $firebase->sendAll($json, $to);
-        return $response;
     }
 }

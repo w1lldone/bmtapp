@@ -132,19 +132,14 @@ Route::get('/sendnotification', function()
     return $notif;
 });
 
-Route::get('/sendprivate', function()
+Route::get('/priv', function()
 {
-    // $order = \App\Order::first()->load('orderDetail.produk.lapak');
     $data = [
         'kode' => 2,
-        'object' => [
-            'id' => 1,
-            'action' => 'test',
-        ],
+        'id' => 21,
     ];
-
-    $nasabah = \App\Nasabah::find(11);
-
-    $notif = \App\Firebase\Notification::sendTo('Ini judul', 'ini pesan', $data, 'fKB5jnpOfx4:APA91bHvmS_zW6R-GpdkoEmpc4LjA8G14wyprRNjARLIe7_Hl4RuIZ9-bCEQcO-EqFmPZRYwLgUy0CZCY0GuXe7RQFvRpmDKYzkY7FHgwXmFH2JW0WOgDCnh5U78xEGE5SLgo6Z1Y2PW');
+    $device = \App\Nasabah::find(11)->device->first();
+    // $jancuk = \App\Firebase\Notification::test();
+    $notif = \App\Firebase\Notification::sendto('Ini judul', 'ini pesan', $data, $device->device_id);
     return $notif;
 });
