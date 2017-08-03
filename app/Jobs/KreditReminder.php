@@ -39,7 +39,7 @@ class KreditReminder implements ShouldQueue
 
         foreach ($kredits as $kredit) {
             // check registered nasabah
-            $nasabah = Nasabah::where('no_rekening', $kredit->NO_REKENING)->first();
+            $nasabah = Nasabah::where('no_rekening_kredit', $kredit->NO_REKENING)->first();
             if (!empty($nasabah)) {
                 // add reminder detail
                 $this->reminder->addDetail($nasabah->id);
