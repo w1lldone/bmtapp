@@ -11,6 +11,10 @@ use App\Firebase\Firebase;
 */
 class Notification
 {
+    function __construct($foo = null)
+    {
+        $this->foo = $foo;
+    }
 	public static function send($title, $message, $data = array()){
 
         $push = new Push;
@@ -31,7 +35,7 @@ class Notification
         return $response;
     }
 
-    public static function sendTo($title, $message, $to = '', $data = array()){
+    public static function sendTo($title, $message, $data = array(), $to){
         $push = new Push;
 
         $push->setTitle($title);
