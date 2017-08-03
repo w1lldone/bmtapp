@@ -119,10 +119,13 @@ Route::group(['prefix' => 'mku'], function(){
 
 Route::get('/sendnotification', function()
 {
-    $order = \App\Order::first()->load('orderDetail.produk.lapak');
+    // $order = \App\Order::first()->load('orderDetail.produk.lapak');
     $data = [
         'kode' => 2,
-        'object' => $order,
+        'object' => [
+            'id' => 1,
+            'action' => 'test',
+        ],
     ];
 
     $notif = \App\Firebase\Notification::send('Ini judul', 'ini pesan', $data);
