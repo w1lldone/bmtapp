@@ -9,6 +9,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use App\KretransBU;
 use App\Nasabah;
+use App\Jobs\SendFirebaseNotification;
 
 class KreditReminder implements ShouldQueue
 {
@@ -39,11 +40,20 @@ class KreditReminder implements ShouldQueue
 
         foreach ($kredits as $kredit) {
             // check registered nasabah
+            $data = [
+                'kode' => 8,
+                'data' => $kredit,
+            ];
             $nasabah = Nasabah::where('no_rekening_kredit', $kredit->NO_REKENING)->first();
             if (!empty($nasabah)) {
+
+                // send notification
+                foreach ($nasabah->device as $device) {
+                    dispatch(new SendFirebaseNotification('BMT Mobile App', 'Pengingat Kredit', $data, $device->device_id));
+                }
+
                 // add reminder detail
                 $this->reminder->addDetail($nasabah->id);
-                // send notification
 
 
             }
