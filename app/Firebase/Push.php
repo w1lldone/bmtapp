@@ -46,7 +46,7 @@ class Push {
         $res = array();
         $res['data']['title'] = $this->title;
         $res['data']['is_background'] = $this->is_background;
-        $res['data']['message'] = $this->message;
+        $res['data']['body'] = $this->message;
         $res['data']['image'] = $this->image;
         $res['data']['data'] = $this->data;
         $res['data']['timestamp'] = date('Y-m-d G:i:s');

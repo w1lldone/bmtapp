@@ -184,7 +184,7 @@ class Order extends Model
             foreach ($orderDetail->produk->lapak->nasabah->device as $device) {
                 $data = [
                     'kode' => 1,
-                    'object' => $orderDetail,
+                    'id' => $orderDetail->id,
                 ];
                 dispatch(new SendFirebaseNotification('BMT Mobile App', 'Barang anda dipesan!', $data, $device->device_id));
             }

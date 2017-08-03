@@ -32,7 +32,10 @@ class Notification
 
         $json = $push->getPush();
         $response = $firebase->sendAll($json);
-        return $response;
+        return [
+            'status' => $response,
+            'isi' => $json,
+        ];
     }
 
     public static function sendTo($title, $message, $data = array(), $to){
