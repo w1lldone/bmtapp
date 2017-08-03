@@ -11,10 +11,7 @@ use App\Firebase\Firebase;
 */
 class Notification
 {
-	public static function send($title, $message, $to = '', $data = array()){
-        $payload = array();
-        $payload['team'] = 'India';
-        $payload['score'] = '5.6';
+	public static function send($title, $message, $data = array()){
 
         $push = new Push;
 
@@ -35,17 +32,13 @@ class Notification
     }
 
     public static function sendTo($title, $message, $to = '', $data = array()){
-    	$payload = array();
-        $payload['team'] = 'India';
-        $payload['score'] = '5.6';
-
         $push = new Push;
 
-        $push->setTitle(request('title'));
-        $push->setMessage(request('message'));
+        $push->setTitle($title);
+        $push->setMessage($message);
         $push->setImage('');
         $push->setIsBackground(FALSE);
-        $push->setPayload($payload);
+        $push->setPayload($data);
 
         $json = '';
         $response = '';
@@ -53,7 +46,7 @@ class Notification
         $firebase = new Firebase;
 
         $json = $push->getPush();
-        $response = $firebase->sendAll($json, request('to'));
+        $response = $firebase->sendAll($json, $to);
         return $response;
     }
 }
