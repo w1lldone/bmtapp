@@ -117,28 +117,8 @@ Route::group(['prefix' => 'mku'], function(){
     Route::delete('/{mku}', 'MkuController@destroy');
 });
 
-Route::get('/sendnotification', function()
+Route::group(['prefix' => 'send'], function()
 {
-    $data = [
-        'kode' => 2,
-        'object' => [
-            'id' => 1,
-            'action' => 'test',
-        ],
-    ];
-
-    $notif = \App\Firebase\Notification::send('Ini judul', 'ini pesan', $data);
-    return $notif;
-});
-
-Route::get('/priv', function()
-{
-    $data = [
-        'kode' => 2,
-        'id' => 21,
-    ];
-    $device = \App\Nasabah::find(11)->device->first();
-    // $jancuk = \App\Firebase\Notification::test();
-    $notif = \App\Firebase\Notification::sendto('Ini judul', 'ini pesan', $data, $device->device_id);
-    return $notif;
+    Route::get('/all', 'TryNotificationController@all');
+    Route::get('/to', 'TryNotificationController@sendto');
 });
