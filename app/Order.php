@@ -178,16 +178,14 @@ class Order extends Model
         return static::whereRaw($query)->orderBy($col, $sort);
     }
 
-    public function pesanNotification($kode = 1)
+    public function pesanNotification()
     {
         foreach ($this->orderDetail as $orderDetail) {
             $data = [
-                'kode' => $kode,
+                'kode' => 1,
                 'id' => $orderDetail->id,
             ];
-            foreach ($orderDetail->produk->lapak->nasabah as $nasabah) {
-                $nasabah->sendNotification('Barang anda dipesan!', $data);
-            }
+            $orderDetail->produk->lapak->nasabah->sendNotification('Barang anda dipesan!', $data);
         }
         return true;
     }
