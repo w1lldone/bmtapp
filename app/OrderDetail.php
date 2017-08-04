@@ -38,23 +38,22 @@ class OrderDetail extends Model
 
     public function sediaNotification()
     {
-        $data = [
-            'kode' => 2,
-            'id' => $this->id,
-        ];
-
-        $this->order->nasabah->sendNotification('Pesanan anda tersedia', $data);
-
+        return $this->sendNotification('Pesanan Anda tersedia');
     }
 
     public function habisNotification()
+    {
+        return $this->sendNotification('Maaf, pesanan Anda tidak tersedia');
+    }
+
+    public function sendNotification($message = 'Notifikasi pesanan')
     {
         $data = [
             'kode' => 2,
             'id' => $this->id,
         ];
 
-        $this->order->nasabah->sendNotification('Maaf, produk tidak tersedia', $data);
+        $this->order->nasabah->sendNotification($message, $data);
 
     }
 

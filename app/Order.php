@@ -180,12 +180,17 @@ class Order extends Model
 
     public function pesanNotification()
     {
+        return $this->sendNotification('Barang anda dipesan!');
+    }
+
+    public function sendNotification($message = 'Notifikasi pesanan')
+    {
         foreach ($this->orderDetail as $orderDetail) {
             $data = [
                 'kode' => 1,
                 'id' => $orderDetail->id,
             ];
-            $orderDetail->produk->lapak->nasabah->sendNotification('Barang anda dipesan!', $data);
+            $orderDetail->produk->lapak->nasabah->sendNotification($message, $data);
         }
         return true;
     }
