@@ -14,7 +14,7 @@ class SendFirebaseNotification implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
-    public $tries = 5;
+    // public $tries = 5;
     
     protected $title;
     protected $message;
