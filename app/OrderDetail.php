@@ -52,7 +52,7 @@ class OrderDetail extends Model
     public function dikirimNotification()
     {
         $kirim = $this->antar == true ? 'dikirim' : 'siap diambil';
-        return $this->pembeliNotification("Pesanan Anda sudah $kirim", 1);
+        return $this->pembeliNotification("Pesanan Anda sudah $kirim");
     }
 
     public function diterimaNotification()
@@ -60,7 +60,7 @@ class OrderDetail extends Model
         return $this->penjualNotification('Pesanan sudah diterima');
     }
 
-    public function pembeliNotification($message = 'Notifikasi pembelian', $kode = 2, $id)
+    public function pembeliNotification($message = 'Notifikasi pembelian', $kode = 2, $id = null)
     {
         if (empty($id)) {
             $id = $this->id;
