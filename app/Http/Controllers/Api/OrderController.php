@@ -61,7 +61,7 @@ class OrderController extends Controller
 		$job = (new OrderKadaluarsa($order->id))->delay(Carbon::now()->addHours(12));
 		dispatch($job);
 
-		$order->sendNotification();
+		$order->pesanNotification();
 
 		return [
 			'error' => false, 
