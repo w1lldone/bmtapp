@@ -181,17 +181,13 @@ class Order extends Model
 
     public function pesanNotification()
     {
-        return $this->orderDetailsNotification('Barang anda dipesan!');
+        return $this->penjualNotification('Barang anda dipesan!');
     }
 
-    public function orderDetailsNotification($message = 'Notifikasi pesanan')
+    public function penjualNotification($message = 'Notifikasi pesanan')
     {
         foreach ($this->orderDetail as $orderDetail) {
-            $data = [
-                'kode' => 1,
-                'id' => $orderDetail->id,
-            ];
-            $orderDetail->produk->lapak->nasabah->sendNotification($message, $data);
+            $orderDetail->penjualNotification($message);
         }
         return true;
     }
@@ -203,7 +199,7 @@ class Order extends Model
             'id' => $this->id,
         ];
         $this->nasabah->sendNotification('Pesanan Anda sudah dibayar', $data);
-        $this->orderDetailsNotification('Penjualan sudah dibayar');
+        $this->penjualNotification('Penjualan sudah dibayar');
     }
 
 

@@ -55,7 +55,7 @@ class OrderDetail extends Model
         return $this->pembeliNotification("Pesanan Anda sudah $kirim", 1);
     }
 
-    public function pembeliNotification($message = 'Notifikasi pesanan', $kode = 2)
+    public function pembeliNotification($message = 'Notifikasi pembelian', $kode = 2)
     {
         $data = [
             'kode' => $kode,
@@ -64,6 +64,16 @@ class OrderDetail extends Model
 
         $this->order->nasabah->sendNotification($message, $data);
 
+    }
+
+    public function penjualNotification($message = 'Notifikasi penjualan', $kode = 1)
+    {
+        $data = [
+            'kode' => $kode,
+            'id' => $this->id,
+        ];
+
+        $this->produk->lapak->nasabah->sendNotification($message, $data);
     }
 
     protected $guarded=['id'];
