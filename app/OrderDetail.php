@@ -9,6 +9,10 @@ class OrderDetail extends Model
 {
 	use SoftDeletes;
 
+    public function nasabah(){
+        return $this->hasManyThrough('App\Nasabah', 'App\Order');
+    }
+
     public function produk(){
     	return $this->belongsTo('App\Produk');
     }
@@ -24,14 +28,38 @@ class OrderDetail extends Model
     }
 
     public function ada(){
+        $this->sediaNotification();
     	return $this->update(['sedia' => 1]);
     }
 
     public function habis(){
     	$this->update(['sedia' => 0]);
     	$this->delete();
+        $this->habisNotification();
     	// $this->order->cekSedia();
     	return true;
+    }
+
+    public function sediaNotification()
+    {
+        $data = [
+            'kode' => 2,
+            'id' => $this->id,
+        ];
+        foreach ($this->nasabah as $nasabah) {
+            $nasabah->sendNotification('Pesanan pesanan anda tersedia', $data);
+        }
+    }
+
+    public function habisNotification()
+    {
+        $data = [
+            'kode' => 2,
+            'id' => $this->id,
+        ];
+        foreach ($this->nasabah as $nasabah) {
+            $nasabah->sendNotification('Maaf, produk tidak tersedia', $data);
+        }
     }
 
     protected $guarded=['id'];
