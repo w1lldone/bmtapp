@@ -23,6 +23,7 @@ class Layanan extends Model
     }
 
     public function statusFinished(){
+        $this->selesaiNotification();
         return $this->update(['status' => 'finished', 'status_kode' => 5]);
     }
 
@@ -92,6 +93,15 @@ class Layanan extends Model
         }
 
         return static::whereRaw($query)->orderBy($col, $sort);
+    }
+
+    public function selesaiNotification()
+    {
+        $data = [
+            'kode' => 3,
+            'id' => $this->id,
+        ];
+        return $this->nasabah->sendNotification('Transaksi layanan sudah dibayar', $data);
     }
 
     protected $dates = ['dibayar_at'];
