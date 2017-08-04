@@ -41,21 +41,21 @@ class OrderDetail extends Model
     */
     public function sediaNotification()
     {
-        return $this->nasabahNotification('Pesanan Anda tersedia');
+        return $this->pembeliNotification('Pesanan Anda tersedia');
     }
 
     public function habisNotification()
     {
-        return $this->nasabahNotification('Maaf, pesanan Anda tidak tersedia');
+        return $this->pembeliNotification('Maaf, pesanan Anda tidak tersedia');
     }
 
     public function dikirimNotification()
     {
         $kirim = $this->antar == true ? 'dikirim' : 'siap diambil';
-        return $this->nasabahNotification("Pesanan Anda sudah $kirim", 1);
+        return $this->pembeliNotification("Pesanan Anda sudah $kirim", 1);
     }
 
-    public function nasabahNotification($message = 'Notifikasi pesanan', $kode = 2)
+    public function pembeliNotification($message = 'Notifikasi pesanan', $kode = 2)
     {
         $data = [
             'kode' => $kode,
