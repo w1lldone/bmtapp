@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Keranjang;
 use Carbon\Carbon;
+use App\Jobs\SendFirebaseNotification;
 use App\ProdukLayanan;
 
 class Nasabah extends Authenticatable
@@ -183,6 +184,13 @@ class Nasabah extends Authenticatable
 					->latest()
 					->with('layananDetail.produkLayanan.katLayanan')
 					->get();
+	}
+
+	public function sendNotification($message, $data)
+	{
+		foreach ($this->device as $device) {
+			dispatch(new SendFirebaseNotification('BMT Mobile App', $message, $data, $device->device_id));
+		}
 	}
 
     protected $guarded=['id'];
