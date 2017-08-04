@@ -41,7 +41,7 @@ class OrderDetail extends Model
     */
     public function sediaNotification()
     {
-        return $this->pembeliNotification('Pesanan Anda tersedia');
+        return $this->pembeliNotification('Pesanan Anda tersedia', 2, $this->order->id);
     }
 
     public function habisNotification()
@@ -55,11 +55,19 @@ class OrderDetail extends Model
         return $this->pembeliNotification("Pesanan Anda sudah $kirim", 1);
     }
 
-    public function pembeliNotification($message = 'Notifikasi pembelian', $kode = 2)
+    public function diterimaNotification()
     {
+        return $this->penjualNotification('Pesanan sudah diterima');
+    }
+
+    public function pembeliNotification($message = 'Notifikasi pembelian', $kode = 2, $id)
+    {
+        if (empty($id)) {
+            $id = $this->id;
+        }
         $data = [
             'kode' => $kode,
-            'id' => $this->id,
+            'id' => $id,
         ];
 
         $this->order->nasabah->sendNotification($message, $data);

@@ -14,9 +14,12 @@ class SendFirebaseNotification implements ShouldQueue
 {
     use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
+    public $tries = 5;
+    
     protected $title;
     protected $message;
     protected $data;
+    protected $to;
 
     /**
      * Create a new job instance.
@@ -53,11 +56,7 @@ class SendFirebaseNotification implements ShouldQueue
 
         $json = $push->getPush();
 
-        if (!empty($this->to)) {
-           $response = $firebase->sendAll($json, $to);
-        } else{
-            $response = $firebase->sendAll($json);
-        }
+        $response = $firebase->sendAll($json, $this->to);
 
         return $response;
     }
