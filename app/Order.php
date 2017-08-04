@@ -47,6 +47,7 @@ class Order extends Model
     }
 
     public function statusPaid(){
+        $this->bayarNotification();
         return $this->update([
             'status' => 'paid', 
             'status_kode' => 3,
@@ -180,10 +181,10 @@ class Order extends Model
 
     public function pesanNotification()
     {
-        return $this->sendNotification('Barang anda dipesan!');
+        return $this->orderDetailsNotification('Barang anda dipesan!');
     }
 
-    public function sendNotification($message = 'Notifikasi pesanan')
+    public function orderDetailsNotification($message = 'Notifikasi pesanan')
     {
         foreach ($this->orderDetail as $orderDetail) {
             $data = [
@@ -193,6 +194,16 @@ class Order extends Model
             $orderDetail->produk->lapak->nasabah->sendNotification($message, $data);
         }
         return true;
+    }
+
+    public function bayarNotification()
+    {
+        $data = [
+            'kode' => 2,
+            'id' => $this->id,
+        ];
+        $this->nasabah->sendNotification('Pesanan Anda sudah dibayar', $data);
+        $this->orderDetailsNotification('Penjualan sudah dibayar');
     }
 
 

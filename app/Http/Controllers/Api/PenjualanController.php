@@ -42,6 +42,7 @@ class PenjualanController extends Controller
         }
 
         $orderDetail->update(['dikirim_at' => \Carbon\Carbon::now()]);
+        $orderDetail->dikirimNotification();
         $orderDetail->reduceStock();
 
         return [

@@ -36,20 +36,29 @@ class OrderDetail extends Model
     	return true;
     }
 
+    /*
+    * NOTIFICATION METHOD SECTION
+    */
     public function sediaNotification()
     {
-        return $this->sendNotification('Pesanan Anda tersedia');
+        return $this->nasabahNotification('Pesanan Anda tersedia');
     }
 
     public function habisNotification()
     {
-        return $this->sendNotification('Maaf, pesanan Anda tidak tersedia');
+        return $this->nasabahNotification('Maaf, pesanan Anda tidak tersedia');
     }
 
-    public function sendNotification($message = 'Notifikasi pesanan')
+    public function dikirimNotification()
+    {
+        $kirim = $this->antar == true ? 'dikirim' : 'siap diambil';
+        return $this->nasabahNotification("Pesanan Anda sudah $kirim", 1);
+    }
+
+    public function nasabahNotification($message = 'Notifikasi pesanan', $kode = 2)
     {
         $data = [
-            'kode' => 2,
+            'kode' => $kode,
             'id' => $this->id,
         ];
 
