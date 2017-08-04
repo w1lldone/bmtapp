@@ -178,18 +178,20 @@ class Order extends Model
         return static::whereRaw($query)->orderBy($col, $sort);
     }
 
-    public function sendNotification()
+    public function pesanNotification($kode = 1)
     {
         foreach ($this->orderDetail as $orderDetail) {
-            foreach ($orderDetail->produk->lapak->nasabah->device as $device) {
-                $data = [
-                    'kode' => 1,
-                    'id' => $orderDetail->id,
-                ];
-                dispatch(new SendFirebaseNotification('BMT Mobile App', 'Barang anda dipesan!', $data, $device->device_id));
+            $data = [
+                'kode' => $kode,
+                'id' => $orderDetail->id,
+            ];
+            foreach ($orderDetail->produk->lapak->nasabah as $nasabah) {
+                $nasabah->sendNotification('Barang anda dipesan!', $data);
             }
         }
+        return true;
     }
+
 
     protected $guarded=['id'];
     protected $dates = ['tgl_bayar'];
