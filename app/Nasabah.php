@@ -136,7 +136,7 @@ class Nasabah extends Authenticatable
 					->latest()
 					->get();
 		foreach ($orders as $order) {
-			$order->orderDetail = $order->orderDetail()->withTrashed()->with('produk.kategori_produk', 'produk.lapak')->get();
+			$order->order_detail = $order->orderDetail()->withTrashed()->with('produk.kategori_produk', 'produk.lapak')->get();
 			$order->jumlah = $order->orderDetail()->sum('total');
 		}
 		return $orders;
