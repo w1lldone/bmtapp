@@ -13,7 +13,6 @@
 						<p>
 							Nama : <b class="pull-right">{{ $layanan->nasabah->name }}</b> <br>
 							Alamat : <b class="pull-right">{{ $layanan->nasabah->alamat }}</b> <br>
-							Kontak : <b class="pull-right">{{ $layanan->nasabah->kontak }}</b> <br>
 							No Rekening : <b class="pull-right">{{ $layanan->nasabah->no_rekening }}</b><br>
 						</p>
                     </div>
