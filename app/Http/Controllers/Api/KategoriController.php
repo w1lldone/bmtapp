@@ -50,9 +50,16 @@ class KategoriController extends Controller
     		$by = $request->order;
     	}
 
-    	$produks = $produk->whereRaw("name LIKE '%$keyword%' or deskripsi LIKE '%$keyword%'")->where($query)->orderBy($order, $by)->with(['kategori_produk', 'lapak','review' => function($query){
-            $query->take(5)->with('nasabah');
-        }])->simplePaginate($paginate);
+    	$produks = $produk
+            // ->whereRaw("name LIKE '%$keyword%' or deskripsi LIKE '%$keyword%'")
+            ->where(function($q) use ($query)
+            {
+                $q->where('kategori_produk_id', $query['kategori_produk_id']);
+            })
+            ->orderBy($order, $by)
+            ->with(['kategori_produk', 'lapak','review' => function($query){
+                $query->take(5)->with('nasabah');
+            }])->simplePaginate($paginate);
 
     	return $produks->withPath($request->fullUrl());
 
