@@ -61,6 +61,9 @@ class Order extends Model
     }
 
     public function statusFinished(){
+        foreach ($this->orderDetail as $orderDetail) {
+            $orderDetail->selesaiNotification();
+        }
         return $this->update(['status' => 'finished', 'status_kode' => 5]);
     }
 

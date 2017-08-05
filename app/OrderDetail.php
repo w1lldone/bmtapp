@@ -60,6 +60,11 @@ class OrderDetail extends Model
         return $this->penjualNotification('Pesanan sudah diterima');
     }
 
+    public function selesaiNotification()
+    {
+        return $this->penjualNotification('Pesanan selesai, eriksa rekening Anda');
+    }
+
     public function pembeliNotification($message = 'Notifikasi pembelian', $kode = 2, $id = null)
     {
         if (empty($id)) {

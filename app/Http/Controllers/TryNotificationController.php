@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Nasabah;
+use App\Order;
 use App\Firebase\Notification;
 use Illuminate\Http\Request;
 
@@ -31,5 +32,11 @@ class TryNotificationController extends Controller
         $device = Nasabah::find(11)->device->first();
         $notif = Notification::sendto('Ini judul', 'ini pesan', $data, $device->device_id);
         return $notif;
+    }
+
+    public function bayar()
+    {
+        Order::latest()->first()->bayarNotification();
+        return Order::latest()->first();
     }
 }
