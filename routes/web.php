@@ -123,6 +123,7 @@ Route::group(['prefix' => 'agenda'], function()
     Route::get('/create', 'AgendaController@create');
     Route::post('/', 'AgendaController@store');
     Route::get('/{agenda}/edit', 'AgendaController@edit');
+    Route::put('/{agenda}', 'AgendaController@update');
 });
 
 Route::group(['prefix' => 'send'], function()

@@ -91,7 +91,13 @@ class AgendaController extends Controller
      */
     public function update(Request $request, Agenda $agenda)
     {
-        //
+        $this->validation($request->all())->validate();
+
+        $agenda->update(request([
+            'name', 'tanggal', 'jam', 'lokasi', 'mku_id', 'deskripsi',
+        ]));
+
+        return redirect('/agenda')->with('status', 'Berhasil mengubah agenda!');
     }
 
     /**

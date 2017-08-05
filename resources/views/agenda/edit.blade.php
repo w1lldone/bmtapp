@@ -24,14 +24,15 @@
 				<div class="card-content">
 					<div class="row">
 				    <div class="col-lg-12">
-				      <form action="/agenda" method="POST">
+				      <form action="/agenda/{{ $agenda->id }}" method="POST">
+				      	{{ method_field('PUT') }}
 				        {{ csrf_field() }}
 				        <div class="row">
 				          <div class="col-md-6">
-			              <div class="form-group label-floating {{ $errors->has('tanggal') ? ' has-error' : '' }}">
-		                  <label class="control-label">Masukkan tanggal</label>
-		                  <input class="form-control" id="date" required name="tanggal" type="text" value="{{ $agenda->tanggal }}"/>
-			              </div>
+				              <div class="form-group label-floating {{ $errors->has('tanggal') ? ' has-error' : '' }}">
+			                  <label class="control-label">Masukkan tanggal</label>
+			                  <input class="form-control" id="date" required name="tanggal" type="text" value="{{ $agenda->tanggal->toDateString() }}"/>
+				              </div>
 				          </div>				          
 				          <div class="col-md-6">
 				            <div class="form-group input-group bootstrap-timepicker timepicker {{ $errors->has('jam') ? ' has-error' : '' }}">
@@ -55,16 +56,16 @@
 				        </div>
 				        <div class="row">
 				          <div class="col-md-6">
-			              <div class="form-group label-floating {{ $errors->has('name') ? ' has-error' : '' }}">
-		                  <label class="control-label">Nama kegiatan</label>
-		                  <input class="form-control" required name="name" type="text" value="{{ $agenda->name }}"/>
-			              </div>
+				              <div class="form-group label-floating {{ $errors->has('name') ? ' has-error' : '' }}">
+				                  <label class="control-label">Nama kegiatan</label>
+				                  <input class="form-control" required name="name" type="text" value="{{ $agenda->name }}"/>
+				              </div>
 				          </div>				          
 				          <div class="col-md-6">
-			              <div class="form-group label-floating {{ $errors->has('lokasi') ? ' has-error' : '' }}">
-		                  <label class="control-label">Lokasi</label>
-		                  <input class="form-control" required name="lokasi" type="text" value="{{ $agenda->lokasi }}"/>
-			              </div>
+				              <div class="form-group label-floating {{ $errors->has('lokasi') ? ' has-error' : '' }}">
+				                  <label class="control-label">Lokasi</label>
+				                  <input class="form-control" required name="lokasi" type="text" value="{{ $agenda->lokasi }}"/>
+				              </div>
 				          </div>	
 				        </div>
 				        <div class="row">
