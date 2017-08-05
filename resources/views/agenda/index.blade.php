@@ -49,7 +49,7 @@
 										<form action="/agenda/{{$agenda->id}}" method="POST">
 											{{ csrf_field() }}
 											{{ method_field('DELETE') }}
-											<button type="submit" onclick="return confirm('Anda Yakin akan menghapus MKU?')" rel="tooltip" title="Hapus" class="btn btn-danger btn-simple btn-xs">
+											<button type="submit" onclick="return confirm('Anda Yakin akan menghapus agenda?')" rel="tooltip" title="Hapus" class="btn btn-danger btn-simple btn-xs">
 												<i class="material-icons">close</i>
 											</button>
 										</form>

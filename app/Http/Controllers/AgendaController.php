@@ -108,6 +108,7 @@ class AgendaController extends Controller
      */
     public function destroy(Agenda $agenda)
     {
-        //
+        $agenda->delete();
+        return redirect('/agenda')->with('status', 'Berhasil menghapus agenda!');
     }
 }
