@@ -13,9 +13,15 @@ class AgendaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return Agenda::all();
+        $agenda = Agenda::whereYear('tanggal', $request->has('tahun') ? $request->tahun : date("Y"))
+                        ->whereMonth('tanggal', $request->has('bulan') ? $request->bulan : date("m"))
+                        ->with('mku')
+                        ->get();
+
+        return $agenda;
+
     }
 
     /**
