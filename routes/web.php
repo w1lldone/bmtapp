@@ -121,4 +121,5 @@ Route::group(['prefix' => 'send'], function()
 {
     Route::get('/all', 'TryNotificationController@all');
     Route::get('/to', 'TryNotificationController@sendto');
+    Route::get('/bayar', 'TryNotificationController@bayar');
 });
