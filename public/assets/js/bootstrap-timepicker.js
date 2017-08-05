@@ -287,12 +287,12 @@
 
       templateContent = '<table>'+
          '<tr>'+
-           '<td><a href="#" data-action="incrementHour"><span class="'+ this.icons.up +'"></span></a></td>'+
+           '<td><a href="#" data-action="incrementHour"><span><i class="material-icons">keyboard_arrow_up</i></span></a></td>'+
            '<td class="separator">&nbsp;</td>'+
-           '<td><a href="#" data-action="incrementMinute"><span class="'+ this.icons.up +'"></span></a></td>'+
+           '<td><a href="#" data-action="incrementMinute"><span><i class="material-icons">keyboard_arrow_up</i></span></a></td>'+
            (this.showSeconds ?
              '<td class="separator">&nbsp;</td>'+
-             '<td><a href="#" data-action="incrementSecond"><span class="'+ this.icons.up +'"></span></a></td>'
+             '<td><a href="#" data-action="incrementSecond"><span><i class="material-icons">keyboard_arrow_up</i></span></a></td>'
            : '') +
            (this.showMeridian ?
              '<td class="separator">&nbsp;</td>'+
@@ -313,12 +313,12 @@
            : '') +
          '</tr>'+
          '<tr>'+
-           '<td><a href="#" data-action="decrementHour"><span class="'+ this.icons.down +'"></span></a></td>'+
+           '<td><a href="#" data-action="decrementHour"><span><i class="material-icons">keyboard_arrow_down</i></span></a></td>'+
            '<td class="separator"></td>'+
-           '<td><a href="#" data-action="decrementMinute"><span class="'+ this.icons.down +'"></span></a></td>'+
+           '<td><a href="#" data-action="decrementMinute"><span><i class="material-icons">keyboard_arrow_down</i></span></a></td>'+
            (this.showSeconds ?
             '<td class="separator">&nbsp;</td>'+
-            '<td><a href="#" data-action="decrementSecond"><span class="'+ this.icons.down +'"></span></a></td>'
+            '<td><a href="#" data-action="decrementSecond"><span><i class="material-icons">keyboard_arrow_down</i></span></a></td>'
            : '') +
            (this.showMeridian ?
             '<td class="separator">&nbsp;</td>'+
