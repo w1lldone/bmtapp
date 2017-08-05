@@ -11,6 +11,7 @@
 	<div class="row">
 		<div class="col-lg-6">
 			@include('layouts.status')
+			@include('layouts.errors')
 			<div class="card">
         <div class="card-header" data-background-color="bmt-green">
         	<div class="row">
@@ -23,7 +24,7 @@
 				<div class="card-content">
 					<div class="row">
 				    <div class="col-lg-12">
-				      <form action="/reminder" method="POST">
+				      <form action="/agenda" method="POST">
 				        {{ csrf_field() }}
 				        <div class="row">
 				          <div class="col-md-6">
