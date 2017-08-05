@@ -79,7 +79,7 @@ class AgendaController extends Controller
      */
     public function edit(Agenda $agenda)
     {
-        //
+        return view('agenda.edit', compact('agenda'));
     }
 
     /**

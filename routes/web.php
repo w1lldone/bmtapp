@@ -122,6 +122,7 @@ Route::group(['prefix' => 'agenda'], function()
     Route::get('/', 'AgendaController@index');
     Route::get('/create', 'AgendaController@create');
     Route::post('/', 'AgendaController@store');
+    Route::get('/{agenda}/edit', 'AgendaController@edit');
 });
 
 Route::group(['prefix' => 'send'], function()
