@@ -4,12 +4,24 @@ namespace App\Http\Controllers;
 
 use App\Agenda;
 use Illuminate\Http\Request;
+use Validator;
 
 class AgendaController extends Controller
 {
     function __construct()
     {
         $this->middleware('auth');
+    }
+
+    public function validation($request)
+    {
+        return Validator::make($request, [
+            'name' => 'required|string',
+            'tanggal' => 'required|timestamp',
+            'jam' => 'required',
+            'mku_id' => 'required',
+            'lokasi' => 'required|string',
+        ]);
     }
     /**
      * Display a listing of the resource.
@@ -40,7 +52,8 @@ class AgendaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $agenda = Agenda::create();
     }
 
     /**
