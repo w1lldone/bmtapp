@@ -11,21 +11,22 @@
 		<div class="col-lg-12">
 			@include('layouts.status')
 			<div class="card">
-	            <div class="card-header" data-background-color="bmt-green">
-	            	<div class="row">
-	            		<div class="col-xs-8">
-	            			<h4 class="title">Agenda</h4>
-			                <p class="category">Daftar agenda MKU</p>
-	            		</div>
-	            		<div class="col-xs-4">
-	            			<a href="/agenda/create" class="btn btn-round btn-just-icon pull-right" rel="tooltip" style="background: WhiteSmoke;;" title="Tambah Agenda"><i class="material-icons text-success">add</i></a>
-	            		</div>
-	            	</div>
-	            </div>
+        <div class="card-header" data-background-color="bmt-green">
+        	<div class="row">
+        		<div class="col-xs-8">
+        			<h4 class="title">Agenda</h4>
+                <p class="category">Daftar agenda MKU</p>
+        		</div>
+        		<div class="col-xs-4">
+        			<a href="/agenda/create" class="btn btn-round btn-just-icon pull-right" rel="tooltip" style="background: WhiteSmoke;;" title="Tambah Agenda"><i class="material-icons text-success">add</i></a>
+        		</div>
+        	</div>
+        </div>
 				<div class="card-content">
 					<table class="table">
 						<thead class="text-danger">
 							<th>No</th>
+							<th>MKU</th>
 							<th>Nama</th>
 							<th>Tanggal</th>
 							<th>Jam</th>
@@ -35,7 +36,8 @@
 						<tbody>
 							@foreach ($agendas as $agenda)
 								<tr>
-									<td>{{ $loop->index+1 }}</td>
+									<td>{{ $agendas->toArray()['from']+$loop->index }}</td>
+									<td>{{ $agenda->mku->name }}</td>
 									<td>{{ $agenda->name }}</td>
 									<td>{{ $agenda->tanggal->format('j F Y') }}</td>
 									<td>{{ $agenda->jam }}</td>
@@ -56,6 +58,7 @@
 							@endforeach
 						</tbody>
 					</table>
+					{{ $agendas->links() }}
 				</div>
 			</div>
 		</div>
