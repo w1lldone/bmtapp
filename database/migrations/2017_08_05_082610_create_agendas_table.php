@@ -17,7 +17,7 @@ class CreateAgendasTable extends Migration
             $table->increments('id');
             $table->integer('mku_id')->nullable()->unsigned();
             $table->string('name', 250);
-            $table->string('tanggal', 12);
+            $table->date('tanggal');
             $table->string('jam', 10)->nullable();
             $table->string('lokasi', 50)->nullable();
             $table->string('deskripsi', 500)->nullable();
