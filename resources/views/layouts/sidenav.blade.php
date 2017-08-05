@@ -50,6 +50,12 @@
                         <p>Reminder</p>
                     </a>
                   </li>
+                  <li class="@if (substr(Route::currentRouteName(),0 ,6) == 'agenda'){{ 'active' }} @endif">
+                    <a href="/agenda">
+                        <i class="material-icons">today</i>
+                        <p>Agenda</p>
+                    </a>
+                  </li>
                   <li class="@if (substr(Route::currentRouteName(),0 ,3) == 'mku'){{ 'active' }} @endif">
                     <a href="/mku">
                         <i class="material-icons">groups</i>
