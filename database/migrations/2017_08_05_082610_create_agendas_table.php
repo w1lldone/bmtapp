@@ -18,6 +18,8 @@ class CreateAgendasTable extends Migration
             $table->integer('mku_id')->nullable()->unsigned();
             $table->string('name', 250);
             $table->string('tanggal', 12);
+            $table->string('jam', 10)->nullable();
+            $table->string('lokasi', 50)->nullable();
             $table->string('deskripsi', 500)->nullable();
             $table->timestamps();
         });
