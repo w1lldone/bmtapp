@@ -24,7 +24,7 @@
     <link href="{{ asset('/assets/css/bootstrap-datepicker3.css')}}" rel="stylesheet" />
 
     <!--  Time and date picker css bootstrap -->
-    <link href="{{ asset('/assets/css/bootstrap-timepicker.min.css')}}" rel="stylesheet" />
+    <link href="{{ asset('/assets/css/bootstrap-timepicker.css')}}" rel="stylesheet" />
 
     <link rel="stylesheet" type="text/css" href="/css/notification.css">
 
@@ -86,7 +86,7 @@
 	<script src="{{ asset('/assets/js/bootstrap-datepicker.min.js')}}"></script>
 
 	<!-- Datetimepicker JS -->
-	<script src="{{ asset('/assets/js/bootstrap-timepicker.min.js')}}"></script>
+	<script src="{{ asset('/assets/js/bootstrap-timepicker.js')}}"></script>
 
 	{{-- pusher library --}}
 	<script src="//js.pusher.com/3.1/pusher.min.js"></script>

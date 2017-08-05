@@ -3,7 +3,7 @@
 @section('breadcrumb')
 	<ol class="breadcrumb">
       <li><a href="/agenda">Agenda</a></li>
-      <li>Buat agenda</li>
+      <li>Tambah agenda</li>
     </ol>
 @endsection
 
@@ -15,7 +15,7 @@
         <div class="card-header" data-background-color="bmt-green">
         	<div class="row">
         		<div class="col-xs-12">
-        			<h4 class="title">Form buat agenda</h4>
+        			<h4 class="title">Form tambah agenda MKU</h4>
                 <p class="category">BMT mobile app</p>
         		</div>
         	</div>
@@ -27,16 +27,52 @@
 				        {{ csrf_field() }}
 				        <div class="row">
 				          <div class="col-md-6">
-				              <div class="form-group label-floating">
-				                  <label class="control-label">Masukkan tanggal</label>
-				                  <input class="form-control" id="date" required name="tanggal" type="text"/>
-				              </div>
+			              <div class="form-group label-floating {{ $errors->has('tanggal') ? ' has-error' : '' }}">
+		                  <label class="control-label">Masukkan tanggal</label>
+		                  <input class="form-control" id="date" required name="tanggal" type="text" value="{{ old('tanggal') }}"/>
+			              </div>
 				          </div>				          
 				          <div class="col-md-6">
-				            <div class="input-group bootstrap-timepicker timepicker">
-                        <input id="timepicker1" type="text" placeholder="Klik gambar jam" class="form-control input-small">
-                        <span class="input-group-addon"><i class="material-icons">access_time</i></span>
+				            <div class="form-group input-group bootstrap-timepicker timepicker {{ $errors->has('jam') ? ' has-error' : '' }}">
+                      <input id="timepicker1" name="jam" type="text" placeholder="Klik gambar jam" class="form-control input-small" value="{{ old('jam') }}">
+                      <span class="input-group-addon"><i class="material-icons">access_time</i></span>
                     </div>
+					        </div>
+				        </div>
+				        <div class="row">
+				          <div class="col-md-12">
+				              <div class="form-group label-floating {{ $errors->has('mku_id') ? ' has-error' : '' }}">
+				              	<label class="control-label">Pilih MKU</label>
+				              	<select name="mku_id" id="mku_id" class="form-control">
+				              		<option value=""></option>
+				              		@foreach (\App\Mku::all() as $mku)
+				              			<option value="{{ $mku->id }}">{{ $mku->name }}</option>
+				              		@endforeach
+				              	</select>
+				              </div>
+				          </div>				          
+				        </div>
+				        <div class="row">
+				          <div class="col-md-6">
+			              <div class="form-group label-floating {{ $errors->has('name') ? ' has-error' : '' }}">
+		                  <label class="control-label">Nama kegiatan</label>
+		                  <input class="form-control" required name="name" type="text" value="{{ old('name') }}"/>
+			              </div>
+				          </div>				          
+				          <div class="col-md-6">
+			              <div class="form-group label-floating {{ $errors->has('lokasi') ? ' has-error' : '' }}">
+		                  <label class="control-label">Lokasi</label>
+		                  <input class="form-control" required name="lokasi" type="text" value="{{ old('lokasi') }}"/>
+			              </div>
+				          </div>	
+				        </div>
+				        <div class="row">
+				          <div class="col-md-12">
+			              <div class="form-group label-floating {{ $errors->has('deskripsi') ? ' has-error' : '' }}">
+		                  <label class="control-label">Deskripsi/catatan</label>
+		                  <textarea class="form-control" name="deskripsi">{{ old('deskripsi') }}</textarea>
+			              </div>
+				          </div>				          
 				        </div>
 				        <button type="submit" class="btn btn-success pull-right">Proses</button>
 				        <div class="clearfix"></div>
@@ -64,6 +100,8 @@
     // TIME PICKER
     $('#timepicker1').timepicker({
     	showMeridian: false,
+    	defaultTime: false,
+    	disableFocus: true,
     });
   </script>
 @endsection
