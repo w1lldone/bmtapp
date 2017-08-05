@@ -75,6 +75,10 @@ Route::group(['prefix' => 'bayar'], function(){
 	Route::post('/{nasabah}', 'Api\BayarLayananController@store');
 });
 
+Route::group(['prefix' => 'agenda'], function(){
+	Route::get('/', 'Api\AgendaController@index');
+});
+
 Route::group(['prefix' => 'review'], function(){
 	Route::get('/{produk}', 'Api\ReviewController@view');
 	Route::post('/{produk}', 'Api\ReviewController@store');
