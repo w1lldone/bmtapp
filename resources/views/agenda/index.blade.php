@@ -26,8 +26,8 @@
 					<table class="table">
 						<thead class="text-danger">
 							<th>No</th>
-							<th>MKU</th>
 							<th>Nama</th>
+							<th>MKU</th>
 							<th>Tanggal</th>
 							<th>Jam</th>
 							<th>Lokasi</th>
@@ -37,8 +37,8 @@
 							@foreach ($agendas as $agenda)
 								<tr>
 									<td>{{ $agendas->toArray()['from']+$loop->index }}</td>
-									<td>{{ $agenda->mku->name }}</td>
 									<td>{{ $agenda->name }}</td>
+									<td>{{ $agenda->mku->name }}</td>
 									<td>{{ $agenda->tanggal->format('j F Y') }}</td>
 									<td>{{ $agenda->jam }}</td>
 									<td>{{ $agenda->lokasi }}</td>
