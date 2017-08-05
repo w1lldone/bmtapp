@@ -117,6 +117,12 @@ Route::group(['prefix' => 'mku'], function(){
     Route::delete('/{mku}', 'MkuController@destroy');
 });
 
+Route::group(['prefix' => 'agenda'], function()
+{
+    Route::get('/', 'AgendaController@index');
+    Route::get('/create', 'AgendaController@create');
+});
+
 Route::group(['prefix' => 'send'], function()
 {
     Route::get('/all', 'TryNotificationController@all');
