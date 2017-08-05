@@ -15,17 +15,6 @@ Route::get('/', function () {
     return redirect()->route('login');
 });
 
-Route::get('test', function () {
-    $order = App\Order::first();
-    event(new App\Events\OrderNotification($order));
-    return $order;
-});
-
-Route::get('test-layan', function () {
-    $layanan = App\Layanan::first();
-    event(new App\Events\LayananNotification($layanan));
-    return $layanan;
-});
 
 Route::get('/logout', function () {
     auth()->logout();
@@ -117,14 +106,16 @@ Route::group(['prefix' => 'mku'], function(){
     Route::delete('/{mku}', 'MkuController@destroy');
 });
 
-Route::group(['prefix' => 'agenda'], function()
-{
-    Route::get('/', 'AgendaController@index');
-    Route::get('/create', 'AgendaController@create');
-    Route::post('/', 'AgendaController@store');
-    Route::get('/{agenda}/edit', 'AgendaController@edit');
-    Route::put('/{agenda}', 'AgendaController@update');
-});
+Route::resource('agenda', 'AgendaController');
+
+// Route::group(['prefix' => 'agenda'], function()
+// {
+//     Route::get('/', 'AgendaController@index');
+//     Route::get('/create', 'AgendaController@create');
+//     Route::post('/', 'AgendaController@store');
+//     Route::get('/{agenda}/edit', 'AgendaController@edit');
+//     Route::put('/{agenda}', 'AgendaController@update');
+// });
 
 Route::group(['prefix' => 'send'], function()
 {
