@@ -28,9 +28,8 @@ class PembelianController extends Controller
         }
 
         $orderDetail->update(['diterima_at' => \Carbon\Carbon::now()]);
-
+        $orderDetail->diterimaNotification();
         $orderDetail->order->update();
-
         $orderDetail->order->cekDiterima();
 
         return [
