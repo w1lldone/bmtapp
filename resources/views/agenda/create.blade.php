@@ -34,8 +34,8 @@
 			              </div>
 				          </div>				          
 				          <div class="col-md-6">
-				            <div class="form-group input-group bootstrap-timepicker timepicker {{ $errors->has('jam') ? ' has-error' : '' }}">
-                      <input id="timepicker1" name="jam" type="text" placeholder="Klik gambar jam" class="form-control input-small" value="{{ old('jam') }}">
+				            <div class="form-group input-group bootstrap-timepicker timepicker {{ $errors->has('mulai_at') ? ' has-error' : '' }}">
+                      <input id="timepicker1" name="mulai_at" type="text" placeholder="Klik gambar jam" class="form-control input-small" value="{{ old('mulai_at') }}">
                       <span class="input-group-addon"><i class="material-icons">access_time</i></span>
                     </div>
 					        </div>
@@ -102,7 +102,7 @@
     $('#timepicker1').timepicker({
     	showMeridian: false,
     	defaultTime: false,
-    	disableFocus: true,
+    	// disableFocus: true,
     });
   </script>
 @endsection

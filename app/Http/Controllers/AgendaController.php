@@ -18,7 +18,8 @@ class AgendaController extends Controller
         return Validator::make($request, [
             'name' => 'required|string',
             'tanggal' => 'required|string',
-            'jam' => 'required',
+            'mulai_at' => 'required|string',
+            'selesai_at' => 'string',
             'mku_id' => 'required',
             'lokasi' => 'required|string',
         ]);
@@ -54,7 +55,7 @@ class AgendaController extends Controller
     {
         $this->validation($request->all())->validate();
         $agenda = Agenda::create(request([
-            'name', 'tanggal', 'jam', 'lokasi', 'mku_id', 'deskripsi',
+            'name', 'tanggal', 'mulai_at', 'selesai_at', 'lokasi', 'mku_id', 'deskripsi',
         ]));
 
         return redirect('/agenda')->with('status', 'Berhasil membuat agenda!');
@@ -94,7 +95,7 @@ class AgendaController extends Controller
         $this->validation($request->all())->validate();
 
         $agenda->update(request([
-            'name', 'tanggal', 'jam', 'lokasi', 'mku_id', 'deskripsi',
+            'name', 'tanggal', 'mulai_at', 'selesai_at', 'lokasi', 'mku_id', 'deskripsi',
         ]));
 
         return redirect('/agenda')->with('status', 'Berhasil mengubah agenda!');

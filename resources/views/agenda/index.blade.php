@@ -22,7 +22,7 @@
         		</div>
         	</div>
         </div>
-				<div class="card-content">
+				<div class="card-content table-responsive">
 					<table class="table">
 						<thead class="text-danger">
 							<th>No</th>
@@ -40,7 +40,7 @@
 									<td>{{ $agenda->name }}</td>
 									<td>{{ $agenda->mku->name }}</td>
 									<td>{{ $agenda->tanggal->format('j F Y') }}</td>
-									<td>{{ $agenda->jam }}</td>
+									<td>{{ $agenda->mulai_at }} - {{ empty($agenda->selesai_at) ? 'selesai' : $agenda->selesai_at }}</td>
 									<td>{{ $agenda->lokasi }}</td>
 									<td class="td-actions text-right">
 										<a href="/agenda/{{ $agenda->id }}/edit" type="button" rel="tooltip" title="Edit MKU" class="btn btn-primary btn-simple btn-xs">
