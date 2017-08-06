@@ -32,16 +32,8 @@
 		                  <label class="control-label">Masukkan tanggal</label>
 		                  <input class="form-control" id="date" required name="tanggal" type="text" value="{{ old('tanggal') }}"/>
 			              </div>
-				          </div>				          
+				          </div>
 				          <div class="col-md-6">
-				            <div class="form-group input-group bootstrap-timepicker timepicker {{ $errors->has('mulai_at') ? ' has-error' : '' }}">
-                      <input id="timepicker1" name="mulai_at" type="text" placeholder="Klik gambar jam" class="form-control input-small" value="{{ old('mulai_at') }}">
-                      <span class="input-group-addon"><i class="material-icons">access_time</i></span>
-                    </div>
-					        </div>
-				        </div>
-				        <div class="row">
-				          <div class="col-md-12">
 				              <div class="form-group label-floating {{ $errors->has('mku_id') ? ' has-error' : '' }}">
 				              	<label class="control-label">Pilih MKU</label>
 				              	<select name="mku_id" id="mku_id" class="form-control">
@@ -52,6 +44,22 @@
 				              	</select>
 				              </div>
 				          </div>				          
+				        </div>
+				        <div class="row">
+				          <div class="col-md-6">
+				            <div class="form-group input-group bootstrap-timepicker timepicker {{ $errors->has('mulai_at') ? ' has-error' : '' }}">
+				            	  <label>Mulai</label>
+			                      <input onfocus="showTime()" id="timepicker1" name="mulai_at" type="text" placeholder="Klik gambar jam" class="form-control input-small" value="{{ old('mulai_at') }}">
+			                      <span onclick="showTime()" class="input-group-addon"><i class="material-icons">access_time</i></span>
+			                    </div>
+					        </div>
+					        <div class="col-md-6">
+					            <div class="form-group input-group bootstrap-timepicker timepicker {{ $errors->has('selesai_at') ? ' has-error' : '' }}">
+						          <label>selesai</label>
+			                      <input id="timepicker2" name="selesai_at" type="text" placeholder="Klik gambar jam" class="form-control input-small" value="{{ old('selesai_at') }}">
+			                      <span class="input-group-addon"><i class="material-icons">access_time</i></span>
+			                    </div>
+					        </div>
 				        </div>
 				        <div class="row">
 				          <div class="col-md-6">
@@ -100,9 +108,24 @@
 
     // TIME PICKER
     $('#timepicker1').timepicker({
+    	// template: 'modal',
     	showMeridian: false,
     	defaultTime: false,
-    	// disableFocus: true,
+    	disableFocus: true,
+    	showInputs: true,
+    	// modalBackdrop: true,
     });
+
+    $('#timepicker2').timepicker({
+    	// template: 'modal',
+    	showMeridian: false,
+    	defaultTime: false,
+    	disableFocus: true,
+    	showInputs: true,
+    });
+
+    // function showTime1() {
+    // 	$('#timepicker1').timepicker('showWidget');
+    // }
   </script>
 @endsection
