@@ -33,16 +33,8 @@
 			                  <label class="control-label">Masukkan tanggal</label>
 			                  <input class="form-control" id="date" required name="tanggal" type="text" value="{{ $agenda->tanggal->toDateString() }}"/>
 				              </div>
-				          </div>				          
+				          </div>
 				          <div class="col-md-6">
-				            <div class="form-group input-group bootstrap-timepicker timepicker {{ $errors->has('mulai_at') ? ' has-error' : '' }}">
-                      <input id="timepicker1" name="mulai_at" type="text" placeholder="Klik gambar jam" class="form-control input-small" value="{{ $agenda->mulai_at }}">
-                      <span class="input-group-addon"><i class="material-icons">access_time</i></span>
-                    </div>
-					        </div>
-				        </div>
-				        <div class="row">
-				          <div class="col-md-12">
 				              <div class="form-group label-floating {{ $errors->has('mku_id') ? ' has-error' : '' }}">
 				              	<label class="control-label">Pilih MKU</label>
 				              	<select name="mku_id" id="mku_id" class="form-control">
@@ -52,7 +44,21 @@
 				              		@endforeach
 				              	</select>
 				              </div>
-				          </div>				          
+				          </div>	          
+				        </div>
+				        <div class="row">
+				          <div class="col-md-6">
+				            <div class="form-group input-group bootstrap-timepicker timepicker {{ $errors->has('mulai_at') ? ' has-error' : '' }}">
+                      <input id="timepicker1" name="mulai_at" type="text" placeholder="Klik gambar jam" class="form-control input-small" value="{{ $agenda->mulai_at }}">
+                      <span class="input-group-addon"><i class="material-icons">access_time</i></span>
+                    </div>
+					        </div>
+					        <div class="col-md-6">
+				            <div class="form-group input-group bootstrap-timepicker timepicker {{ $errors->has('selesai_at') ? ' has-error' : '' }}">
+                      <input id="timepicker2" name="selesai_at" type="text" placeholder="Klik gambar jam" class="form-control input-small" value="{{ $agenda->selesai_at }}">
+                      <span class="input-group-addon"><i class="material-icons">access_time</i></span>
+                    </div>
+					        </div>
 				        </div>
 				        <div class="row">
 				          <div class="col-md-6">
@@ -102,10 +108,11 @@
 
 
     // TIME PICKER
-    $('#timepicker1').timepicker({
+    $(['#timepicker1', '#timepicker2']).timepicker({
     	showMeridian: false,
     	defaultTime: false,
     	disableFocus: true,
     });
+
   </script>
 @endsection

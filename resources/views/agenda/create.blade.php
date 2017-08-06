@@ -83,7 +83,7 @@
 			              </div>
 				          </div>				          
 				        </div>
-				        <button type="submit" class="btn btn-success pull-right">Proses</button>
+				        <button type="submit" class="btn btn-success pull-right">Simpan</button>
 				        <div class="clearfix"></div>
 				      </form> 
 				    </div>
@@ -107,21 +107,13 @@
     });
 
     // TIME PICKER
-    $('#timepicker1').timepicker({
+    $(['#timepicker1', '#timepicker2']).timepicker({
     	// template: 'modal',
     	showMeridian: false,
     	defaultTime: false,
     	disableFocus: true,
     	showInputs: true,
     	// modalBackdrop: true,
-    });
-
-    $('#timepicker2').timepicker({
-    	// template: 'modal',
-    	showMeridian: false,
-    	defaultTime: false,
-    	disableFocus: true,
-    	showInputs: true,
     });
 
     // function showTime1() {
