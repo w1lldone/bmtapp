@@ -51,7 +51,7 @@ class LayananController extends Controller
 
         if ($request->has('catatan')) {
             $layanan->layananDetail->update([
-                'catatan' => implode("-", $request->catatan),
+                'catatan' => 'token: '.implode("-", $request->catatan),
             ]);
         }
 
