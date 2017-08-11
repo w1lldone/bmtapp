@@ -22,16 +22,14 @@ class KategoriController extends Controller
 
     public function view(Request $request){
 
-    	$produk = new Produk;
+    	// $produk = new Produk;
     	$paginate = 10;
     	$query = array();
         $order = 'name';
         $keyword = '';
         $by = 'asc';
 
-    	if ($request->has('kategori_id')){
-    		$query['kategori_produk_id'] = $request->kategori_id;
-    	}
+		$query['kategori_produk_id'] = $request->has('kategori_id') ? $request->kategori_id : '*';
 
         if ($request->has('keyword')) {
             $keyword=$request->keyword;
@@ -50,16 +48,19 @@ class KategoriController extends Controller
     		$by = $request->order;
     	}
 
-    	$produks = $produk
-            // ->whereRaw("name LIKE '%$keyword%' or deskripsi LIKE '%$keyword%'")
-            ->where(function($q) use ($query)
-            {
-                $q->where('kategori_produk_id', $query['kategori_produk_id']);
-            })
-            ->orderBy($order, $by)
-            ->with(['kategori_produk', 'lapak','review' => function($query){
-                $query->take(5)->with('nasabah');
-            }])->simplePaginate($paginate);
+        $produks = Produk::where(function($q) use ($query)
+                    {
+                        $q->where('kategori_produk_id', $query['kategori_produk_id']);
+                    })
+                    // ->whereRaw("name LIKE '%$keyword%' or deskripsi LIKE '%$keyword%'")
+                    ->orderBy($order, $by)
+                    ->with(['kategori_produk', 'lapak','review' => function($query){
+                        $query->take(5)->with('nasabah');
+                    }])->simplePaginate($paginate);
+
+        foreach ($produks as $produk) {
+            $produk->terjual();
+        }
 
     	return $produks->withPath($request->fullUrl());
 
