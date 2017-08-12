@@ -11,7 +11,11 @@ use App\Nasabah;
 class LapakController extends Controller
 {
     public function view(Nasabah $nasabah){
-    	return response()->json($nasabah->lapak);
+    	$lapak = $nasabah->lapak;
+        $lapak->terjual = $lapak->orderDetail()->count();
+        $lapak->rating = $lapak->produk()->avg('rating');
+
+        return $lapak;
     }
 
     public function update(Request $request, Nasabah $nasabah){
