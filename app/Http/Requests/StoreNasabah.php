@@ -26,7 +26,7 @@ class StoreNasabah extends FormRequest
     {
         return [
             'name' => 'required',
-            'username' => 'required|unique:nasabahs',
+            'username' => 'required|alpha_dash|unique:nasabahs',
             'password' => 'required|confirmed',
             'kontak' => 'required',
             'alamat' => 'required',

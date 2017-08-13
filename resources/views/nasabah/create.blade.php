@@ -21,7 +21,7 @@
 							{{ csrf_field() }}
 	                        <div class="row">
 	                            <div class="col-md-12">
-									<div class="form-group label-floating">
+									<div class="form-group label-floating {{ $errors->has('name') ? ' has-error' : '' }}">
 										<label class="control-label">Nama</label>
 										<input type="text" class="form-control" name="name" required>
 									</div>
@@ -29,7 +29,7 @@
                             </div>
                             <div class="row">
 	                            <div class="col-md-12">
-									<div class="form-group label-floating">
+									<div class="form-group label-floating {{ $errors->has('username') ? ' has-error' : '' }}">
 										<label class="control-label">Username</label>
 										<input type="text" class="form-control" name="username" required>
 									</div>
@@ -37,7 +37,7 @@
                             </div>
                             <div class="row">
 	                            <div class="col-md-6">
-									<div class="form-group label-floating">
+									<div class="form-group label-floating {{ $errors->has('password') ? ' has-error' : '' }}">
 										<label class="control-label">Password</label>
 										<input type="password" class="form-control" name="password" required>
 									</div>
@@ -51,13 +51,13 @@
                             </div>
                             <div class="row">
 	                             <div class="col-md-6">
-									<div class="form-group label-floating">
+									<div class="form-group label-floating {{ $errors->has('kontak') ? ' has-error' : '' }}">
 										<label class="control-label">No Hp</label>
 										<input type="text" class="form-control" name="kontak" required>
 									</div>
 	                            </div>
 	                            <div class="col-md-6">
-									<div class="form-group label-floating">
+									<div class="form-group label-floating {{ $errors->has('cabang_id') ? ' has-error' : '' }}">
 										<label class="control-label">Pilih Cabang</label>
 										<select name="cabang_id" id="cabang_id" class="form-control">
 											<option value=""></option>
@@ -92,7 +92,7 @@
                             </div>
                             <div class="row">
 	                            <div class="col-md-12">
-									<div class="form-group label-floating">
+									<div class="form-group label-floating {{ $errors->has('mku_id') ? ' has-error' : '' }}">
 										<label class="control-label">Anggota MKU</label>
 										<select name="mku_id" id="mku_id" class="form-control">
 											<option value=""></option>
