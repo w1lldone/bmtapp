@@ -15,6 +15,10 @@ class Lapak extends Model
         return $this->hasManyThrough('App\OrderDetail', 'App\Produk');
     }
 
+    public function review(){
+        return $this->hasManyThrough('App\Review', 'App\Produk');
+    }
+
     public function produk(){
     	return $this->hasMany('App\Produk');
     }
@@ -74,6 +78,11 @@ class Lapak extends Model
         }
 
         return $query;
+    }
+
+    public function getInfo()
+    {
+        
     }
 
     public function penjualan($keyword = '*')
