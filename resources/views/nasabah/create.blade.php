@@ -23,7 +23,7 @@
 	                            <div class="col-md-12">
 									<div class="form-group label-floating {{ $errors->has('name') ? ' has-error' : '' }}">
 										<label class="control-label">Nama</label>
-										<input type="text" class="form-control" name="name" required>
+										<input value="{{ old('name') }}" type="text" class="form-control" name="name" required>
 									</div>
 	                            </div>
                             </div>
@@ -31,7 +31,7 @@
 	                            <div class="col-md-12">
 									<div class="form-group label-floating {{ $errors->has('username') ? ' has-error' : '' }}">
 										<label class="control-label">Username</label>
-										<input type="text" class="form-control" name="username" required>
+										<input value="{{ old('username') }}" type="text" class="form-control" name="username" required>
 									</div>
 	                            </div>
                             </div>
@@ -53,7 +53,7 @@
 	                             <div class="col-md-6">
 									<div class="form-group label-floating {{ $errors->has('kontak') ? ' has-error' : '' }}">
 										<label class="control-label">No Hp</label>
-										<input type="text" class="form-control" name="kontak" required>
+										<input value="{{ old('kontak') }}" type="text" class="form-control" name="kontak" required>
 									</div>
 	                            </div>
 	                            <div class="col-md-6">
@@ -72,7 +72,7 @@
 	                             <div class="col-md-12">
 									<div class="form-group label-floating">
 										<label class="control-label">Alamat</label>
-										<input type="text" class="form-control" name="alamat" required>
+										<input value="{{ old('alamat') }}" type="text" class="form-control" name="alamat" required>
 									</div>
 	                            </div>
 	                        </div>
@@ -80,13 +80,13 @@
 	                            <div class="col-md-6">
 									<div class="form-group">
 										<label class="control-label">Rekening tabungan</label>
-										<input type="text" class="form-control" name="no_rekening" minlength="12" maxlength="12" placeholder="1.234.567890">
+										<input value="{{ old('no_rekening') }}" type="text" class="form-control" name="no_rekening" minlength="12" maxlength="12" placeholder="1.234.567890">
 									</div>
 	                            </div>
 	                             <div class="col-md-6">
 									<div class="form-group">
 										<label class="control-label">Rekening kredit</label>
-										<input type="text" class="form-control" name="no_rekening_kredit" minlength="12" maxlength="12" placeholder="1.234.567890">
+										<input value="{{ old('no_rekening_kredit') }}" type="text" class="form-control" name="no_rekening_kredit" minlength="12" maxlength="12" placeholder="1.234.567890">
 									</div>
 	                            </div>
                             </div>
