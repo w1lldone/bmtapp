@@ -84,4 +84,8 @@ Route::group(['prefix' => 'review'], function(){
 	Route::post('/{produk}', 'Api\ReviewController@store');
 });
 
+Route::group(['prefix' => 'news'], function(){
+	Route::get('/', 'Api\NewsController@index');
+});
+
 Route::post('/notification', 'Api\NotificationController@view');
