@@ -97,7 +97,7 @@ class Nasabah extends Authenticatable
 	}
 
 	/*
-	* method for make sql where LIKE query from each words of sentence
+	* method for make sql whereRaw LIKE query from each words of sentence
 	*/
 	public function keyword($coloumn, $sentence)
     {
@@ -118,7 +118,9 @@ class Nasabah extends Authenticatable
     }
 
 	public function pembelian($keyword = '*'){
+		// make sql whereRaw LIKE query form each words of keyword
 		$key = $this->keyword('name', $keyword);
+
 		$orders = $this->order()
 					->where(function($query) use ($keyword, $key)
 					{
