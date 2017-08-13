@@ -196,5 +196,7 @@ class Nasabah extends Authenticatable
 	}
 
     protected $guarded=['id'];
-    protected $hidden=['password'];
+    protected $hidden = [
+        'password', 'no_rekening', 'no_rekening_kredit', 'kontak', 'alamat', 'cabang_id', 'device_token', 'remember_token', 'mku_id'
+    ];
 }

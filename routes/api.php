@@ -88,4 +88,8 @@ Route::group(['prefix' => 'news'], function(){
 	Route::get('/', 'Api\NewsController@index');
 });
 
+Route::group(['prefix' => 'search'], function(){
+	Route::get('/produk', 'Api\SearchProdukController@index');
+});
+
 Route::post('/notification', 'Api\NotificationController@view');

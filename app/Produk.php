@@ -40,6 +40,45 @@ class Produk extends Model
             ]));
     }
 
+    public function keyword($sentence, $coloumn = 'name')
+    {
+        $query = '';
+                $i = 0;
+                $keywords = explode(' ', $sentence);
+                foreach ($keywords as $keyword) {
+                    $query .= "$coloumn LIKE '%$keyword%'";
+
+                    $i++;
+
+                    if ($i != count($keywords)) {
+                        $query .= " OR ";
+                    }
+                }
+
+        return $query;
+    }
+
+    public static function search($keyword = '*')
+    {
+        $key = \Helper::keyword($keyword);
+
+        $produks = Produk::where(function($query) use ($key, $keyword)
+        {
+            $query->whereRaw($key)
+                  ->orWhereRaw(\Helper::keyword($keyword, 'deskripsi'))
+                  ->orWhereHas('kategori_produk', function($q) use ($key)
+                  {
+                      $q->whereRaw($key);
+                  })
+                  ->orWhereHas('lapak', function($q) use ($key)
+                  {
+                      $q->whereRaw($key);
+                  });  
+        })->get();
+
+        return $produks;
+    }
+
     // protected $hidden=['nasabah_id'];
     protected $guarded=['id'];
 }
