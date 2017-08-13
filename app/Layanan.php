@@ -44,6 +44,13 @@ class Layanan extends Model
         ]);
     }
 
+    public function addKreditLayananDetail($kredit = ''){
+        return $this->layananDetail()->create([
+            'produk_layanan_id' => request('produk_id'),
+            'nomer' => $kredit,
+        ]);
+    }
+
     public static function filter($request)
     {
         if ($request->urutkan == 'terbaru') {
