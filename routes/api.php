@@ -73,6 +73,7 @@ Route::group(['prefix' => 'layanan'], function(){
 
 Route::group(['prefix' => 'bayar'], function(){
 	Route::post('/{nasabah}', 'Api\BayarLayananController@store');
+	Route::post('kredit/{nasabah}', 'Api\BayarKreditController@store');
 });
 
 Route::group(['prefix' => 'agenda'], function(){

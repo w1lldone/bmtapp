@@ -36,7 +36,7 @@
 							</h4>
 						</div>
 						<div class="col-md-4 col-xs-6">
-							<p class="category">Nomer</p>
+							<p class="category">{{ $layanan->layananDetail->produkLayanan->id == 10 ? "Rekening kredit" : 'Nomer' }}</p>
 							<h4 style="margin-top: 0px">{{ $layanan->layananDetail->nomer }}</h4>
 						</div>
 						<div class="col-md-4 col-xs-6">

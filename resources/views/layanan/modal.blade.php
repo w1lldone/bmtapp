@@ -111,7 +111,7 @@
                     <div class="col-md-6">
 						<p>
 							Pembayaran : <b class="pull-right">{{ $layanan->layananDetail->produkLayanan->katLayanan->name }}</b> <br>
-							No. ID PLN : <b class="pull-right">{{ $layanan->layananDetail->nomer }}</b> <br>
+							{{ $layanan->layananDetail->produkLayanan->id == 10 ? 'Rekening kredit' : 'No. ID PLN'}} : <b class="pull-right">{{ $layanan->layananDetail->nomer }}</b> <br>
 						</p>
                     </div>
                 </div>
