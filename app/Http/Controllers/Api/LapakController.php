@@ -15,7 +15,7 @@ class LapakController extends Controller
         $lapak->terjual = $lapak->orderDetail()->count();
         $lapak->rating = $lapak->produk()->avg('rating');
         $lapak->review = $lapak->review()->count();
-        $lapak->last_update = $lapak->last_update();
+        $lapak->last_update = $lapak->produk()->latest()->first()->updated_at->toDateString();
 
         return $lapak->load('nasabah');
     }
