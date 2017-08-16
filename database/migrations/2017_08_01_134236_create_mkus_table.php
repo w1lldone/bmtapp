@@ -16,6 +16,8 @@ class CreateMkusTable extends Migration
         Schema::create('mkus', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name', 30);
+            $table->string('alamat', 150)->nullable();
+            $table->integer('cabang_id')->unsigned();
             $table->timestamps();
         });
     }
