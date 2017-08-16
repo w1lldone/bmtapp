@@ -44,6 +44,7 @@ class KreditReminder implements ShouldQueue
                 'kode' => 8,
                 'data' => $kredit,
             ];
+            
             $nasabah = Nasabah::where('no_rekening_kredit', $kredit->NO_REKENING)->first();
             if (!empty($nasabah)) {
 

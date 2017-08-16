@@ -13,6 +13,7 @@ Route::group(['prefix' => 'lapak'], function(){
 	Route::get('/{nasabah}', 'Api\LapakController@view');
 	Route::put('/{nasabah}', 'Api\LapakController@update');
 	Route::post('/foto/{nasabah}', 'Api\LapakController@updatefoto');
+	Route::get('/{lapak}/review', 'Api\ReviewController@index');
 });
 
 Route::get('/saldo/{tabung}', 'Api\SaldoController@view');
