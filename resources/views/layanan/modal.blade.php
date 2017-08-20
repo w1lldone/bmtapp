@@ -27,6 +27,10 @@
                 </div>
                 @if ($layanan->layananDetail->produkLayanan->katLayanan->id == 2)
                 	<div class="row">
+                		<div class="col-md-6">
+                			<label>Bukti pembayaran</label>
+                			<input type="file" name="receipt">
+                		</div>
                 		<div class="col-md-12">
                 			<div class="form-group">
 		            			<b>Masukkan token listrik</b>
@@ -98,7 +102,7 @@
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        <h4 class="modal-title ">Total tagihan yang harus dibayar oleh:</h4>
 	        <hr>
-	        <form action="/layanan/{{$layanan->id}}/bayar" method="POST">
+	        <form action="/layanan/{{$layanan->id}}/bayar" method="POST" enctype="multipart/form-data">
 				{{ csrf_field() }}
                 <div class="row">
                 	<div class="col-md-6">
@@ -119,7 +123,7 @@
                 <div class="row">
                 	<div class="col-md-6">
                 		<label>Bukti pembayaran</label>
-                		<input type="file" name="bukti">
+                		<input type="file" name="receipt">
                 	</div>
                 	<div class="col-md-6">
                 		<div class="input-group">

@@ -43,7 +43,16 @@ class LayananController extends Controller
 
     public function bayar(Layanan $layanan, Request $request){
         $layanan->layananDetail->update(request(['total']));
-        return redirect("/layanan/$layanan->kode")->with('status', 'Layanan berhasil dibayar');
+
+        if (!empty($request->file('receipt'))) {
+            $path = $request->file('receipt')->store('receipts', 'uploads');
+            $receipt = "/uploads/receipts/".$request->file('receipt')->hashName();
+            $layanan->layananDetail->update([
+                'receipt' => $receipt,
+            ]);
+        }
+
+        return redirect("/layanan/$layanan->kode")->with('status', 'Berhasil menyimpan informasi tagihan. Anda dapat menyelesaikan pembelian');
     }
 
     public function selesai(Layanan $layanan, Request $request){
