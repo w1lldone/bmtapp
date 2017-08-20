@@ -25,6 +25,23 @@
 				</div>
 			</div>
 			<div class="card-content table-responsive">
+				<div class="row">
+					<div class="col-lg-6">
+						<form class="form-inline" action="/nasabah" method="GET">
+							<div class="form-group  is-empty">
+	                        	<input value="{{ request()->has('keyword') ? request('keyword') : '' }}" name="keyword" type="text" class="form-control" placeholder="Search">
+							</div>
+							<button type="submit" class="btn btn-white btn-round btn-just-icon">
+								<i class="material-icons">search</i><div class="ripple-container"></div>
+							</button>
+							@if (request()->has('keyword'))
+								<a href="/nasabah" class="btn btn-white btn-round btn-just-icon">
+									<i class="material-icons">replay</i>
+								</a>
+							@endif
+						</form>
+					</div>
+				</div>
 				<table class="table">
 					<thead class="text-danger">
 						<th>Nama</th>
@@ -55,8 +72,10 @@
 							</tr>
 						@endforeach
 					</tbody>
-					{{ $nasabahs->links() }}
 				</table>
+				<div class="text-center">
+					{{ $nasabahs->links() }}
+				</div>
 			</div>
 		</div>
 	</div>
