@@ -19,9 +19,9 @@ class NasabahController extends Controller
     public function index(){
         if (request()->has('keyword')) {
             $keyword = request('keyword');
-            $nasabahs = Nasabah::where('name', 'like', "%$keyword%")->orWhere('no_rekening', $keyword)->paginate(5);
+            $nasabahs = Nasabah::where('name', 'like', "%$keyword%")->orWhere('no_rekening', $keyword)->paginate(10);
         } else {
-            $nasabahs = Nasabah::paginate(5);
+            $nasabahs = Nasabah::paginate(10);
         }
     	return view('nasabah.index', compact('nasabahs'));
     }
