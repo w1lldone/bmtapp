@@ -16,10 +16,17 @@
   		<div class="card">
   			<div class="card-header" data-background-color="bmt-green">
   				<div class="row">
-  					<div class="col-xs-6">
+  					<div class="col-lg-5">
   						<h4 class="title">Riwayat reminder kredit</h4>
   						<p class="category">BMT Bina Umah Godean</p>
   					</div>
+            <div class="col-lg-7">
+              <ul class="nav nav-pills nav-pills-white">
+                <li><a>Lihat menurut:</a></li>
+                <li class="active"><a href="/reminder">Tanggal</a></li>
+                <li><a href="/reminder?view=nasabah">Nasabah</a></li>
+              </ul>
+            </div>
   				</div>
   			</div>
   			<div class="card-content table-responsive">
