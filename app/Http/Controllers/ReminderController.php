@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Reminder;
+use App\Nasabah;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
 use App\Jobs\KreditReminder;
@@ -28,7 +29,12 @@ class ReminderController extends Controller
      */
     public function index()
     {
-        $reminders = Reminder::latest()->paginate(5);
+        if (request()->has('view')) {
+            $nasabahs = Nasabah::whereHas('reminder_detail')->with('reminder_detail')->paginate(10)->withPath(request()->fullUrl());;
+            // return $nasabahs;
+            return view('reminder.index-nasabah', compact('nasabahs'));
+        }
+        $reminders = Reminder::latest()->paginate(10);
         return view('reminder.index', compact('reminders'));
     }
 

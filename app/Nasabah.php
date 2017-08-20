@@ -45,6 +45,10 @@ class Nasabah extends Authenticatable
 		return $this->hasMany('App\Device');
 	}
 
+	public function reminder_detail(){
+		return $this->hasMany('App\ReminderDetail');
+	}
+
 	public function mku(){
 		return $this->belongsTo('App\Mku');
 	}
