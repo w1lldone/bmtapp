@@ -19,6 +19,7 @@ class CreateLayananDetailsTable extends Migration
             $table->integer('produk_layanan_id')->unsigned();
             $table->integer('total')->nullable();
             $table->string('nomer', 30)->nullable();
+            $table->string('recoipt', 250)->nullable();
             $table->string('catatan', 200)->nullable();
             $table->integer('nominal')->nullable();
             $table->timestamps();
