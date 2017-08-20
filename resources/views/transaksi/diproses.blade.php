@@ -123,6 +123,8 @@
 							</a>
 						</div>	
 					@endforeach
+				</div>
+				<div class="text-center">
 					{{$transaksis->links()}}
 				</div>
 			</div>
