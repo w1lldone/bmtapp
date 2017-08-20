@@ -16,6 +16,17 @@
 	<div class="row">
 		<div class="col-lg-12">
 		@include('layouts.status')
+		@if ($layanan->layananDetail->produkLayanan->kat_layanan_id == 3 && $layanan->layananDetail->total == null)
+			<div class="alert alert-warning alert-with-icon" data-notify="container">
+		        <button type="button" aria-hidden="true" class="close" data-dismiss="alert">×</button>
+		        <i data-notify="icon" class="material-icons">warning</i>
+		        <span data-notify="message"><b>Perhatian</b>, pembayaran listrik prabayar memerlukan 2 langkah:</span>
+		        <ul>
+		        	<li>1. Masukkan info tagihan</li>
+		        	<li>2. Selesaikan pembayaran</li>
+		        </ul>
+		    </div>
+		@endif
 			<h3 class="pull-left">Detail Layanan # {{ $layanan->kode }} 
 				<span class="label label-warning">{{ $layanan->status }}</span>
 			</h3>
@@ -58,7 +69,7 @@
 						<div class="col-sm-6">
 							<h4 class="title">Pembayaran</h4>
 							@if ($layanan->layananDetail->total == null)
-								<p class="text-muted">Harap lakukan pembayaran terlebih dahulu</p>
+								<p class="text-muted">Harap masukkan informasi tagihan</p>
 							@endif
 							@if ($layanan->layananDetail->total != null)
 								<p>
@@ -75,7 +86,7 @@
 							<h4 class="title">Tindakan</h4>
 							@if ($layanan->status == 'pending')
 								@if ($layanan->layananDetail->total == null)
-									<a class="btn btn-success" rel="tooltip" title="Bayar tagihan" data-toggle="modal" data-target="#Bayar"><i class="material-icons">account_balance_wallet</i></a>
+									<a class="btn btn-success" rel="tooltip" title="Masukkan info tagihan" data-toggle="modal" data-target="#Bayar"><i class="material-icons">account_balance_wallet</i></a>
 								@endif
 								@if ($layanan->layananDetail->total != null)
 									<a class="btn btn-info" rel="tooltip" title="Selesaikan layanan" data-toggle="modal" data-target="#Selesai"><i class="material-icons">done</i></a>
