@@ -93,6 +93,9 @@
 								@endif
 								<a class="btn btn-danger" rel="tooltip" title="Batalkan layanan" data-toggle="modal" data-target="#Batal"><i class="material-icons">clear</i></a>
 							@endif
+							@if (!empty($layanan->layananDetail->receipt))
+								<a class="btn btn-info" target="_blank" href="{{ $layanan->layananDetail->receipt }}" rel="tooltip" title="Bukti pembayaran"><i class="material-icons">receipt</i></a>
+							@endif
 							<a onclick="history.go(-1)" title="Kembali" rel="tooltip" title="kembali" class="btn btn-warning"><i class="material-icons">arrow_back</i></a>
 						</div>
 					</div>
