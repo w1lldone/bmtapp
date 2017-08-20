@@ -64,6 +64,14 @@ class LayananController extends Controller
             ]);
         }
 
+        if (!empty($request->file('receipt'))) {
+            $path = $request->file('receipt')->store('receipts', 'uploads');
+            $receipt = "/uploads/receipts/".$request->file('receipt')->hashName();
+            $layanan->layananDetail->update([
+                'receipt' => $receipt,
+            ]);
+        }
+
         if ($request->has('total')) {
             $layanan->layananDetail->update(request(['total']));
         }

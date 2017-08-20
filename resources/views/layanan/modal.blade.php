@@ -6,7 +6,7 @@
 	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 	        <h4 class="modal-title ">Konfirmasi Penyelesaian Layanan # <span class="label label-info">{{ $layanan->kode }}</span></h4>
 	        <hr>
-	        <form action="/layanan/{{$layanan->id}}/selesai" method="POST">
+	        <form action="/layanan/{{$layanan->id}}/selesai" method="POST" enctype="multipart/form-data">
 				{{ csrf_field() }}
                 <div class="row">
                 	<div class="col-md-6">
