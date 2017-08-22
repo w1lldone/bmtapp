@@ -31,6 +31,11 @@ class Produk extends Model
         return $this->terjual = $this->orderDetail()->count();
     }
 
+    public function getTerjualAttribute()
+    {
+        return $this->orderDetail()->count();
+    }
+
     public function getTotalReviewAttribute()
     {
         return $this->review()->count();
@@ -86,5 +91,5 @@ class Produk extends Model
 
     // protected $hidden=['nasabah_id'];
     protected $guarded=['id'];
-    protected $appends = ['total_review'];
+    protected $appends = ['total_review', 'terjual'];
 }

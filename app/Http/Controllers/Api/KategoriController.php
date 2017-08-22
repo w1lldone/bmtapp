@@ -58,9 +58,9 @@ class KategoriController extends Controller
                         $query->take(5)->with('nasabah');
                     }])->simplePaginate($paginate);
 
-        foreach ($produks as $produk) {
-            $produk->terjual();
-        }
+        // foreach ($produks as $produk) {
+        //     $produk->terjual();
+        // }
 
     	return $produks->withPath($request->fullUrl());
 
