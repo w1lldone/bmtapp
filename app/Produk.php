@@ -31,6 +31,11 @@ class Produk extends Model
         return $this->terjual = $this->orderDetail()->count();
     }
 
+    public function getTotalReviewAttribute()
+    {
+        return $this->review()->count();
+    }
+
     public function addReview(){
         return $this->review()
             ->create(request([
@@ -81,4 +86,5 @@ class Produk extends Model
 
     // protected $hidden=['nasabah_id'];
     protected $guarded=['id'];
+    protected $appends = ['total_review'];
 }
