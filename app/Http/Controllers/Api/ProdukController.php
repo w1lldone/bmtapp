@@ -25,9 +25,9 @@ class ProdukController extends Controller
         {
             $query->take(5)->with('nasabah');
         }])->simplePaginate(12);
-        foreach ($produk as $data) {
-            $data->terjual();
-        }
+        // foreach ($produk as $data) {
+        //     $data->terjual();
+        // }
         return $produk;
     }
 

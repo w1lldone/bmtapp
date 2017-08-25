@@ -20,9 +20,9 @@ class SearchProdukController extends Controller
             $q->latest()->take(3)->with('nasabah');
         }]);
 
-        foreach ($produks as $produk) {
-            $produk->terjual();
-        }
+        // foreach ($produks as $produk) {
+        //     $produk->terjual();
+        // }
 
         return $produks;
     }

@@ -12,12 +12,12 @@ class ReviewController extends Controller
 
     public function index($lapak)
     {
-        $produks = Produk::where('lapak_id', $lapak)->has('review')->with(['review' => function($query)
-        {
-            $query->latest()->take(5)->with('nasabah');
-        }])->get();
+        $produks = Produk::where('lapak_id', $lapak)->has('review')->get();
 
-        return $produks;
+        return $produks->load(['review' => function($query)
+        {
+            $query->latest()->with('nasabah');
+        }]);
     }
 
     public function view(Produk $produk){
