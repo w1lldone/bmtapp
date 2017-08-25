@@ -10,8 +10,8 @@ class Review extends Model
     	return $this->belongsTo('App\Nasabah');
     }
 
-    public function lapak(){
-    	return $this->belongsTo('App\Lapak');
+    public function produk(){
+    	return $this->belongsTo('App\Produk');
     }
 
     protected $guarded = ['id'];
