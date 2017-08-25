@@ -108,18 +108,24 @@ Route::group(['prefix' => 'mku'], function(){
 
 Route::resource('agenda', 'AgendaController');
 
-// Route::group(['prefix' => 'agenda'], function()
-// {
-//     Route::get('/', 'AgendaController@index');
-//     Route::get('/create', 'AgendaController@create');
-//     Route::post('/', 'AgendaController@store');
-//     Route::get('/{agenda}/edit', 'AgendaController@edit');
-//     Route::put('/{agenda}', 'AgendaController@update');
-// });
-
 Route::group(['prefix' => 'send'], function()
 {
     Route::get('/all', 'TryNotificationController@all');
     Route::get('/to', 'TryNotificationController@sendto');
     Route::get('/bayar', 'TryNotificationController@bayar');
+});
+
+Route::get('/test-review', function()
+{
+    return \App\Produk::where('lapak_id', 11)->has('review')->with(['review' => function ($query)
+    {
+        $query->take(5)->with('nasabah');
+    }])->get();
+});
+
+Route::group(['prefix' => 'aturan'], function(){
+    Route::get('/', function()
+    {
+        return view('aturan.try');
+    });
 });
