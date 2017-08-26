@@ -1,12 +1,6 @@
 <!-- FOOTER -->
-<footer class="footer mt-5">
+<footer class="footer mt-5 pt-4" style="background-color: #f5f5f5">
   <div class="container py-4">
-    <div class="row">
-      <div class="col-12 text-center">
-        <img src="../images/logos/ugm.png" class="px-2 my-2" height="70px"> <br>
-        <hr style="border-color: #e3e3f3; width: 80%;" class="mx-auto my-4">
-      </div>
-    </div>
     <div class="row pt-2">
       <div class="col-md-3">
         <h5><b>Hubungi kami</b></h5>
