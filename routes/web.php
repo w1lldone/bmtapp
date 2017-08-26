@@ -126,4 +126,9 @@ Route::get('/test-review', function()
 Route::get('/aturan-penggunaan', function()
 {
     return view('aturan.aturan-penggunaan');
-});
+})->name('aturan');
+
+Route::get('/kebijakan-privasi', function()
+{
+    return view('aturan.kebijakan-privasi');
+})->name('kebijakan');
