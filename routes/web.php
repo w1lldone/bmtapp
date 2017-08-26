@@ -123,9 +123,7 @@ Route::get('/test-review', function()
     }])->get();
 });
 
-Route::group(['prefix' => 'aturan'], function(){
-    Route::get('/', function()
-    {
-        return view('aturan.try');
-    });
+Route::get('/aturan-penggunaan', function()
+{
+    return view('aturan.aturan-penggunaan');
 });
