@@ -22,7 +22,7 @@ class NewsController extends Controller
             case 'PUT':
                 return Validator::make($request, [
                     'name' => 'required',
-                    'date' => 'required|date',
+                    'photo' => 'image',
                 ]);
                 break;
         }
@@ -60,7 +60,16 @@ class NewsController extends Controller
     {
         $this->validator($request->all())->validate();
 
-        return $request->all();   
+        $path = $request->file('photo')->store('images/news', 'uploads');
+        $photo = "/uploads/images/news/".$request->file('photo')->hashName();
+
+        $news = News::create([
+            'name' => $request->name,
+            'link' => $request->link,
+            'photo' => $photo,
+        ]);
+
+        return redirect('/news')->with('status', 'Berhasil menambahkan news!');   
     }
 
     /**
