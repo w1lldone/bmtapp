@@ -46,7 +46,7 @@
                   </li>
                   <li class="@if (substr(Route::currentRouteName(),0 ,8) == 'reminder'){{ 'active' }} @endif">
                     <a href="/reminder">
-                        <i class="material-icons">announcement</i>
+                        <i class="material-icons">notifications</i>
                         <p>Reminder</p>
                     </a>
                   </li>
@@ -60,6 +60,12 @@
                     <a href="/mku">
                         <i class="material-icons">groups</i>
                         <p>MKU</p>
+                    </a>
+                  </li>
+                  <li class="@if (substr(Route::currentRouteName(),0 ,4) == 'news'){{ 'active' }} @endif">
+                    <a href="/news">
+                        <i class="material-icons">mms</i>
+                        <p>News</p>
                     </a>
                   </li>
                   <hr class="hidden-md hidden-lg separator">
