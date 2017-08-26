@@ -135,6 +135,8 @@ class NewsController extends Controller
      */
     public function destroy(News $news)
     {
-        //
+        Uploader::remove($news->photo);
+        $news->delete();
+        return redirect('/news')->with('success', 'Berhasil menghapus news!');
     }
 }
