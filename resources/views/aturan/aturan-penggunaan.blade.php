@@ -7,6 +7,10 @@
 	</ol>
 @endsection
 
+@section('title')
+	Aturan penggunaan
+@endsection
+
 @section('content')
   <div class="row">
     <div class="col-12">
