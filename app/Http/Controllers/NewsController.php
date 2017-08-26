@@ -5,9 +5,15 @@ namespace App\Http\Controllers;
 use App\News;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use App\Helper\Uploader;
 
 class NewsController extends Controller
 {
+
+    function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     protected function validator($request)
     {
@@ -19,7 +25,7 @@ class NewsController extends Controller
                 ]);
                 break;
             
-            case 'PUT':
+            case 'PATCH':
                 return Validator::make($request, [
                     'name' => 'required',
                     'photo' => 'image',
@@ -60,8 +66,10 @@ class NewsController extends Controller
     {
         $this->validator($request->all())->validate();
 
-        $path = $request->file('photo')->store('images/news', 'uploads');
-        $photo = "/uploads/images/news/".$request->file('photo')->hashName();
+        // $path = $request->file('photo')->store('images/news', 'uploads');
+        // $photo = "/uploads/images/news/".$request->file('photo')->hashName();
+
+        $photo = Uploader::upload('photo', 'news');
 
         $news = News::create([
             'name' => $request->name,
@@ -91,7 +99,7 @@ class NewsController extends Controller
      */
     public function edit(News $news)
     {
-        //
+        return view('news.edit', compact('news'));
     }
 
     /**
@@ -103,7 +111,20 @@ class NewsController extends Controller
      */
     public function update(Request $request, News $news)
     {
-        //
+        $this->validator($request->all())->validate();
+
+        $news->update([
+            'name' => $request->name,
+            'link' => $request->link,
+        ]);
+
+        if (!empty($request->file('photo'))) {
+            $photo = Uploader::replace('photo', 'news', $news->photo);
+            $news->update(['photo' => $photo]);
+        }
+
+        return redirect('/news')->with('status', 'Berhasil mengubah news!');
+        
     }
 
     /**
