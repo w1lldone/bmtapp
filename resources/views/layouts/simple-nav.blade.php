@@ -9,11 +9,11 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active">
+        <li class="nav-item @if (Route::currentRouteName() == 'aturan'){{ 'active' }} @endif ">
           <a class="nav-link" href="/aturan-penggunaan">Aturan penggunaan</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Kebijakan privasi</a>
+        <li class="nav-item @if (Route::currentRouteName() == 'kebijakan'){{ 'active' }} @endif ">
+          <a class="nav-link" href="/kebijakan-privasi">Kebijakan privasi</a>
         </li>
       </ul>
     </div>
