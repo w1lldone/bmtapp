@@ -35,6 +35,7 @@
       <div class="col-md-3">
         <p class="text-center"> <img src="/uploads/images/logo/logo.svg" height="70px"></p>
         <p class="text-center">BMT Mobile App</p>
+        <p class="text-center"> <img src="/uploads/images/logo/google-play-badge.png" height="70px"></p>
       </div>
     </div>
     <div class="row">
