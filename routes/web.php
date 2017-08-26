@@ -123,7 +123,11 @@ Route::get('/test-review', function()
     }])->get();
 });
 
-Route::resource('news', 'NewsController');
+Route::resource('news', 'NewsController', ['except' => [
+    'update'
+]]);
+
+Route::patch('/news/{news}', 'NewsController@update');
 
 Route::get('/aturan-penggunaan', function()
 {
