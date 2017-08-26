@@ -37,4 +37,12 @@ class Uploader
 
 	}
 
+	public static function remove($location)
+	{
+		$filepath = substr($location, 9);
+		Storage::disk('uploads')->delete($filepath);
+		return true;
+	}
+	
+
 }
