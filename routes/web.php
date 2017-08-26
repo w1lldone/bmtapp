@@ -123,6 +123,8 @@ Route::get('/test-review', function()
     }])->get();
 });
 
+Route::resource('news', 'NewsController');
+
 Route::get('/aturan-penggunaan', function()
 {
     return view('aturan.aturan-penggunaan');
