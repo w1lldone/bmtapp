@@ -65,8 +65,8 @@
 </body>
 
 	<!--   Core JS Files   -->
-	{{-- <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> --}}
-	<script src="{{ asset('/assets/js/jquery-3.1.0.min.js')}}" type="text/javascript"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	{{-- <script src="{{ asset('/assets/js/jquery-3.1.0.min.js')}}" type="text/javascript"></script> --}}
 	<script src="{{ asset('/assets/js/bootstrap.min.js')}}" type="text/javascript"></script>
 	<script src="{{ asset('/assets/js/material.min.js')}}" type="text/javascript"></script>
 
