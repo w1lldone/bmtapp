@@ -41,7 +41,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $news = News::latest()->paginate(10);
+        $news = News::orderBy('aktif', 'desc')->latest()->paginate(10);
         // return $news;
         return view('news.index', compact('news'));
     }
@@ -75,6 +75,7 @@ class NewsController extends Controller
             'name' => $request->name,
             'link' => $request->link,
             'photo' => $photo,
+            'aktif' => 1,
         ]);
 
         return redirect('/news')->with('status', 'Berhasil menambahkan news!');   
