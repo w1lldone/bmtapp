@@ -127,7 +127,8 @@ Route::resource('news', 'NewsController', ['except' => [
     'update'
 ]]);
 
-Route::patch('/news/{news}', 'NewsController@update');
+Route::patch('/news/{news}', 'NewsController@update');\
+Route::put('news/{news}/aktif', 'NewsAktifController@update');
 
 Route::get('/aturan-penggunaan', function()
 {
