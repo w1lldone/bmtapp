@@ -27,7 +27,7 @@
 			  </div>
 			</div>
 			<div class="row">
-			  <div class="col-12">
+			  <div class="col-lg-12">
 			  	<div class="form-group label-floating {{ $errors->has('link') ? ' has-error' : '' }}">
 				  <label class="control-label">Link</label>
 				  <textarea class="form-control" name="link">{{ old('link') }}</textarea>
@@ -35,7 +35,7 @@
 			  </div>
 			</div>
 			<div class="row">
-			  <div class="col-12">
+			  <div class="col-lg-12">
 		  		<div class="alert alert-info alert-with-icon" data-notify="container">
 		  	        <button type="button" aria-hidden="true" class="close" data-dismiss="alert">×</button>
 		  	        <i data-notify="icon" class="material-icons">info</i>
