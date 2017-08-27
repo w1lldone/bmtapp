@@ -15,7 +15,7 @@ class NewsController extends Controller
      */
     public function index()
     {
-        return News::take('3')->latest()->get();
+        return News::take('5')->where('aktif', 1)->latest()->get();
     }
 
     /**
