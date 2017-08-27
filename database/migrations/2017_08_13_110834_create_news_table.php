@@ -18,6 +18,7 @@ class CreateNewsTable extends Migration
             $table->string('name', 200);
             $table->string('photo', 250)->nullable();
             $table->string('link', 250)->nullable();
+            $table->boolean('aktif');
             $table->timestamps();
         });
     }
