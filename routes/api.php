@@ -95,3 +95,20 @@ Route::group(['prefix' => 'search'], function(){
 });
 
 Route::post('/notification', 'Api\NotificationController@view');
+
+Route::group(['prefix' => 'topic'], function () {
+    Route::get('/', 'Api\TopicRoomController@index');
+    Route::post('/message', 'Api\TopicMessageController@store');
+    Route::get('/{topicroom}/message', 'Api\TopicMessageController@index');
+});
+
+Route::group(['prefix' => 'private'], function () {
+    Route::post('/message', 'Api\PrivateMessageController@store');
+    Route::get('/{room}/message', 'Api\PrivateMessageController@index');
+    Route::post('/', 'Api\PrivateRoomController@store');
+    Route::get('/check', 'Api\PrivateRoomController@show');
+});
+
+Route::group(['prefix' => 'nasabah'], function () {
+    Route::get('/{nasabah}/private', 'Api\PrivateRoomController@index');
+});
