@@ -53,6 +53,23 @@ class Nasabah extends Authenticatable
 		return $this->belongsTo('App\Mku');
 	}
 
+	public function private_room(){
+        return $this->hasMany('App\PrivateRoom');
+    }
+
+    public function private_room_detail(){
+        return $this->hasMany('App\PrivateRoomDetail');
+    }
+
+    public function private_message(){
+        return $this->hasMany('App\PrivateMessage');
+    }
+
+    public function getDeviceId()
+    {
+        return $this->device()->pluck('device_id')->all();
+    }
+
 	public function addLapak($id){
 		return $this->lapak()->create([
 			'name' => 'Toko saya',
