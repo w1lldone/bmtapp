@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\TopicMessage;
 use Illuminate\Http\Request;
 use App\Jobs\SendTopicChat;
+use App\Http\Controllers\Controller;
 
 class TopicMessageController extends Controller
 {

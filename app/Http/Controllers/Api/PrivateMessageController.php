@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\PrivateMessage;
 use Illuminate\Http\Request;
 use App\Jobs\SendPrivateChat;
+use App\Http\Controllers\Controller;
 
 class PrivateMessageController extends Controller
 {

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\PrivateRoom;
 use App\PrivateRoomDetail as RoomDetail;
+use App\Http\Controllers\Controller;
 
 class PrivateRoomController extends Controller
 {
