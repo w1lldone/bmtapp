@@ -89,6 +89,15 @@ class Produk extends Model
         return $produks;
     }
 
+    public static function hotItems()
+    {
+        return static::orderBy('view', 'desc')
+                    ->take(5)
+                    ->with(['kategori_produk', 'lapak','review' => function($query){
+                        $query->take(5)->with('nasabah');
+                    }])->get();
+    }
+
     // protected $hidden=['nasabah_id'];
     protected $guarded=['id'];
     protected $appends = ['total_review', 'terjual'];
