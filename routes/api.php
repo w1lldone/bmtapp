@@ -29,10 +29,13 @@ Route::group(['prefix' => 'produk'], function(){
 	Route::get('/{lapak}', 'Api\ProdukController@index');
 	Route::post('/{lapak}', 'Api\ProdukController@store');
 	Route::get('/{produk}/edit', 'Api\ProdukController@edit');
+	Route::get('/{produk}/addview', 'Api\ProdukViewController@show');
 	Route::post('/{produk}/edit', 'Api\ProdukController@update');
 	Route::get('/view/{produk}', 'Api\ProdukController@view');
 	Route::put('/{produk}/aktif', 'Api\ProdukAktifController@update');
 });
+
+Route::get('/hotitem', 'Api\ProdukHotController@index');
 
 Route::group(['prefix' => 'order'], function(){
 	Route::post('/{nasabah}', 'Api\OrderController@store');
