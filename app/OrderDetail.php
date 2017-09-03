@@ -68,7 +68,7 @@ class OrderDetail extends Model
     public function pembeliNotification($message = 'Notifikasi pembelian', $kode = 2, $id = null)
     {
         if (empty($id)) {
-            $id = $this->id;
+            $id = $this->order_id;
         }
         $data = [
             'kode' => $kode,
