@@ -18,7 +18,7 @@ class KreditReminder implements ShouldQueue
 
     public $tries = 5;
     public $reminder;
-    public $connection;
+    public $con;
 
     /**
      * Create a new job instance.
@@ -28,7 +28,7 @@ class KreditReminder implements ShouldQueue
     public function __construct($reminder)
     {
         $this->reminder = $reminder;
-        $this->connection = $reminder->connection;
+        $this->con = $reminder->con;
     }
 
     /**
@@ -38,7 +38,7 @@ class KreditReminder implements ShouldQueue
      */
     public function handle()
     {
-        $kretrans = new KretransBU($this->connection);
+        $kretrans = new KretransBU($this->con);
         $kredits = $kretrans->where('TGL_TRANS', $this->reminder->tanggal->toDateString())->where('MY_KODE_TRANS', 200)->get();
 
         foreach ($kredits as $kredit) {

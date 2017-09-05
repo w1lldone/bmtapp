@@ -65,7 +65,7 @@ class ReminderController extends Controller
 
         // check dates on BMT database and send notification to registered nasabah
         foreach (\App\Cabang::all() as $cabang) {
-            $reminder->connection = $cabang->connection;
+            $reminder->con = $cabang->connection;
             dispatch(new KreditReminder($reminder));
         }
 
