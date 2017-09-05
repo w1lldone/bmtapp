@@ -145,9 +145,14 @@ class Lapak extends Model
         return $this->orderDetail()->where('sedia', 0)->count();
     }
 
+    public function getTotalPesananAttribute()
+    {
+        return $this->orderDetail()->count();
+    }
+
 
 
     protected $guarded = ['id'];
     protected $fillable = ['name', 'alamat', 'foto'];
-    protected $appends = ['pendapatan_hari_ini', 'barang_terjual', 'barang_terjual_hari_ini', 'rating', 'review_total', 'last_update', 'sedang_dikirim', 'pesanan_batal'];
+    protected $appends = ['pendapatan_hari_ini', 'barang_terjual', 'barang_terjual_hari_ini', 'rating', 'review_total', 'last_update', 'sedang_dikirim', 'pesanan_batal', 'total_pesanan'];
 }
