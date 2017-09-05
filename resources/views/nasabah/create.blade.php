@@ -80,13 +80,13 @@
 	                            <div class="col-md-6">
 									<div class="form-group">
 										<label class="control-label">Rekening tabungan</label>
-										<input value="{{ old('no_rekening') }}" type="text" class="form-control" name="no_rekening" minlength="12" maxlength="12" placeholder="1.234.567890">
+										<input value="{{ old('no_rekening') }}" type="text" class="form-control" name="no_rekening" minlength="8" maxlength="15" placeholder="1.234.567890">
 									</div>
 	                            </div>
 	                             <div class="col-md-6">
 									<div class="form-group">
 										<label class="control-label">Rekening kredit</label>
-										<input value="{{ old('no_rekening_kredit') }}" type="text" class="form-control" name="no_rekening_kredit" minlength="12" maxlength="12" placeholder="1.234.567890">
+										<input value="{{ old('no_rekening_kredit') }}" type="text" class="form-control" name="no_rekening_kredit" minlength="8" maxlength="15" placeholder="1.234.567890">
 									</div>
 	                            </div>
                             </div>

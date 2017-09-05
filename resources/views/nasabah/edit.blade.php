@@ -48,8 +48,8 @@
 							<form action="/nasabah/{{ $nasabah->id }}" method="POST">
 								{{ method_field('PUT') }}
 								{{ csrf_field() }}
-		                        <div class="row">
-		                            <div class="col-md-12">
+              <div class="row">
+                  <div class="col-md-12">
 										<div class="form-group">
 											<label >Nama</label>
 											<input type="text" class="form-control" name="name" value="{{ $nasabah->name }}" required>
@@ -60,13 +60,13 @@
 		                            <div class="col-md-6">
 										<div class="form-group">
 											<label >No Rekening</label>
-											<input minlength="12" maxlength="12" type="text" class="form-control" name="no_rekening" required value="{{ $nasabah->no_rekening }}">
+											<input minlength="8" maxlength="15" type="text" class="form-control" name="no_rekening" value="{{ $nasabah->no_rekening }}">
 										</div>
 		                            </div>
 		                            <div class="col-md-6">
 										<div class="form-group">
 											<label >No Rekening kredit</label>
-											<input minlength="12" maxlength="12" type="text" class="form-control" name="no_rekening_kredit" required value="{{ $nasabah->no_rekening_kredit }}">
+											<input minlength="8" maxlength="15" type="text" class="form-control" name="no_rekening_kredit" value="{{ $nasabah->no_rekening_kredit }}">
 										</div>
 		                            </div>
 	                            </div>

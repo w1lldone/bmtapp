@@ -64,9 +64,12 @@ class ReminderController extends Controller
         $reminder = Reminder::create(request(['tanggal']));
 
         // check dates on BMT database and send notification to registered nasabah
-        dispatch(new KreditReminder($reminder));
+        foreach (\App\Cabang::all() as $cabang) {
+            $reminder->connection = $cabang->connection;
+            dispatch(new KreditReminder($reminder));
+        }
 
-        return redirect('/home')->with('status', 'Reminder kredit berhasi diproses!');
+        return redirect('/reminder')->with('status', 'Reminder kredit berhasi diproses!');
     }
 
     /**
