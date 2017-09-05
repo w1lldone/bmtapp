@@ -17,15 +17,17 @@ class KreditReminder implements ShouldQueue
 
     public $tries = 5;
     public $reminder;
+    public $connection;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($reminder)
+    public function __construct($reminder, $connection)
     {
         $this->reminder = $reminder;
+        $this->connection = $connection;
     }
 
     /**
@@ -36,7 +38,8 @@ class KreditReminder implements ShouldQueue
     public function handle()
     {
         // get all nasabah from kretrans
-        $kredits = KretransBU::where('TGL_TRANS', $this->reminder->tanggal->toDateString())->where('MY_KODE_TRANS', 200)->get();
+        $kredits = new KretransBU($this->connection);
+        $kredits = $kredits->where('TGL_TRANS', $this->reminder->tanggal->toDateString())->where('MY_KODE_TRANS', 200)->get();
 
         foreach ($kredits as $kredit) {
             // check registered nasabah
