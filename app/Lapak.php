@@ -80,11 +80,6 @@ class Lapak extends Model
         return $query;
     }
 
-    public function getInfo()
-    {
-        
-    }
-
     public function penjualan($keyword = '*')
     {
         $key = $this->keyword('name', $keyword);
@@ -105,6 +100,54 @@ class Lapak extends Model
                     ->latest()->with('produk', 'order.nasabah')->get();
     }
 
-    protected $guarded=['id'];
-    protected $fillable=['name', 'alamat', 'foto'];
+    /*CUSTOM ATTRIBUTE*/
+    public function getPendapatanHariIniAttribute()
+    {
+        return $this->orderDetail()->whereDate('diterima_at', date("Y-m-d"))->get()->sum('total');
+    }
+
+    public function getBarangTerjualAttribute()
+    {
+        return $this->orderDetail()->count();
+    }
+
+    public function getRatingAttribute()
+    {
+        return number_format($this->produk()->avg('rating'), 1);
+    }
+
+    public function getReviewTotalAttribute()
+    {
+        return $this->review()->count();
+    }
+
+    public function getLastUpdateAttribute()
+    {
+        return $this->produk()->latest()->first()->updated_at->toDateString();
+    }
+
+    public function getSedangDikirimAttribute()
+    {
+        return $this->orderDetail()->where('dikirim_at', '<>', null)->where('diterima_at', null)->count();
+    }
+
+    public function getBarangTerjualHariIniAttribute()
+    {
+        // return $this->orderDetail()->whereDate('created_at', date('Y-m-d'))->count();
+        return $this->produk()->whereHas('orderDetail', function($q)
+        {
+            $q->whereDate('created_at', date('Y-m-d'));
+        })->count();
+    }
+
+    public function getPesananBatalAttribute()
+    {
+        return $this->orderDetail()->where('sedia', 0)->count();
+    }
+
+
+
+    protected $guarded = ['id'];
+    protected $fillable = ['name', 'alamat', 'foto'];
+    protected $appends = ['pendapatan_hari_ini', 'barang_terjual', 'barang_terjual_hari_ini', 'rating', 'review_total', 'last_update', 'sedang_dikirim', 'pesanan_batal'];
 }
