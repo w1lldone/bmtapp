@@ -9,6 +9,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use App\KretransBU;
 use App\Nasabah;
+use App\Cabang;
 use App\Jobs\SendFirebaseNotification;
 
 class KreditReminder implements ShouldQueue
@@ -17,17 +18,15 @@ class KreditReminder implements ShouldQueue
 
     public $tries = 5;
     public $reminder;
-    public $connection;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($reminder, $connection)
+    public function __construct($reminder)
     {
         $this->reminder = $reminder;
-        $this->connection = $connection;
     }
 
     /**
@@ -37,30 +36,32 @@ class KreditReminder implements ShouldQueue
      */
     public function handle()
     {
-        // get all nasabah from kretrans
-        $kredits = new KretransBU($this->connection);
-        $kredits = $kredits->where('TGL_TRANS', $this->reminder->tanggal->toDateString())->where('MY_KODE_TRANS', 200)->get();
+        foreach (Cabang::all() as $cabang) {
+            $kretrans = new KretransBU($cabang->connection);
+            $kredits = $kretrans->where('TGL_TRANS', $this->reminder->tanggal->toDateString())->where('MY_KODE_TRANS', 200)->get();
 
-        foreach ($kredits as $kredit) {
-            // check registered nasabah
-            $data = [
-                'kode' => 8,
-                'data' => $kredit,
-            ];
-            
-            $nasabah = Nasabah::where('no_rekening_kredit', $kredit->NO_REKENING)->first();
-            if (!empty($nasabah)) {
+            foreach ($kredits as $kredit) {
+                // check registered nasabah
+                $data = [
+                    'kode' => 8,
+                    'data' => $kredit,
+                ];
+                
+                $nasabah = Nasabah::where('no_rekening_kredit', $kredit->NO_REKENING)->first();
+                if (!empty($nasabah)) {
 
-                // send notification
-                foreach ($nasabah->device as $device) {
-                    dispatch(new SendFirebaseNotification('BMT Mobile App', 'Pengingat Kredit', $data, $device->device_id));
+                    // send notification
+                    foreach ($nasabah->device as $device) {
+                        dispatch(new SendFirebaseNotification('BMT Mobile App', 'Pengingat Kredit', $data, $device->device_id));
+                    }
+
+                    // add reminder detail
+                    $this->reminder->addDetail($nasabah->id);
+
+
                 }
-
-                // add reminder detail
-                $this->reminder->addDetail($nasabah->id);
-
-
             }
         }
+        
     }
 }
