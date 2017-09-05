@@ -189,6 +189,7 @@ class Nasabah extends Authenticatable
 
 	public function layananList($keyword = '*')
 	{
+		$status = request()->has('status_kode') ? "status_kode = ".request('status_kode') : 'status_kode';
 		$key = $this->keyword('name', $keyword);
 		return $this->layanan()
 					->where(function($q) use ($key, $keyword)
@@ -203,6 +204,7 @@ class Nasabah extends Authenticatable
 								$query->whereRaw($this->keyword('nomer', $keyword));
 							});
 					})
+					->whereRaw($status)
 					->orderBy('status_kode')
 					->latest()
 					->with('layananDetail.produkLayanan.katLayanan')
