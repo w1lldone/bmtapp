@@ -53,7 +53,7 @@ class KreditReminder implements ShouldQueue
 
                 // send notification
                 foreach ($nasabah->device as $device) {
-                    dispatch(new SendFirebaseNotification('BMT Mobile App', 'Pengingat Kredit', $data, $device->device_id));
+                    dispatch(new SendFirebaseNotification('BMT Mobile App', \App\Template::find(1)->body, $data, $device->device_id));
                 }
 
                 // add reminder detail
