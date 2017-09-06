@@ -73,7 +73,17 @@ class TemplateController extends Controller
      */
     public function update(Request $request, Template $template)
     {
-        //
+        $this->validate($request, [
+            'head' => 'required|string',
+            'foot' => 'required|string',
+        ]);
+
+        $template->update([
+            'head' => $request->head,
+            'foot' => $request->foot,
+        ]);
+
+        return redirect('/reminder')->with('status', 'Berhasil mengubah template!');
     }
 
     /**
