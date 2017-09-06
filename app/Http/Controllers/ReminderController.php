@@ -49,7 +49,8 @@ class ReminderController extends Controller
         $this->validator(request()->all())->validate();
         $reminder = Reminder::where('tanggal', request('tanggal'))->get();
         $tanggal = Carbon::createFromFormat('Y-m-d', request('tanggal'))->formatLocalized('%d %B %Y');
-        return view('reminder.cek', compact(['reminder', 'tanggal']));
+        $template = \App\Template::find(1)->replaceDate($tanggal);
+        return view('reminder.cek', compact(['reminder', 'tanggal', 'template']));
     }
 
     /**
