@@ -205,7 +205,13 @@ class Order extends Model
         $this->penjualNotification('Penjualan sudah dibayar');
     }
 
+    public function getJumlahAttribute()
+    {
+        return $this->orderDetail->sum('total');
+    }
+
 
     protected $guarded=['id'];
     protected $dates = ['tgl_bayar'];
+    protected $appends = ['jumlah'];
 }
