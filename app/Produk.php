@@ -27,10 +27,6 @@ class Produk extends Model
         return $this->hasMany('App\OrderDetail');
     }
 
-    public function terjual(){
-        return $this->terjual = $this->orderDetail()->count();
-    }
-
     public function getTerjualAttribute()
     {
         return $this->orderDetail()->count();
