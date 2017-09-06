@@ -29,11 +29,11 @@
     <div class="card-content">
         <div class="row">
             <div class="col-lg-12">
-              <p>{{ $template->body }} </p>
+              <p>{{ $template->head }} </p>
               <ul>
                 <li>Nama: <b>Nama nasabah</b></li>
-                <li>Alamat: <b>Alamat nasabah</b></li>
                 <li>Rekening kredit: <b>No rekening</b></li>
+                <li>Cicilan ke: <b>Cicilan</b></li>
                 <li>Nominal cicilan: <b>Nominal</b></li>
               </ul>
               <p>{{ $template->foot }}</p>
