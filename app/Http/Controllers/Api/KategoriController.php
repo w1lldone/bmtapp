@@ -22,45 +22,45 @@ class KategoriController extends Controller
 
     public function view(Request $request){
 
-    	// $produk = new Produk;
-    	$paginate = 10;
-    	$query = array();
-        $order = 'name';
-        $keyword = '';
-        $by = 'asc';
-
-		$query['kategori_produk_id'] = $request->has('kategori_id') ? $request->kategori_id : '*';
-
-        if ($request->has('keyword')) {
-            $keyword=$request->keyword;
+        if (request()->has('kategori_id')) {
+            $produks = Produk::where('kategori_produk_id', request('kategori_id'));
+        } else {
+            $produks = new Produk;
         }
 
-    	if ($request->has('harga')) {
-    		$query['harga'] = $request->harga;
-    	}
+        if (request()->has('harga2')) {
+            $produks = $produks->whereBetween('harga', [request('harga1'), request('harga2')]);
+        }
 
-    	if ($request->has('paginate')) {
-    		$paginate = $request->paginate;
-    	}
+        switch (request('sort')) {
+            case 'terbaru':
+                $produks = $produks->latest();
+                break;
 
-    	if ($request->has('urutkan')) {
-    		$order = $request->urutkan;
-    		$by = $request->order;
-    	}
+            case 'terlama':
+                $produks = $produks->oldest();
+                break;
 
-        $produks = Produk::where(function($q) use ($query)
-                    {
-                        $q->where('kategori_produk_id', $query['kategori_produk_id']);
-                    })
-                    // ->whereRaw("name LIKE '%$keyword%' or deskripsi LIKE '%$keyword%'")
-                    ->orderBy($order, $by)
-                    ->with(['kategori_produk', 'lapak','review' => function($query){
+            case 'nama-desc':
+                $produks = $produks->orderBy('name', 'desc');
+                break;
+
+            case 'termurah':
+                $produks = $produks->orderBy('harga', 'asc');
+                break;
+
+            case 'termahal':
+                $produks = $produks->orderBy('harga', 'desc');
+                break;
+            
+            default:
+               $produks = $produks->orderBy('name', 'asc');
+                break;
+        }
+
+        $produks =  $produks->with(['kategori_produk', 'lapak','review' => function($query){
                         $query->take(5)->with('nasabah');
-                    }])->simplePaginate($paginate);
-
-        // foreach ($produks as $produk) {
-        //     $produk->terjual();
-        // }
+                    }])->simplePaginate(10);
 
     	return $produks->withPath($request->fullUrl());
 
