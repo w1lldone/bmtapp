@@ -233,11 +233,11 @@ class Nasabah extends Authenticatable
 								$query->whereRaw($this->keyword('nomer', $keyword));
 							});
 					})
-					->whereRaw($status)
-					->orderBy('status_kode')
-					->latest()
-					->with('layananDetail.produkLayanan.katLayanan')
-					->get();
+		->whereRaw($status)
+		->orderBy('status_kode')
+		->latest()
+		->with('layananDetail.produkLayanan.katLayanan')
+		->get();
 	}
 
 	public function sendNotification($message = 'notifikasi', $data = array())
