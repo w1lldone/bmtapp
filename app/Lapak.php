@@ -101,6 +101,7 @@ class Lapak extends Model
 
         // FILTERING
         switch (request('filter')) {
+
             case 'butuh-tindakan':
                 $penjualan = $penjualan->where('sedia', null)
                 ->orWhere(function($query)
@@ -112,13 +113,35 @@ class Lapak extends Model
                     ->where('dikirim_at', null);
                 });
                 break;
+
+            case 'selesai':
+                $penjualan = $penjualan->whereHas('order', function($query)
+                {
+                    $query->where('status_kode', 5);
+                });
+                break;
+
+            case 'batal':
+                $penjualan = $penjualan->whereHas('order', function($query)
+                {
+                    $query->where('status_kode', 6);
+                });
+                break;
+
+            case 'diproses':
+                $penjualan = $penjualan->whereHas('order', function($query)
+                {
+                    $query->where('status_kode', 1);
+                })
+                ->where('sedia', '<>', null);
+                break;
             
             default:
                 # code...
                 break;
         }
                     
-        $penjualan = $penjualan->latest()->with('produk', 'order.nasabah')->get();
+        $penjualan = $penjualan->latest()->get()->load('produk', 'order.nasabah');
 
         return $penjualan;
     }
