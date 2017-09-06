@@ -13,7 +13,7 @@ class ReminderController extends Controller
 {
     function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except(['test']);
     }
 
     public function validator($request)
@@ -117,5 +117,34 @@ class ReminderController extends Controller
     public function destroy(Reminder $reminder)
     {
         //
+    }
+
+    public function test(Nasabah $nasabah)
+    {
+        $tanggal = Carbon::createFromFormat('Y-m-d', '2017-07-31')->formatLocalized('%d %B %Y');
+        $template = \App\Template::find(1)->replaceDate($tanggal);
+
+        // GENERATE DATA
+        $kredit= [
+            'NO_REKENING' => '1.004.016099',
+            'POKOK' => 12000,
+            'BUNGA' => 10000,
+            'NASABAH' => $nasabah->name,
+            'ANGSURAN_KE' => 23,
+        ];
+        $data = [
+            'kode' => 8,
+            'data' => [
+                'pesan' => $template,
+                'kredit' => $kredit,
+            ],
+        ];
+
+        foreach ($nasabah->device as $device) {
+            dispatch(new \App\Jobs\SendFirebaseNotification('BMT Mobile App', 'Pengingat cicilan kredit', $data, $device->device_id));
+        }
+        
+        return $data;
+
     }
 }
