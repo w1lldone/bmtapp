@@ -83,21 +83,44 @@ class Lapak extends Model
     public function penjualan($keyword = '*')
     {
         $key = $this->keyword('name', $keyword);
-        return $this->orderDetail()
-                    ->where(function($q) use ($keyword, $key)
+
+        // KEYWORDING
+        $penjualan = $this->orderDetail()
+        ->where(function($q) use ($keyword, $key)
+        {
+            $q->whereHas('produk', function($query) use ($key)
+            {
+                $query->whereRaw($key);
+            })
+            ->orWhereHas('order.nasabah', function($query) use ($key)
+            {
+               $query->whereRaw($key);
+            })
+        ->orWhereRaw($this->keyword('catatan', $keyword));
+        });
+
+        // FILTERING
+        switch (request('filter')) {
+            case 'butuh-tindakan':
+                $penjualan = $penjualan->where('sedia', null)
+                ->orWhere(function($query)
+                {
+                    $query->whereHas('order', function($q)
                     {
-                        $q->whereHas('produk', function($query) use ($key)
-                        {
-                            $query->whereRaw($key);
-                        })
-                        ->orWhereHas('order.nasabah', function($query) use ($key)
-                        {
-                           $query->whereRaw($key);
-                        })
-                        ->orWhereRaw($this->keyword('catatan', $keyword));
+                        $q->where('status_kode', 3);
                     })
+                    ->where('dikirim_at', null);
+                });
+                break;
+            
+            default:
+                # code...
+                break;
+        }
                     
-                    ->latest()->with('produk', 'order.nasabah')->get();
+        $penjualan = $penjualan->latest()->with('produk', 'order.nasabah')->get();
+
+        return $penjualan;
     }
 
     /*CUSTOM ATTRIBUTE*/
