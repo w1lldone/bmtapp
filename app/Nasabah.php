@@ -142,26 +142,55 @@ class Nasabah extends Authenticatable
 		// make sql whereRaw LIKE query form each words of keyword
 		$key = $this->keyword('name', $keyword);
 
+		// QUERY KEYWORDS
 		$orders = $this->order()
-					->where(function($query) use ($keyword, $key)
-					{
-						$query->whereRaw($this->keyword('kode', $keyword))
-							->orWhereHas('orderDetail.produk', function($query) use ($key)
-							{
-								$query->whereRaw($key);
-							})
-							->orWhereHas('orderDetail.produk.lapak', function($query) use ($key)
-							{
-								$query->whereRaw($key);
-							});
-					})
-					->orderBy('status_kode')
-					->latest()
-					->get();
-		foreach ($orders as $order) {
-			$order->order_detail = $order->orderDetail()->withTrashed()->with('produk.kategori_produk', 'produk.lapak')->get();
-			$order->jumlah = $order->orderDetail()->sum('total');
+		->where(function($query) use ($keyword, $key)
+		{
+			$query->whereRaw($this->keyword('kode', $keyword))
+			->orWhereHas('orderDetail.produk', function($query) use ($key)
+			{
+				$query->whereRaw($key);
+			})
+			->orWhereHas('orderDetail.produk.lapak', function($query) use ($key)
+			{
+				$query->whereRaw($key);
+			});
+		});
+
+		// FILTERING
+		switch (request('filter')) {
+			case 'butuh-tindakan':
+				$orders = $orders->whereHas('orderDetail', function($q)
+				{
+					$q->where('dikirim_at', '<>', null)->where('diterima_at', null);
+				});
+				break;
+
+			case 'selesai':
+				$orders = $orders->where('status_kode', 5);
+				break;
+
+			case 'batal':
+				$orders = $orders->where('status_kode', 6);
+				break;
+
+			case 'diproses':
+				$orders = $orders->where('status_kode', 1)->orWhere('status_kode', 2)->orWhere('status_kode', 3);
+				break;
+			
+			default:
+				# code...
+				break;
 		}
+
+		$orders = $orders->orderBy('status_kode')
+		->latest()
+		->get()
+		->load(['orderDetail' => function($q)
+		{
+			$q->withTrashed();
+		}, 'orderDetail.produk.kategori_produk', 'orderDetail.produk.lapak']);
+
 		return $orders;
 	}
 
