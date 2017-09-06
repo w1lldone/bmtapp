@@ -29,13 +29,14 @@ class ReminderController extends Controller
      */
     public function index()
     {
+        $template = \App\Template::find(1);
         if (request()->has('view')) {
             $nasabahs = Nasabah::whereHas('reminder_detail')->with('reminder_detail')->paginate(10)->withPath(request()->fullUrl());;
             // return $nasabahs;
-            return view('reminder.index-nasabah', compact('nasabahs'));
+            return view('reminder.index-nasabah', compact(['nasabahs', 'template']));
         }
         $reminders = Reminder::latest()->paginate(10);
-        return view('reminder.index', compact('reminders'));
+        return view('reminder.index', compact(['reminders', 'template']));
     }
 
     /**
