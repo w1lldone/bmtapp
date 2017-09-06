@@ -183,9 +183,18 @@ class Nasabah extends Authenticatable
 				break;
 		}
 
-		$orders = $orders->orderBy('status_kode')
-		->latest()
-		->get()
+		// SORTING
+		switch (request('sort')) {
+			case 'terlama':
+				$orders = $orders->oldest();
+				break;
+
+			default:
+				$orders = $orders->latest();
+				break;
+		}
+
+		$orders = $orders->get()
 		->load(['orderDetail' => function($q)
 		{
 			$q->withTrashed();

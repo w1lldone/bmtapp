@@ -140,8 +140,19 @@ class Lapak extends Model
                 # code...
                 break;
         }
+
+        // SORTING
+        switch (request('sort')) {
+            case 'terlama':
+                $penjualan = $penjualan->oldest();
+                break;
+            
+            default:
+               $penjualan = $penjualan->latest();
+                break;
+        }
                     
-        $penjualan = $penjualan->latest()->get()->load('produk', 'order.nasabah');
+        $penjualan = $penjualan->get()->load('produk', 'order.nasabah');
 
         return $penjualan;
     }
