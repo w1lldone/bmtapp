@@ -9,7 +9,7 @@ class Template extends Model
 
 	public function replaceDate($string)
 	{
-		$this->foot = str_replace('{tanggal}', $string, $this->foot);
+		$this->foot = str_replace('{tanggal}', '<b>'.$string.'</b>', $this->foot);
 
 		return $this; 
 	}
