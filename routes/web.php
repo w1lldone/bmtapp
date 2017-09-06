@@ -139,3 +139,38 @@ Route::get('/kebijakan-privasi', function()
 {
     return view('aturan.kebijakan-privasi');
 })->name('kebijakan');
+
+Route::resource('template', 'TemplateController');
+
+Route::get('/test-reminder', function()
+{
+    $kretrans = new \App\KretransBU('bmtbufake');
+    $kredits = $kretrans->where('TGL_TRANS', '2017-07-31')->where('MY_KODE_TRANS', 200)->get();
+    $tanggal = \Carbon\Carbon::createFromFormat('Y-m-d', '2017-07-31')->formatLocalized('%d %B %Y');
+    $template = \App\Template::find(1)->replaceDate($tanggal);
+
+    foreach ($kredits as $kredit) {
+
+        // check registered nasabah
+        $nasabah = \App\Nasabah::where('no_rekening_kredit', $kredit->NO_REKENING)->first();
+
+        // GENERATE DATA
+        if (!empty($nasabah)) {
+            $kredit->NASABAH = $nasabah->name;
+            $kredit->ANGSURAN_KE = 23;
+        }
+        $data = [
+            'kode' => 8,
+            'data' => [
+                'pesan' => $template,
+                'kredit' => $kredit,
+            ],
+        ];
+        
+        if (!empty($nasabah)) {
+
+            return $data;
+
+        }
+    }        
+});
