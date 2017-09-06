@@ -28,6 +28,11 @@ class KategoriController extends Controller
             $produks = new Produk;
         }
 
+        if (request()->has('keyword')) {
+            $produks = $produks->whereRaw($this->keyword('name', request('keyword')))
+            ->orWhereRaw($this->keyword('deskripsi', request('keyword')));
+        }
+
         if (request()->has('harga2')) {
             $produks = $produks->whereBetween('harga', [request('harga1'), request('harga2')]);
         }
@@ -64,5 +69,23 @@ class KategoriController extends Controller
 
     	return $produks->withPath($request->fullUrl());
 
+    }
+
+    public function keyword($coloumn, $sentence)
+    {
+        $query = '';
+        $i = 0;
+        $keywords = explode(' ', $sentence);
+        foreach ($keywords as $keyword) {
+            $query .= "$coloumn LIKE '%$keyword%'";
+
+            $i++;
+
+            if ($i != count($keywords)) {
+                $query .= " OR ";
+            }
+        }
+
+        return $query;
     }
 }
