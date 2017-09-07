@@ -42,7 +42,7 @@ class KreditReminder implements ShouldQueue
         $kretrans = new KretransBU($this->con);
         $kredits = $kretrans->where('TGL_TRANS', $this->reminder->tanggal->toDateString())->where('MY_KODE_TRANS', 200)->get();
         $tanggal = Carbon::createFromFormat('Y-m-d', $this->reminder->tanggal->toDateString())->formatLocalized('%d %B %Y');
-        $template = \App\Template::find(1)->replaceDate($tanggal);
+        $template = \App\Template::find(1);
 
         foreach ($kredits as $kredit) {
 

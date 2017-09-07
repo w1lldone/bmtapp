@@ -9,7 +9,7 @@ class KretransBU extends Model
     
     protected $connection = 'bmtbu';
     protected $table = 'kretrans';
-    protected $visible = ['NO_REKENING', 'ANGSURAN_KE', 'POKOK', 'BUNGA', 'NASABAH'];
+    protected $visible = ['NO_REKENING', 'ANGSURAN_KE', 'POKOK', 'BUNGA', 'NASABAH', 'TGL_TRANS'];
 
     public function __construct($cabang = 'bmtbu')
 	{
