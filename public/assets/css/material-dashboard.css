@@ -5198,3 +5198,28 @@ footer .btn {
   border-radius: 50%;
   margin-right: 20px;
 }
+
+/*REMINDER NASABAH DETAIL SECTION*/
+.nasabah-detail .title {
+  color: #555555;
+  margin-bottom: -5px;
+  margin-top: -5px;
+}
+
+.nasabah-detail .rekening {
+  color: #555555;
+  font-weight: 500;
+  margin-bottom: -5px;
+  margin-top: 0;
+}
+
+.nasabah-detail span.info {
+  font-size: 1.4rem;
+  margin-right: 10px;
+}
+
+.nasabah-detail span i {
+  position: relative;
+  top: 4px;
+  font-size: 1.7rem;
+}

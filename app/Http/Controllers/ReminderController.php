@@ -147,4 +147,9 @@ class ReminderController extends Controller
         return $data;
 
     }
+
+    public function showNasabah(Nasabah $nasabah)
+    {
+        return view('reminder.view-nasabah', compact('nasabah'));
+    }
 }

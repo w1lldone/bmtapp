@@ -91,6 +91,7 @@ Route::group(['prefix' => 'reminder'], function(){
     Route::post('/', 'ReminderController@store');
     Route::get('/create', 'ReminderController@create')->name('reminder.create');
     Route::get('/{reminder}/view', 'ReminderController@show')->name('reminder.show');
+    Route::get('/nasabah/{nasabah}/view', 'ReminderController@showNasabah');
     Route::get('/notifikasi/{nasabah}', 'ReminderController@test');
 });
 
@@ -114,14 +115,6 @@ Route::group(['prefix' => 'send'], function()
     Route::get('/all', 'TryNotificationController@all');
     Route::get('/to', 'TryNotificationController@sendto');
     Route::get('/bayar', 'TryNotificationController@bayar');
-});
-
-Route::get('/test-review', function()
-{
-    return \App\Produk::where('lapak_id', 11)->has('review')->with(['review' => function ($query)
-    {
-        $query->take(5)->with('nasabah');
-    }])->get();
 });
 
 Route::resource('news', 'NewsController', ['except' => [
