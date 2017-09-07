@@ -52,7 +52,7 @@
 								<p class="text-muted">
 									<strong>Catatan</strong> <br>
 									<li>Hanya bagian <strong>pembuka</strong> dan <strong>penutup</strong> yang dapat dirubah.</li>
-									<li>_tanggal_: Kode tanggal. Otomatis diganti dengan tanggal pembayaran. </li>
+									<li><code>{tanggal}</code>: Kode tanggal. Otomatis diganti dengan tanggal pembayaran. </li>
 									<li><code><span><</span><span>b></span><span><</span><span>/b></span></code>: Tulisan dibuat cetak tebal.</li>
 								</p>
 							</div>
