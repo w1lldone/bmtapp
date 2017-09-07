@@ -28,7 +28,7 @@
           		<tr>
           			<th>#</th>
           			<th>Tanggal transaksi</th>
-          			<th>Diingatkat pada</th>
+          			<th>Diingatkan pada</th>
           		</tr>
           	</thead>
 						<tbody>
