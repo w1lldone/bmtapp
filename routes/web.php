@@ -42,6 +42,7 @@ Route::group(['prefix' =>  'nasabah', 'middleware' => 'auth'], function(){
     Route::get('/create', 'NasabahController@create');
 	Route::post('/create', 'NasabahController@store');
     Route::get('/{nasabah}/edit', 'NasabahController@edit');
+    Route::get('/{nasabah}/saldo', 'CekSaldoController@view');
     Route::put('/{nasabah}', 'NasabahController@update');
     Route::delete('/{nasabah}', 'NasabahController@destroy');
     Route::put('/username/{nasabah}', 'NasabahController@upUsername');

@@ -91,6 +91,14 @@
   /*background-color: rgba(84, 217, 93, 255);*/
 }
 
+.spinner-sm > div {
+  width: 15px;
+  height: 15px;
+  background-color: #aaaaaa;
+  opacity: 0.7;
+  /*background-color: rgba(84, 217, 93, 255);*/
+}
+
 .spinner .bounce1 {
   -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
