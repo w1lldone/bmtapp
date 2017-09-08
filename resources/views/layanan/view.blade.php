@@ -81,6 +81,17 @@
 									<br>
 								</p>
 							@endif
+							<div class="pull-left">
+								<button onclick="cekSaldo()" class="btn btn-info btn-sm" style="margin: 0;">Cek saldo</button>
+							</div>
+							<div class="pull-right">
+								<div class="spinner spinner-sm text-center" style="margin-top: 5px; margin-bottom: 0; display: none;">
+				          <div class="bounce1"></div>
+				          <div class="bounce2"></div>
+				          <div class="bounce3"></div>
+				        </div>
+								<span id="saldo" style="display: none;"></span>
+							</div>
 						</div>
 						<div class="col-sm-6">
 							<h4 class="title">Tindakan</h4>
@@ -107,4 +118,22 @@
 
 @section('modal')
 	@include('layanan.modal')
+@endsection
+
+@section('script')
+	<script type="text/javascript">
+		function cekSaldo() {
+			$('.spinner').show();
+			$('#saldo').hide();
+			$.ajax({
+				type: 'GET',
+				url: '/nasabah/{{ $layanan->nasabah_id }}/saldo',
+				success: function(data) {
+					$('.spinner').hide();
+					$('#saldo').show();
+					$('#saldo').replaceWith("Rp. "+data.saldo_akhir);
+				}
+			});
+		}
+	</script>
 @endsection
