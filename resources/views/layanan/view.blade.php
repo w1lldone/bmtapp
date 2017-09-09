@@ -128,11 +128,16 @@
 			$.ajax({
 				type: 'GET',
 				url: '/nasabah/{{ $layanan->nasabah_id }}/saldo',
+				timeout: 5000,
 				success: function(data) {
 					$('.spinner').hide();
 					$('#saldo').show();
 					$('#saldo').replaceWith("Rp. "+data.saldo_akhir);
-				}
+				},
+				error: function() {
+					$('.spinner').hide();
+					$('#saldo').replaceWith("Server tidak merespon");
+				},
 			});
 		}
 	</script>
