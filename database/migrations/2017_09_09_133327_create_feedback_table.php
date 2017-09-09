@@ -20,7 +20,7 @@ class CreateFeedbackTable extends Migration
             $table->string('judul', 100)->nullable();
             $table->string('isi', 500)->nullable();
             $table->string('gambar', 250)->nullable();
-            $table->date('read_at')->nullable();
+            $table->timestamp('read_at')->nullable();
             $table->timestamps();
         });
     }
