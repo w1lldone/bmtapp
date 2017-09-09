@@ -11,6 +11,7 @@ Route::resource('nasabah', 'Api\NasabahController');
 
 Route::group(['prefix' => 'nasabah'], function(){
 	Route::get('/{nasabah}/lapak', 'Api\NasabahController@lapak');
+	Route::get('/{nasabah}/private', 'Api\PrivateRoomController@index');
 });
 
 Route::group(['prefix' => 'lapak'], function(){
@@ -117,6 +118,6 @@ Route::group(['prefix' => 'private'], function () {
     Route::get('/check', 'Api\PrivateRoomController@show');
 });
 
-Route::group(['prefix' => 'nasabah'], function () {
-    Route::get('/{nasabah}/private', 'Api\PrivateRoomController@index');
+Route::group(['prefix' => 'feedback'], function(){
+	Route::post('/', 'Api\FeedbackController@store');
 });
