@@ -36,11 +36,11 @@
 </head>
 
 <body>
-		@if (request('view') != 'plain')
-			@include('layouts.simple-nav')
-		@endif
-    <div class="page-header header-filter" style="height: 10vh;">
-    </div>
+	@if (request('view') != 'plain')
+		@include('layouts.simple-nav')
+	@endif
+  <div class="page-header header-filter" style="height: 10vh;">
+  </div>
 	<div class="main">
 	  <div class="container container-fluid">
 	    @yield('content')

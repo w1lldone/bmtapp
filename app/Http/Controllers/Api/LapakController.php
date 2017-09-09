@@ -10,10 +10,14 @@ use App\Nasabah;
 
 class LapakController extends Controller
 {
-    public function view(Nasabah $nasabah){
-    	$lapak = $nasabah->lapak;
-        
-        return $lapak->load('nasabah');
+    
+
+    public function show(Lapak $lapak)
+    {
+        return $lapak->load(['produk' => function($query)
+        {
+            $query->orderBy('view', 'desc')->take(5);
+        }]);
     }
 
     public function update(Request $request, Nasabah $nasabah){

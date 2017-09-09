@@ -124,4 +124,10 @@ class NasabahController extends Controller
     {
         //
     }
+
+    public function lapak(Nasabah $nasabah){
+        $lapak = $nasabah->lapak;
+        
+        return $lapak->load('nasabah');
+    }
 }

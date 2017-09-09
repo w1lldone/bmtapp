@@ -9,8 +9,13 @@ Route::get('test', function () {
 
 Route::resource('nasabah', 'Api\NasabahController');
 
+Route::group(['prefix' => 'nasabah'], function(){
+	Route::get('/{nasabah}/lapak', 'Api\NasabahController@lapak');
+});
+
 Route::group(['prefix' => 'lapak'], function(){
 	Route::get('/{nasabah}', 'Api\LapakController@view');
+	Route::get('/{lapak}/view', 'Api\LapakController@show');
 	Route::put('/{nasabah}', 'Api\LapakController@update');
 	Route::post('/foto/{nasabah}', 'Api\LapakController@updatefoto');
 	Route::get('/{lapak}/review', 'Api\ReviewController@index');
