@@ -5224,3 +5224,12 @@ footer .btn {
   top: 4px;
   font-size: 1.7rem;
 }
+
+.linked-row {
+  cursor: hand;
+  cursor: pointer;
+}
+
+.fade {
+  opacity: 0.5;
+}
