@@ -68,6 +68,12 @@
                         <p>News</p>
                     </a>
                   </li>
+                  <li class="@if (substr(Route::currentRouteName(),0 ,8) == 'feedback'){{ 'active' }} @endif">
+                    <a href="/feedback">
+                        <i class="material-icons">feedback</i>
+                        <p>Feedback</p>
+                    </a>
+                  </li>
                   <hr class="hidden-md hidden-lg separator">
                   <li class="dropdown hidden-md hidden-lg">
                     <a href="/setting">
