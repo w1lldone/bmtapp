@@ -65,6 +65,10 @@ class Nasabah extends Authenticatable
         return $this->hasMany('App\PrivateMessage');
     }
 
+    public function feedback(){
+    	return $this->hasMany('App\Feedback');
+    }
+
     public function getDeviceId()
     {
         return $this->device()->pluck('device_id')->all();
