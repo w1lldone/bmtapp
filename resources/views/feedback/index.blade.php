@@ -42,6 +42,12 @@
 			</div>
 			<div class="card" style="margin-top: 0">
 				<div class="card-content">
+					@if ($feedbacks->isEmpty())
+						<div class="text-center text-muted">
+							<i class="material-icons" style="font-size: 6rem">feedback</i>
+							<h3 class="title">Tidak ada feedback</h3>
+						</div>
+					@endif
 					<table class="table table-hover">
 					<tbody>
 						@foreach ($feedbacks as $feedback)
