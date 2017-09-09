@@ -49,7 +49,7 @@ class FeedbackController extends Controller
     public function show(Feedback $feedback)
     {
         $feedback->checkRead();
-        return $feedback;
+        return view('feedback.view', compact('feedback'));
     }
 
     /**
