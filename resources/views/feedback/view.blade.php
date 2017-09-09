@@ -31,14 +31,18 @@
 						@else
 							<img src="{{ $feedback->gambar }}" class="img-responsive">
 						@endif
-						<p style="margin-top: 10px">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						<p style="margin-top: 10px">{{ $feedback->isi }}</p>
 					</div>
 				</div>
+			</div>
+			<div class="card" style="margin-top: 0">
+				<form class="form card-content">
+					<div class="form-group">
+						<textarea class="form-control" rows="3" placeholder="Ketik balasan"></textarea>
+						<button title="Kirim balasan" rel="tooltip" class="btn btn-round btn-just-icon btn-success pull-right" type="submit"><i class="material-icons">send</i></button>
+						<a title="kembali" rel="tooltip" href="/feedback" class="btn btn-warning btn-round btn-just-icon pull-right"><i class="material-icons">arrow_back</i></a>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>

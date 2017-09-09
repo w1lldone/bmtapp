@@ -11,8 +11,7 @@
 		<div class="col-lg-10 col-lg-offset-1">
 			<div class="card card-plain" style="margin-bottom: 5px">
 				<div class="card-header" data-background-color="orange">
-					<h3 class="title">Feedback</h3>
-					<p class="category"></p>
+					<h3 class="title">Feedback <span class="label text-warning pull-right">2 baru</span></h3>
 				</div>
 			</div>
 			<div class="card" style="margin: 0px 0px 5px 0px">
