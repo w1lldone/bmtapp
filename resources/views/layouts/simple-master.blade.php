@@ -36,7 +36,9 @@
 </head>
 
 <body>
-	@include('layouts.simple-nav')
+		@if (request('view') != 'plain')
+			@include('layouts.simple-nav')
+		@endif
     <div class="page-header header-filter" style="height: 10vh;">
     </div>
 	<div class="main">
@@ -44,7 +46,9 @@
 	    @yield('content')
 	  </div>
 	</div>
-	@include('layouts.simple-footer')
+	@if (request('view') != 'plain')
+		@include('layouts.simple-footer')
+	@endif
 </body>
 
 	<!--   Core JS Files   -->
