@@ -14,7 +14,8 @@ class FeedbackController extends Controller
      */
     public function index()
     {
-        $feedbacks = Feedback::orderBy('read_at', 'asc')->latest()->get();
+        $feedbacks = Feedback::getData();
+
         return view('feedback.index', compact('feedbacks'));
     }
 
@@ -47,7 +48,8 @@ class FeedbackController extends Controller
      */
     public function show(Feedback $feedback)
     {
-        //
+        $feedback->checkRead();
+        return $feedback;
     }
 
     /**

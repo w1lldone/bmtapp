@@ -16,9 +16,65 @@ class Feedback extends Model
 	}
 
 	/*CUSTOM METHOD*/
+	public static function getData()
+	{
+		$feedbacks = new Feedback;
+
+        switch (request('filter')) {
+            case 'unread':
+                $feedbacks = $feedbacks->where('read_at', null);
+                break;
+
+            case 'bug':
+                $feedbacks = $feedbacks->where('feedback_kategori_id', 1);
+                break;
+
+            case 'masukan':
+                $feedbacks = $feedbacks->where('feedback_kategori_id', 2);
+                break;
+
+            case 'pertanyaan':
+                $feedbacks = $feedbacks->where('feedback_kategori_id', 3);
+                break;
+            
+            default:
+               
+                break;
+        }
+
+        switch (request('sort')) {
+            case 'terbaru':
+                $feedbacks = $feedbacks->latest();
+                break;
+
+            case 'terbaru':
+                $feedbacks = $feedbacks->oldest();
+                break;
+            
+            default :
+                $feedbacks = $feedbacks->latest();
+                break;
+        }
+
+        $feedbacks = $feedbacks->paginate(10);
+
+        return $feedbacks->appends(request()->except('page'));
+	}
+
 	public function readStatus()
 	{
 		return empty($this->read_at) ? '' : 'text-muted';
+	}
+
+	public function checkRead()
+	{
+		if ($this->read_at == null) {
+			$this->update([
+				'read_at' => \Carbon\Carbon::now(),
+			]);
+		}
+
+		return true;
 	}
 
 	public function kategoriColor()
@@ -48,6 +104,7 @@ class Feedback extends Model
 	{
 		return substr($this->isi, 0, 50);
 	}
-    
+
     protected $guarded = ['id'];
+    protected $dates = ['read_at'];
 }
