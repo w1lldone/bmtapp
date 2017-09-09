@@ -136,3 +136,4 @@ Route::get('/kebijakan-privasi', function()
 })->name('kebijakan');
 
 Route::resource('template', 'TemplateController');
+Route::resource('feedback', 'FeedbackController');
