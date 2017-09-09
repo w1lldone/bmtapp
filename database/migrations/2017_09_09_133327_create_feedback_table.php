@@ -16,7 +16,7 @@ class CreateFeedbackTable extends Migration
         Schema::create('feedback', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('nasabah_id')->unsigned();
-            $table->integer('feedback_kateogri_id')->unsigned();
+            $table->integer('feedback_kategori_id')->unsigned();
             $table->string('judul', 100)->nullable();
             $table->string('isi', 500)->nullable();
             $table->string('gambar', 250)->nullable();
