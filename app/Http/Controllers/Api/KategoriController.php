@@ -37,6 +37,10 @@ class KategoriController extends Controller
             $produks = $produks->whereBetween('harga', [request('harga1'), request('harga2')]);
         }
 
+        if (request()->has('lapak_id')) {
+            $produks = $produks->where('lapak_id', request('lapak_id'));
+        }
+
         switch (request('rating')) {
             case 5:
                 $produks = $produks->where('rating', 5);
