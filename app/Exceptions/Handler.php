@@ -3,7 +3,7 @@
 namespace App\Exceptions;
 
 use Exception;
-// use App\Traits\RestTrait;
+use App\Traits\RestTrait;
 // use App\Traits\RestExceptionHandlerTrait;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -12,7 +12,7 @@ use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
 {
-    // use RestTrait;
+    use RestTrait;
     // use RestExceptionHandlerTrait;
 
     /**
@@ -51,28 +51,27 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        // return parent::render($request, $exception);
 
-        // if(!$this->isApiCall($request)) {
-        //     $retval = parent::render($request, $exception);
-        // } else {
-        //     $retval = $this->getJsonResponseForException($request, $exception);
-        // }
+        if(!$this->isApiCall($request)) return parent::render($request, $exception);
 
-        // return $retval;
-
-        if(!$request->expectsJson()) return parent::render($request, $e);
-        
         switch(true) {
-            case $e instanceof ModelNotFoundException:
+            case $exception instanceof ModelNotFoundException:
                 return response()->json([
+                    'error' => true,
                     'message' => 'Record not found',
                 ], 404);
                 break;
-            case $e instanceof NotFoundHttpException:
+            case $exception instanceof NotFoundHttpException:
                 return response()->json([
+                    'error' => true,
                     'message' => 'Page not found',
                 ], 404);
+                break;
+            default:
+                return response()->json([
+                    'error' => true,
+                    'message' => 'bad request',
+                ]);
                 break;
         }
     }
