@@ -46,7 +46,7 @@ class Produk extends Model
         ]));
 
         $this->update([
-            'rating' => $this->review->avg('rating');
+            'rating' => $this->review->avg('rating'),
         ]);
 
         return $review;

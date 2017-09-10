@@ -51,25 +51,30 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        // return parent::render($request, $exception);
 
         if(!$this->isApiCall($request)) return parent::render($request, $exception);
 
         switch(true) {
+            
             case $exception instanceof ModelNotFoundException:
                 return response()->json([
                     'error' => true,
                     'message' => 'Record not found',
                 ], 404);
                 break;
+
             case $exception instanceof NotFoundHttpException:
                 return response()->json([
                     'error' => true,
                     'message' => 'Page not found',
                 ], 404);
                 break;
+
             case $exception instanceof AuthenticationException:
                 return response()->json(['error' => true, 'message' => 'Unauthenticated'], 401);
                 break;
+
             default:
                 return response()->json([
                     'error' => true,
@@ -78,7 +83,7 @@ class Handler extends ExceptionHandler
                 break;
         }
 
-        // return parent::render($request, $exception);
+        
     }
 
     /**
