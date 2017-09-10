@@ -38,12 +38,18 @@ class Produk extends Model
     }
 
     public function addReview(){
-        return $this->review()
+        $review = $this->review()
             ->create(request([
                 'nasabah_id',
                 'rating',
                 'review',
-            ]));
+        ]));
+
+        $this->update([
+            'rating' => $this->review->avg('rating');
+        ]);
+
+        return $review;
     }
 
     public function keyword($sentence, $coloumn = 'name')

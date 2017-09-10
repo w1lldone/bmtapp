@@ -37,6 +37,19 @@ class KategoriController extends Controller
             $produks = $produks->whereBetween('harga', [request('harga1'), request('harga2')]);
         }
 
+        switch (request('rating')) {
+            case 5:
+                $produks = $produks->where('rating', 5);
+                break;
+
+            case null:
+                break;
+
+            default:
+                $produks = $produks->whereBetween('rating', [request('rating'),5]);
+                break;
+        }
+
         switch (request('sort')) {
             case 'terbaru':
                 $produks = $produks->latest();
