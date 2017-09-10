@@ -27,7 +27,7 @@ class CreateProduksTable extends Migration
             $table->integer('view')->nullable();
             $table->integer('stok');
             $table->boolean('antar')->nullable();
-            $table->integer('rating')->nullable();
+            $table->double('rating')->nullable();
             $table->integer('aktif');
             $table->timestamps();
         });
