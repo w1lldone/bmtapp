@@ -3,11 +3,18 @@
 namespace App\Exceptions;
 
 use Exception;
+// use App\Traits\RestTrait;
+// use App\Traits\RestExceptionHandlerTrait;
 use Illuminate\Auth\AuthenticationException;
+use Illuminate\Database\Eloquent\ModelNotFoundException;
+use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 
 class Handler extends ExceptionHandler
 {
+    // use RestTrait;
+    // use RestExceptionHandlerTrait;
+
     /**
      * A list of the exception types that should not be reported.
      *
@@ -44,7 +51,30 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        return parent::render($request, $exception);
+        // return parent::render($request, $exception);
+
+        // if(!$this->isApiCall($request)) {
+        //     $retval = parent::render($request, $exception);
+        // } else {
+        //     $retval = $this->getJsonResponseForException($request, $exception);
+        // }
+
+        // return $retval;
+
+        if(!$request->expectsJson()) return parent::render($request, $e);
+        
+        switch(true) {
+            case $e instanceof ModelNotFoundException:
+                return response()->json([
+                    'message' => 'Record not found',
+                ], 404);
+                break;
+            case $e instanceof NotFoundHttpException:
+                return response()->json([
+                    'message' => 'Page not found',
+                ], 404);
+                break;
+        }
     }
 
     /**
