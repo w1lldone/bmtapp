@@ -20,13 +20,15 @@
     <!--  CSS for Demo Purpose, don't include it in your project     -->
     <link href="{{ asset('/assets/css/demo.css')}}" rel="stylesheet" />
 
+    <link href="{{ asset('/css/chat.css')}}" rel="stylesheet" />
+
      <!--  Date picker css bootstrap -->
-    <link href="{{ asset('/assets/css/bootstrap-datepicker3.css')}}" rel="stylesheet" />
+    {{-- <link href="{{ asset('/assets/css/bootstrap-datepicker3.css')}}" rel="stylesheet" /> --}}
 
     <!--  Time and date picker css bootstrap -->
-    <link href="{{ asset('/assets/css/bootstrap-timepicker.css')}}" rel="stylesheet" />
+    {{-- <link href="{{ asset('/assets/css/bootstrap-timepicker.css')}}" rel="stylesheet" /> --}}
 
-    <link rel="stylesheet" type="text/css" href="/css/notification.css">
+    {{-- <link rel="stylesheet" type="text/css" href="/css/notification.css"> --}}
 
     <!--     Fonts and icons     -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
@@ -56,15 +58,18 @@
 			
 			@include('layouts.nav')
 
-			<div class="content">
+			<div id="content-chat" class="content-chat">
 				<div class="container-fluid">
 					@yield('content')
 				</div>
 			</div>
-			@include('layouts.footer')
+			<div class="container-fluid text-chat">
+				@yield('chat-form')
+			</div>
+			{{-- @include('layouts.footer') --}}
 		</div>
 	</div>
-	@yield('modal')
+	{{-- @yield('modal') --}}
 </body>
 
 	<!--   Core JS Files   -->
@@ -77,7 +82,7 @@
 	{{-- <script src="{{ asset('/assets/js/chartist.min.js')}}"></script> --}}
 
 	<!--  Notifications Plugin    -->
-	<script src="{{ asset('/assets/js/bootstrap-notify.js')}}"></script>
+	{{-- <script src="{{ asset('/assets/js/bootstrap-notify.js')}}"></script> --}}
 
 	<!-- Material Dashboard javascript methods -->
 	<script src="{{ asset('/assets/js/material-dashboard.js')}}"></script>
@@ -86,10 +91,10 @@
 	<script src="{{ asset('/assets/js/demo.js')}}"></script>
 
 	<!-- Datepicker JS -->
-	<script src="{{ asset('/assets/js/bootstrap-datepicker.min.js')}}"></script>
+	{{-- <script src="{{ asset('/assets/js/bootstrap-datepicker.min.js')}}"></script> --}}
 
 	<!-- Datetimepicker JS -->
-	<script src="{{ asset('/assets/js/bootstrap-timepicker.js')}}"></script>
+	{{-- <script src="{{ asset('/assets/js/bootstrap-timepicker.js')}}"></script> --}}
 
 	{{-- pusher library --}}
 	<script src="//js.pusher.com/3.1/pusher.min.js"></script>

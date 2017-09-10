@@ -1,4 +1,4 @@
-<nav class="navbar navbar-transparent navbar-absolute">
+<nav class="navbar navbar-transparent navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse">

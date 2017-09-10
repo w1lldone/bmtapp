@@ -675,6 +675,23 @@ h2.title {
   padding: 30px 15px;
   min-height: calc(100% - 123px);
 }
+.main-panel > .content-chat {
+  margin-top: 70px;
+  padding: 30px 15px;
+  max-height: calc(100% - 160px);
+  min-height: calc(100% - 160px);
+  overflow-y: scroll;
+  /*background-color: ivory;*/
+}
+.main-panel > .text-chat form {
+  margin-left: 40px;
+}
+.main-panel > .text-chat {
+  padding-top: 10px;
+  height: 90px;
+  padding-left: 15px; 
+  padding-right: 15px;
+}
 .main-panel > .footer {
   border-top: 1px solid #e7e7e7;
 }
