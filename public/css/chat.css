@@ -231,7 +231,7 @@
   top: 0px;
     bottom: auto;
     border: 20px solid;
-    border-color: white transparent transparent transparent;
+    border-color: aliceblue transparent transparent transparent;
 }
 
 /* talk bubble contents */
@@ -253,4 +253,8 @@
 .right-side {
     margin-left: auto;
     margin-right: 0;
+}
+
+.bg-admin {
+  background-color: aliceblue;
 }

@@ -8,8 +8,8 @@
 			    <p>This one adds a right triangle on the left, flush at the top by using .tri-right and .left-top to specify the location.</p>
 			  </div>
 			</div> --}}
-			@foreach ($room->private_message()->oldest()->get() as $message)
-				<div class="talk-bubble tri-right left-top left-side">
+			@foreach ($room->admin_chat()->latest()->get() as $message)
+				<div class="talk-bubble tri-right {{ $message->indent() }}">
 				  <div class="talktext">
 				    <p>{{ $message->message }}</p>
 				  </div>
@@ -38,7 +38,7 @@
 		});
 		$('#send').click(function() {
 			var message = $('#message').val();
-			var chat = '<div class="talk-bubble tri-right right-top right-side"><div class="talktext"><p>'+message+'</p></div></div>'
+			var chat = '<div class="talk-bubble tri-right bg-admin right-top right-side"><div class="talktext"><p>'+message+'</p></div></div>'
 			$('#chat-room').append(chat);
 			$("#content-chat").animate({ scrollTop: $('#content-chat').prop("scrollHeight")}, 1000);
 		});

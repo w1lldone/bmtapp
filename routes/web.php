@@ -138,7 +138,7 @@ Route::get('/kebijakan-privasi', function()
 Route::resource('template', 'TemplateController');
 Route::resource('feedback', 'FeedbackController');
 
-Route::get('/chat/{room}', function(\App\PrivateRoom $room)
+Route::get('/chat/{room}', function(\App\AdminRoom $room)
 {
     return view('chat.view', compact('room'));
 });
