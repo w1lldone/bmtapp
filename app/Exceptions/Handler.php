@@ -67,13 +67,18 @@ class Handler extends ExceptionHandler
                     'message' => 'Page not found',
                 ], 404);
                 break;
+            case $exception instanceof AuthenticationException:
+                return response()->json(['error' => true, 'message' => 'Unauthenticated'], 401);
+                break;
             default:
                 return response()->json([
                     'error' => true,
                     'message' => 'bad request',
-                ]);
+                ], 400);
                 break;
         }
+
+        // return parent::render($request, $exception);
     }
 
     /**
