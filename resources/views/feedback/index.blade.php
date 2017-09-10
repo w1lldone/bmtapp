@@ -51,10 +51,15 @@
 					<tbody>
 						@foreach ($feedbacks as $feedback)
 							<tr class="linked-row {{ $feedback->readStatus() }}" data-href="/feedback/{{ $feedback->id }}">
-								<td>{{ $feedback->nasabah->name }}</td>
-								<td><b>{{ $feedback->judul }}</b> - {{ $feedback->isiReduced() }}....</td>
-								<td><span class="label label-{{ $feedback->kategoriColor() }}">{{ $feedback->feedback_kategori->name }}</span></td>
-								<td>{{ $feedback->created_at->format('j F') }}</td>
+								<td class="hidden-xs">{{ $feedback->nasabah->name }}</td>
+								<td class="hidden-xs"><b>{{ $feedback->judul }}</b> - {{ $feedback->isiReduced() }}....</td>
+								<td class="hidden-xs"><span class="label label-{{ $feedback->kategoriColor() }}">{{ $feedback->feedback_kategori->name }}</span></td>
+								<td class="hidden-xs">{{ $feedback->created_at->format('j F') }}</td>
+								<td class="visible-xs">
+									<b>{{ $feedback->judul }}</b> - <span class="label label-{{ $feedback->kategoriColor() }}">{{ $feedback->feedback_kategori->name }}</span> <br>
+									{{ $feedback->nasabah->name }} <br>
+									<small>{{ $feedback->created_at->format('j F') }}</small>
+								</td>
 							</tr>
 						@endforeach
 					</tbody>

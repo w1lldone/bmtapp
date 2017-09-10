@@ -102,7 +102,7 @@ class Feedback extends Model
 
 	public function isiReduced()
 	{
-		return substr($this->isi, 0, 50);
+		return substr($this->isi, 0, 30);
 	}
 
     protected $guarded = ['id'];
