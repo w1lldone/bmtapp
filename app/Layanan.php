@@ -41,6 +41,7 @@ class Layanan extends Model
             'produk_layanan_id' => request('produk_id'),
             'total' => $produk->harga,
             'nomer' => request('nomer'),
+            'atas_nama' => request('atas_nama'),
         ]);
     }
 

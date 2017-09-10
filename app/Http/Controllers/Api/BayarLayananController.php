@@ -27,7 +27,7 @@ class BayarLayananController extends Controller
     	return [
     		'error' => false,
     		'message' => 'success',
-    		'layanan' => $layanan,
+    		'layanan' => $layanan->load('layananDetail'),
     	];
     }
 }
