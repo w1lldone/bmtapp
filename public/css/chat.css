@@ -1,11 +1,12 @@
 /* CSS talk bubble */
 .talk-bubble {
-  margin: 40px;
+  margin: 30px 40px;
   display: block;
   position: relative;
-  width: 80%;
-    height: auto;
-    background-color: white;
+  min-width: 40%;
+  max-width: 80%;
+  height: auto;
+  background-color: white;
 }
 .border{
   border: 8px solid #666;
@@ -237,7 +238,7 @@
 /* talk bubble contents */
 .talktext{
   padding: 1em;
-    text-align: left;
+  text-align: left;
   line-height: 1.5em;
 }
 .talktext p{
