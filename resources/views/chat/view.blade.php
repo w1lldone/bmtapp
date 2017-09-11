@@ -6,7 +6,7 @@
 
 @section('content')
 	<div class="row">
-		<div class="col-lg-10 col-lg-offset-1" id="chat-room">
+		<div class="col-lg-10 col-lg-offset-1" id="chat-room-{{ $room->id }}">
 			@foreach ($room->admin_chat()->oldest()->get() as $message)
 				<div class="talk-bubble tri-right {{ $message->indent() }}">
 				  <div class="talktext">
@@ -38,7 +38,7 @@
 		$('#send').click(function() {
 			var message = $('#message').val();
 			var chat = '<div class="talk-bubble tri-right bg-admin right-top right-side"><div class="talktext"><p>'+message+'</p></div></div>'
-			$('#chat-room').append(chat);
+			$('#chat-room-{{ $room->id }}').append(chat);
 			$("#content-chat").animate({ scrollTop: $('#content-chat').prop("scrollHeight")}, 1000);
 			$.ajax({
 				type: 'POST',
@@ -48,7 +48,7 @@
 					$('#message').val('');
 				},
 				error: function(data) {
-					
+
 				},
 			});
 		});

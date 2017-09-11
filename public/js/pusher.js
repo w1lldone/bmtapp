@@ -23,8 +23,7 @@
     // Bind a function to a Event (the full Laravel class)
     chat.bind('App\\Events\\AdminChatSent', function(data) {
         var messages = '<div class="talk-bubble tri-right left-top left-side"><div class="talktext"><p>'+data.chat.message+'</p></div></div>'
-        $('#chat-room').append(messages);
-        $("#content-chat").animate({ scrollTop: $('#content-chat').prop("scrollHeight")}, 1000);
+        $('#chat-room-'+data.chat.admin_room_id).append(messages);
     });
 
     // Bind to Layanan notification channel
