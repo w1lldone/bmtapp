@@ -48,7 +48,7 @@
 					$('#message').val('');
 				},
 				error: function(data) {
-
+					
 				},
 			});
 		});

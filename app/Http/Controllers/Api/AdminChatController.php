@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\AdminChat;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Events\AdminChatSent;
 
 class AdminChatController extends Controller
 {
@@ -42,7 +43,9 @@ class AdminChatController extends Controller
             'message' => $request->message,
         ]);
 
-        return $chat;
+        event(new AdminChatSent($chat));
+
+        return [$chat];
     }
 
     /**

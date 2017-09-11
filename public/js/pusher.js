@@ -9,6 +9,7 @@
     var channel = pusher.subscribe('status-liked');
     var order = pusher.subscribe('order-notification');
     var layanan = pusher.subscribe('layanan-notification');
+    var chat = pusher.subscribe('admin-chat');
     var $badgeOrder = $('#count-trans');
     var $badgeLayanan = $('#countLayan');
 
@@ -17,6 +18,13 @@
       $.notify(data.message);
       count = Number($badgeOrder.text());
       $badgeOrder.text(count + 1);
+    });
+
+    // Bind a function to a Event (the full Laravel class)
+    chat.bind('App\\Events\\AdminChatSent', function(data) {
+        var messages = '<div class="talk-bubble tri-right left-top left-side"><div class="talktext"><p>'+data.chat.message+'</p></div></div>'
+        $('#chat-room').append(messages);
+        $("#content-chat").animate({ scrollTop: $('#content-chat').prop("scrollHeight")}, 1000);
     });
 
     // Bind to Layanan notification channel
