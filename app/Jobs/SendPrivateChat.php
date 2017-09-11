@@ -20,18 +20,20 @@ class SendPrivateChat implements ShouldQueue
     protected $message;
     protected $data;
     protected $to;
+    protected $kode;
 
     /**
      * Create a new job instance.
      *
      * @return void
      */
-    public function __construct($message, $to)
+    public function __construct($message, $to, $kode = 4)
     {
         $this->title = 'Pesan dari '.$message->nasabah->name;
         $this->message = $message->message;
         $this->data = $message;
         $this->to = $to;
+        $this->kode = $kode;
     }
 
     /**
@@ -42,7 +44,7 @@ class SendPrivateChat implements ShouldQueue
     public function handle()
     {
         $payload = [
-            'kode' => 4,
+            'kode' => $this->kode,
             'data' => $this->data->load('nasabah'),
         ];
 
@@ -61,7 +63,7 @@ class SendPrivateChat implements ShouldQueue
 
         $json = $push->getPush();
 
-        $response = $firebase->sendMultiple($this->to, $json);
+        $response = $firebase->sendTo($this->to, $json);
 
         return $response;
     }
