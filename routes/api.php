@@ -118,6 +118,10 @@ Route::group(['prefix' => 'private'], function () {
     Route::get('/check', 'Api\PrivateRoomController@show');
 });
 
+Route::group(['prefix' => 'admin_chat'], function(){
+	Route::post('/', 'Api\AdminChatController@store');
+});
+
 Route::group(['prefix' => 'feedback'], function(){
 	Route::post('/', 'Api\FeedbackController@store');
 });
