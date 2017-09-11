@@ -56,7 +56,7 @@
 
 	    <div class="main-panel">
 			
-			@include('layouts.nav')
+			@yield('navbar')
 
 			<div id="content-chat" class="content-chat">
 				<div class="container-fluid">

@@ -1,5 +1,9 @@
 @extends('layouts.chat-master')
 
+@section('navbar')
+	@include('chat.nav')
+@endsection
+
 @section('content')
 	<div class="row">
 		<div class="col-lg-10 col-lg-offset-1" id="chat-room">
@@ -8,7 +12,7 @@
 			    <p>This one adds a right triangle on the left, flush at the top by using .tri-right and .left-top to specify the location.</p>
 			  </div>
 			</div> --}}
-			@foreach ($room->admin_chat()->latest()->get() as $message)
+			@foreach ($room->admin_chat()->oldest()->get() as $message)
 				<div class="talk-bubble tri-right {{ $message->indent() }}">
 				  <div class="talktext">
 				    <p>{{ $message->message }}</p>
@@ -41,6 +45,17 @@
 			var chat = '<div class="talk-bubble tri-right bg-admin right-top right-side"><div class="talktext"><p>'+message+'</p></div></div>'
 			$('#chat-room').append(chat);
 			$("#content-chat").animate({ scrollTop: $('#content-chat').prop("scrollHeight")}, 1000);
+			$.ajax({
+				type: 'POST',
+				url: '/admin_chat',
+				data: '_token={{ csrf_token() }}&message='+message+'&admin_room_id={{ $room->id }}',
+				success: function(data) {
+					$('#message').val('');
+				},
+				error: function(data) {
+
+				},
+			});
 		});
 			
 	</script>
