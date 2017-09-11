@@ -142,3 +142,5 @@ Route::get('/chat/{room}', function(\App\AdminRoom $room)
 {
     return view('chat.view', compact('room'));
 });
+
+Route::post('/admin_chat', 'AdminChatController@store');
