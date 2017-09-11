@@ -7,11 +7,6 @@
 @section('content')
 	<div class="row">
 		<div class="col-lg-10 col-lg-offset-1" id="chat-room">
-			{{-- <div class="talk-bubble tri-right left-top left-side">
-			  <div class="talktext">
-			    <p>This one adds a right triangle on the left, flush at the top by using .tri-right and .left-top to specify the location.</p>
-			  </div>
-			</div> --}}
 			@foreach ($room->admin_chat()->oldest()->get() as $message)
 				<div class="talk-bubble tri-right {{ $message->indent() }}">
 				  <div class="talktext">
@@ -29,7 +24,7 @@
 	      {{-- <input id="message" type="text" class="form-control" placeholder="Search for..."> --}}
 	      <textarea id="message" class="form-control" rows="1" placeholder="Ketik pesan..."></textarea>
 	      <span class="input-group-btn">
-	        <button id="send" class="btn btn-default" type="button">Go!</button>
+	        <button id="send" class="btn btn-success btn-round btn-just-icon" type="button"><i class="material-icons">send</i></button>
 	      </span>
 	    </div><!-- /input-group -->
 		</form>
