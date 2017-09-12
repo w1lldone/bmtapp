@@ -39,18 +39,22 @@
 			</div>
 			<div class="card" style="margin-top: 0">
 				<div class="card-content">
-{{-- 					@if ($feedbacks->isEmpty())
+					@if ($rooms->isEmpty())
 						<div class="text-center text-muted">
-							<i class="material-icons" style="font-size: 6rem">feedback</i>
-							<h3 class="title">Pesan</h3>
+							<i class="material-icons" style="font-size: 6rem">message</i>
+							<h3 class="title">Tidak ada pesan</h3>
 						</div>
-					@endif --}}
+					@endif
 					<table class="table table-hover">
 					<tbody>
 						@foreach ($rooms as $room)
 							<tr class="linked-row" data-href="/chat/{{ $room->id }}">
 								<td class="hidden-xs"><b>{{ $room->nasabah->name }}</b> <br> <small>{{ $room->admin_chat()->latest()->first()->message }}</small></td>
-								<td class="hidden-xs text-right">{{ $room->updated_at->diffForHumans() }}</td>
+								<td class="hidden-xs text-right">{{ $room->updated_at->diffForHumans() }} <br> 
+								@if ($room->unread_messages != 0)
+									<span class="label label-success">{{ $room->unread_messages }} new</span>
+								@endif
+								</td>
 							</tr>
 						@endforeach
 					</tbody>
