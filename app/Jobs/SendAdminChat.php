@@ -10,9 +10,9 @@ use Illuminate\Foundation\Bus\Dispatchable;
 use App\Firebase\Push;
 use App\Firebase\Firebase;
 
-class SendPrivateChat implements ShouldQueue
+class SendAdminChat implements ShouldQueue
 {
-    use InteractsWithQueue, Queueable, SerializesModels;
+    use Dispatchable, InteractsWithQueue, Queueable, SerializesModels;
 
     public $tries = 5;
     
@@ -20,7 +20,6 @@ class SendPrivateChat implements ShouldQueue
     protected $message;
     protected $data;
     protected $to;
-    protected $kode;
 
     /**
      * Create a new job instance.
@@ -29,7 +28,7 @@ class SendPrivateChat implements ShouldQueue
      */
     public function __construct($message, $to)
     {
-        $this->title = 'Pesan dari '.$message->nasabah->name;
+        $this->title = 'Pesan dari Administrator';
         $this->message = $message->message;
         $this->data = $message;
         $this->to = $to;
@@ -43,12 +42,12 @@ class SendPrivateChat implements ShouldQueue
     public function handle()
     {
         $payload = [
-            'kode' => 4,
-            'data' => $this->data->load('nasabah'),
+            'kode' => 9,
+            'data' => $this->data->load('user'),
         ];
 
         $push = new Push;
-
+        
         $push->setTitle($this->title);
         $push->setMessage($this->message);
         $push->setImage('');
