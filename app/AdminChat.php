@@ -23,4 +23,5 @@ class AdminChat extends Model
 	}
 	    
     protected $guarded = ['id'];
+    protected $touches = ['admin_room'];
 }
