@@ -16,6 +16,8 @@ class PrivateRoomDetail extends Model
         'id'
     ];
 
+    protected $appends = ['admin_chat'];
+
     public function private_room(){
     	return $this->belongsTo('App\PrivateRoom');
     }
@@ -26,6 +28,11 @@ class PrivateRoomDetail extends Model
 
     public function reciever(){
         return $this->belongsTo('App\Nasabah', 'reciever_id');
+    }
+
+    public function getAdminChatAttribute()
+    {
+        return false;
     }
 
 }

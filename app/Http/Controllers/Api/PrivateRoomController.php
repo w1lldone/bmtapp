@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\PrivateRoom;
+use App\AdminRoom;
 use App\PrivateRoomDetail as RoomDetail;
 use App\Http\Controllers\Controller;
 
@@ -26,10 +27,32 @@ class PrivateRoomController extends Controller
 
     public function index($nasabah)
     {
-        return RoomDetail::where('nasabah_id', $nasabah)->get()->load(['nasabah', 'reciever', 'private_room.private_message' => function($query)
+        $rooms = RoomDetail::where('nasabah_id', $nasabah)->get()->load(['nasabah', 'reciever', 'private_room.private_message' => function($query)
         {
             $query->latest()->with('nasabah')->first();
         }]);
+
+        // return $rooms;
+
+        // Append admin chat to private message
+        $data = AdminRoom::where('nasabah_id', $nasabah)->first();
+        $adminRoom = [
+            'private_room_id' => $data->id,
+            'admin_chat' => true,
+            'reciever' => [
+                'name' => 'Administrator',
+                'foto' => '/uploads/images/logo/logo.svg'
+            ],
+            'private_room' => [
+                'private_message' => [
+                    'message' => $data->admin_chat()->latest()->first()->message,
+                    'created_at' => $data->admin_chat()->latest()->first()->created_at->toDateTimeString(),
+                ],
+            ],
+        ];
+
+        return $rooms->push($adminRoom);
+
     }
 
     public function store(Request $request)

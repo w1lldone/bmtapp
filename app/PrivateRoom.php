@@ -16,6 +16,7 @@ class PrivateRoom extends Model
         'id'
     ];
 
+
     public function private_message(){
     	return $this->hasMany('App\PrivateMessage');
     }
@@ -40,5 +41,6 @@ class PrivateRoom extends Model
 
         return $room;
     }
+
 
 }
