@@ -93,7 +93,8 @@ class Produk extends Model
 
     public static function hotItems()
     {
-        return static::orderBy('view', 'desc')
+        return static::where('aktif', 1)
+                    ->orderBy('view', 'desc')
                     ->take(5)
                     ->with(['kategori_produk', 'lapak','review' => function($query){
                         $query->take(5)->with('nasabah');
