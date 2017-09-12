@@ -9,6 +9,10 @@ use App\Events\AdminChatSent;
 
 class AdminChatController extends Controller
 {
+    function __construct()
+    {
+        $this->middleware('auth');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -54,9 +58,10 @@ class AdminChatController extends Controller
      * @param  \App\AdminChat  $adminChat
      * @return \Illuminate\Http\Response
      */
-    public function show(AdminChat $adminChat)
+    public function show($room)
     {
-        //
+        $chats = AdminChat::where('admin_room_id', $room)->latest()->get();
+        return $chats->load('nasabah', 'user');
     }
 
     /**

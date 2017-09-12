@@ -47,10 +47,6 @@
 					@endif --}}
 					<table class="table table-hover">
 					<tbody>
-						<tr class="linked-row" data-href="/chat/">
-							<td class="hidden-xs"><b>Wildan Ainurrahman</b> <br> <small>halo test ini chat</small></td>
-							<td class="hidden-xs text-right">9 September</td>
-						</tr>
 						@foreach ($rooms as $room)
 							<tr class="linked-row" data-href="/chat/{{ $room->id }}">
 								<td class="hidden-xs"><b>{{ $room->nasabah->name }}</b> <br> <small>{{ $room->admin_chat()->latest()->first()->message }}</small></td>

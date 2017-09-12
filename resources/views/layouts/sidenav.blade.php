@@ -74,6 +74,12 @@
                         <p>Feedback</p>
                     </a>
                   </li>
+                  <li class="@if (substr(Route::currentRouteName(),0 ,4) == 'chat'){{ 'active' }} @endif">
+                    <a href="/chat">
+                        <i class="material-icons">message</i>
+                        <p>Chat</p>
+                    </a>
+                  </li>
                   <hr class="hidden-md hidden-lg separator">
                   <li class="dropdown hidden-md hidden-lg">
                     <a href="/setting">

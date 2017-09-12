@@ -139,8 +139,8 @@ Route::resource('template', 'TemplateController');
 Route::resource('feedback', 'FeedbackController');
 
 Route::group(['prefix' => 'chat'], function(){
-    Route::get('/', 'AdminChatController@index');
-    Route::get('/{room}', 'AdminChatController@show');
+    Route::get('/', 'AdminChatController@index')->name('chat');
+    Route::get('/{room}', 'AdminChatController@show')->name('chat.detail');
 });
 
 Route::post('/admin_chat', 'AdminChatController@store');

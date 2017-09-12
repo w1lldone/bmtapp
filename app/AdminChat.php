@@ -11,6 +11,14 @@ class AdminChat extends Model
 		return $this->belongsTo('App\AdminRoom');
 	}
 
+	public function nasabah(){
+		return $this->belongsTo('App\Nasabah');
+	}
+
+	public function user(){
+		return $this->belongsTo('App\User');
+	}
+
 	/*CUSTOM METHOD*/
 	public function indent()
 	{

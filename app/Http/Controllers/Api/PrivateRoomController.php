@@ -45,9 +45,8 @@ class PrivateRoomController extends Controller
             ],
             'private_room' => [
                 'private_message' => [
-                    'message' => $data->admin_chat()->latest()->first()->message,
-                    'created_at' => $data->admin_chat()->latest()->first()->created_at->toDateTimeString(),
-                ],
+                    array('message' => $data->admin_chat()->latest()->first()->message, 'created_at' => $data->admin_chat()->latest()->first()->created_at->toDateTimeString())
+                ]
             ],
         ];
 
