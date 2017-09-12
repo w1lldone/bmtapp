@@ -19,6 +19,7 @@ class CreateAdminChatsTable extends Migration
             $table->integer('nasabah_id')->unsigned();
             $table->boolean('admin_id')->nullable();
             $table->string('message', 250)->nullable();
+            $table->timestamp('read_at')->nullable();
             $table->timestamps();
         });
     }
