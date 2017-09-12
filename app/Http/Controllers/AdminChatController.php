@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\AdminChat;
 use App\AdminRoom;
 use Illuminate\Http\Request;
+use App\Jobs\SendAdminChat;
 
 class AdminChatController extends Controller
 {
@@ -49,6 +50,10 @@ class AdminChatController extends Controller
             'read_at' => \Carbon\Carbon::now(),
         ]);
 
+        foreach ($chat->admin_room->nasabah->getDeviceId() as $device) {
+            dispatch( new SendAdminChat($chat, $device));
+        }
+
         return response()->json(array('chat' => $chat), 200);
     }
 
@@ -60,6 +65,7 @@ class AdminChatController extends Controller
      */
     public function show(AdminRoom $room)
     {
+        $room->read();
         return view('chat.view', compact('room'));
     }
 
