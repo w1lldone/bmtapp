@@ -22,10 +22,11 @@ class KategoriController extends Controller
 
     public function view(Request $request){
 
+        $produks = new Produk;
+        $produks = $produks->where('aktif', 1)
+
         if (request()->has('kategori_id')) {
-            $produks = Produk::where('kategori_produk_id', request('kategori_id'));
-        } else {
-            $produks = new Produk;
+            $produks = $produks->where('kategori_produk_id', request('kategori_id'));
         }
 
         if (request()->has('keyword')) {
