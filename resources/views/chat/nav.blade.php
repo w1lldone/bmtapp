@@ -7,7 +7,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#"><i class="material-icons">arrow_back</i></a>
+      <a class="navbar-brand" href="/chat"><i class="material-icons">arrow_back</i></a>
       <div style="padding-left: 60px;">
         <span style="font-size: 2rem;"><b>{{ $room->nasabah->name }}</b> <br> <small>{{ $room->nasabah->kontak }}</small></span>
       </div>
