@@ -138,9 +138,9 @@ Route::get('/kebijakan-privasi', function()
 Route::resource('template', 'TemplateController');
 Route::resource('feedback', 'FeedbackController');
 
-Route::get('/chat/{room}', function(\App\AdminRoom $room)
-{
-    return view('chat.view', compact('room'));
+Route::group(['prefix' => 'chat'], function(){
+    Route::get('/', 'AdminChatController@index');
+    Route::get('/{room}', 'AdminChatController@show');
 });
 
 Route::post('/admin_chat', 'AdminChatController@store');

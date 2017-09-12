@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\AdminChat;
+use App\AdminRoom;
 use Illuminate\Http\Request;
 
 class AdminChatController extends Controller
@@ -18,7 +19,9 @@ class AdminChatController extends Controller
      */
     public function index()
     {
-        //
+        $rooms = AdminRoom::getData();
+
+        return view('chat.index', compact('rooms'));
     }
 
     /**
@@ -43,6 +46,7 @@ class AdminChatController extends Controller
             'user_id' => auth()->id(),
             'admin_room_id' => $request->admin_room_id,
             'message' => $request->message,
+            'read_at' => \Carbon\Carbon::now(),
         ]);
 
         return response()->json(array('chat' => $chat), 200);
@@ -54,9 +58,9 @@ class AdminChatController extends Controller
      * @param  \App\AdminChat  $adminChat
      * @return \Illuminate\Http\Response
      */
-    public function show(AdminChat $adminChat)
+    public function show(AdminRoom $room)
     {
-        //
+        return view('chat.view', compact('room'));
     }
 
     /**
