@@ -17,6 +17,11 @@ class AdminRoom extends Model
 
 	/*CUSTOM METHOD SECTION*/
 
+	public function getUnreadMessagesAttribute()
+	{
+		return $this->admin_chat()->where('read_at', null)->count();
+	}
+
 	public static function getData()
 	{
 		$rooms = new AdminRoom;
@@ -57,6 +62,13 @@ class AdminRoom extends Model
 
 		return $rooms->paginate(10)->appends(request()->except('page'));
 	}
+
+
+	public function read()
+	{
+		return $this->admin_chat()->where('read_at', null)->update(['read_at' => \Carbon\Carbon::now()]);
+	}
+
     
     protected $guarded = ['id'];
     protected $dates = ['updated_at'];
