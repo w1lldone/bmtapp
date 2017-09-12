@@ -69,6 +69,14 @@ class Nasabah extends Authenticatable
     	return $this->hasMany('App\Feedback');
     }
 
+    public function admin_room(){
+    	return $this->hasOne('App\AdminRoom');
+    }
+
+    public function admin_chat(){
+    	return $this->hasMany('App\AdminChat');
+    }
+
     public function getDeviceId()
     {
         return $this->device()->pluck('device_id')->all();
