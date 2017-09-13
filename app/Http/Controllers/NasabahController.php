@@ -47,6 +47,7 @@ class NasabahController extends Controller
         $nasabah->update(['foto' => "/uploads/$nasabah->id/default.png"]);
 
         $nasabah->addLapak($nasabah->id);
+        \App\AdminRoom::firstOrCreate(['nasabah_id' => $nasabah->id]);
 
         return redirect('/nasabah')->with('status', 'Nasabah berhasil didaftarkan!');
 
