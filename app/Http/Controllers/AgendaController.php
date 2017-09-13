@@ -19,7 +19,6 @@ class AgendaController extends Controller
             'name' => 'required|string',
             'tanggal' => 'required|string',
             'mulai_at' => 'required|string',
-            'selesai_at' => 'string',
             'mku_id' => 'required',
             'lokasi' => 'required|string',
         ]);
