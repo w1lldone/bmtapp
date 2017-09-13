@@ -14,7 +14,7 @@
         </div>
         <div class="col-sm-4 p-2">
             <div class="card card-plain">
-                <div class="card-header" data-background-color="red">
+                <div class="card-header" data-background-color="purple">
                     <h4 class="title">Pintasan</h4>
                 </div>
                 <div class="card-content" style="padding-right: 0; padding-left: 0;">
@@ -23,13 +23,13 @@
                           <div class="items"><i background="bmt-green" style="box-shadow: none" class="material-icons circle">person</i></div>
                           <div class="items"><h4>Mendaftarkan nasabah</h4></div>
                       </a>
-                      <button data-toggle="modal" data-target="#newKategori" type="button" class="list-group-item list-icons">
-                        <div class="items"><i background="blue" style="box-shadow: none" class="material-icons circle">store</i></div>
-                        <div class="items"><h4>Tambah kategori</h4></div>
-                      </button>
-                      <a href="/kategori/layanan/create" type="button" class="list-group-item list-icons">
-                        <div class="items"><i background="orange" style="box-shadow: none" class="material-icons circle">account_balance_wallet</i></div>
-                        <div class="items"><h4>Tambah Layanan</h4></div>
+                      <a href="/agenda/create" type="button" class="list-group-item list-icons">
+                        <div class="items"><i background="blue" style="box-shadow: none" class="material-icons circle">today</i></div>
+                        <div class="items"><h4>Tambah agenda</h4></div>
+                      </a>
+                      <a href="/news/create" type="button" class="list-group-item list-icons">
+                        <div class="items"><i background="orange" style="box-shadow: none" class="material-icons circle">mms</i></div>
+                        <div class="items"><h4>Tambah News</h4></div>
                       </a>
                     </div>
                 </div>

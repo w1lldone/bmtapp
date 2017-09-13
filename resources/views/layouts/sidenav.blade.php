@@ -38,10 +38,10 @@
                         <p>Layanan <span id="count-layan" class="badge notification-badge hidden-lg hidden-md">{{ $count_l }}</span></p>
                     </a>
                   </li>
-                  <li class="@if (Route::currentRouteName() == 'kategori'){{ 'active' }} @endif">
-                    <a href="/kategori">
-                        <i class="material-icons">store</i>
-                        <p>Kategori</p>
+                  <li class="@if (substr(Route::currentRouteName(),0 ,4) == 'chat'){{ 'active' }} @endif">
+                    <a href="/chat">
+                        <i class="material-icons">message</i>
+                        <p>Chat</p>
                     </a>
                   </li>
                   <li class="@if (substr(Route::currentRouteName(),0 ,8) == 'reminder'){{ 'active' }} @endif">
@@ -54,6 +54,12 @@
                     <a href="/agenda">
                         <i class="material-icons">today</i>
                         <p>Agenda</p>
+                    </a>
+                  </li>
+                  <li class="@if (Route::currentRouteName() == 'kategori'){{ 'active' }} @endif">
+                    <a href="/kategori">
+                        <i class="material-icons">store</i>
+                        <p>Kategori</p>
                     </a>
                   </li>
                   <li class="@if (substr(Route::currentRouteName(),0 ,3) == 'mku'){{ 'active' }} @endif">
@@ -74,12 +80,7 @@
                         <p>Feedback</p>
                     </a>
                   </li>
-                  <li class="@if (substr(Route::currentRouteName(),0 ,4) == 'chat'){{ 'active' }} @endif">
-                    <a href="/chat">
-                        <i class="material-icons">message</i>
-                        <p>Chat</p>
-                    </a>
-                  </li>
+
                   <hr class="hidden-md hidden-lg separator">
                   <li class="dropdown hidden-md hidden-lg">
                     <a href="/setting">
