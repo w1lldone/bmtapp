@@ -41,7 +41,7 @@ class PrivateRoomController extends Controller
             'admin_chat' => true,
             'reciever' => [
                 'name' => 'Administrator',
-                'foto' => '/uploads/images/logo/logo.svg'
+                'foto' => '/assets/img/logo/logo.png'
             ],
             'private_room' => [
                 'private_message' => [
