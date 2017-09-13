@@ -49,7 +49,7 @@
 					<tbody>
 						@foreach ($rooms as $room)
 							<tr class="linked-row" data-href="/chat/{{ $room->id }}">
-								<td class="hidden-xs"><b>{{ $room->nasabah->name }}</b> <br> <small>{{ $room->admin_chat()->latest()->first()->message }}</small></td>
+								<td class="hidden-xs"><b>{{ $room->nasabah->name }}</b> <br> <small>{{ $room->last_message }}</small></td>
 								<td class="hidden-xs text-right">{{ $room->updated_at->diffForHumans() }} <br> 
 								@if ($room->unread_messages != 0)
 									<span class="label label-success">{{ $room->unread_messages }} new</span>

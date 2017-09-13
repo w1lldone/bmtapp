@@ -22,6 +22,15 @@ class AdminRoom extends Model
 		return $this->admin_chat()->where('read_at', null)->count();
 	}
 
+	public function getLastMessageAttribute()
+	{
+		if (empty($this->admin_chat->first())) {
+			return '&nbsp;';
+		} else {
+			return substr($this->admin_chat()->latest()->first()->message, 0, 30);
+		}
+	}
+
 	public static function getData()
 	{
 		$rooms = new AdminRoom;
