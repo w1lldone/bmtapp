@@ -27,9 +27,10 @@ class PrivateRoomController extends Controller
 
     public function index($nasabah)
     {
-        $rooms = RoomDetail::where('nasabah_id', $nasabah)->with(['nasabah', 'reciever', 'private_room.private_message' => function($query)
+        $count = RoomDetail::where('nasabah_id', $nasabah)->count();
+        $rooms = RoomDetail::where('nasabah_id', $nasabah)->with(['nasabah', 'reciever', 'private_room.private_message' => function($query) use ($count)
         {
-            $query->latest()->limit(2);
+            $query->latest()->take($count)->with('nasabah');
         }])->get();
 
         // return $rooms;
