@@ -180,6 +180,7 @@ class Lapak extends Model
 
     public function getLastUpdateAttribute()
     {
+        if ($this->produk()->count() == 0) return $this->updated_at->toDateString();
         return $this->produk()->latest()->first()->updated_at->toDateString();
     }
 
