@@ -16,6 +16,8 @@ class PrivateRoom extends Model
         'id'
     ];
 
+    protected $appends = ['last_message'];
+
 
     public function private_message(){
     	return $this->hasMany('App\PrivateMessage');
@@ -40,6 +42,12 @@ class PrivateRoom extends Model
         ]);
 
         return $room;
+    }
+
+    /*CUSTOM ATTRIBUTE*/
+    public function getLastMessageAttribute()
+    {
+        return $this->private_message()->latest()->take(1)->with('nasabah')->get();
     }
 
 

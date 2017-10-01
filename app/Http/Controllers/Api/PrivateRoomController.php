@@ -27,11 +27,7 @@ class PrivateRoomController extends Controller
 
     public function index($nasabah)
     {
-        $count = RoomDetail::where('nasabah_id', $nasabah)->count();
-        $rooms = RoomDetail::where('nasabah_id', $nasabah)->with(['nasabah', 'reciever', 'private_room.private_message' => function($query) use ($count)
-        {
-            $query->latest()->take($count)->with('nasabah');
-        }])->get();
+        $rooms = RoomDetail::where('nasabah_id', $nasabah)->with(['nasabah', 'reciever', 'private_room'])->get();
 
         // return $rooms;
 
@@ -45,7 +41,7 @@ class PrivateRoomController extends Controller
                 'foto' => '/assets/img/logo/logo.png'
             ],
             'private_room' => [
-                'private_message' => [
+                'last_message' => [
                     array('message' => $data->admin_chat()->latest()->first()->message, 'created_at' => $data->admin_chat()->latest()->first()->created_at->toDateTimeString())
                 ]
             ],

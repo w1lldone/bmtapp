@@ -30,6 +30,9 @@ class PrivateRoomDetail extends Model
         return $this->belongsTo('App\Nasabah', 'reciever_id');
     }
 
+    /*CUSTOM ATTRIBUTE*/
+
+
     public function getAdminChatAttribute()
     {
         return false;
