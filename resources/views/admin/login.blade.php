@@ -18,6 +18,13 @@
 		<div class="row" style="margin-top: 30px">
 			<div class="col m5 s12 offset-m3">
 				<h5 class="light center">Login Sistem Informasi <br> BMT Mobile</h5>
+				@foreach ($errors->all() as $error)
+					<div class="card orange darken-2">
+            <div class="card-content white-text">
+              <span>{{ $error }}</span>
+            </div>
+          </div>
+				@endforeach
 				<div class="card grey lighten-3">
 					<div class="card-content">
 						<div class="row center">
