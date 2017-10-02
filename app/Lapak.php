@@ -33,7 +33,7 @@ class Lapak extends Model
     		'stok' => request('stok'),
     		'view' => 0,
     		'aktif' => 1,
-            'rating' => 4,
+            'rating' => 4.0,
             'antar' => request('antar'),
 		]);
 
