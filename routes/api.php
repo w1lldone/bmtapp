@@ -12,6 +12,7 @@ Route::resource('nasabah', 'Api\NasabahController');
 Route::group(['prefix' => 'nasabah'], function(){
 	Route::get('/{nasabah}/lapak', 'Api\NasabahController@lapak');
 	Route::get('/{nasabah}/private', 'Api\PrivateRoomController@index');
+	Route::get('/{nasabah}/saldo', 'Api\SaldoController@show');
 });
 
 Route::group(['prefix' => 'lapak'], function(){
@@ -21,8 +22,6 @@ Route::group(['prefix' => 'lapak'], function(){
 	Route::post('/foto/{nasabah}', 'Api\LapakController@updatefoto');
 	Route::get('/{lapak}/review', 'Api\ReviewController@index');
 });
-
-Route::get('/saldo/{tabung}', 'Api\SaldoController@view');
 
 Route::post('foto/{nasabah}', 'Api\NasabahFotoController@update');
 Route::post('/link', 'Api\NasabahFotoController@link');

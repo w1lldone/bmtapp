@@ -5,15 +5,17 @@ namespace App\Http\Controllers\Api;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\TabungBU;
+use App\Nasabah;
 
 class SaldoController extends Controller
 {
-    public function view(TabungBU $tabung){
+    public function show(Nasabah $nasabah){
 
-       	return response()->json([
+
+       	return [
     		'error' => false,
     		'status' => 'success',
-    		'saldo' => $tabung->SALDO_AKHIR,
-		]);
+    		'saldo' => 14000,
+		];
     }
 }
