@@ -69,7 +69,7 @@ class KreditReminder implements ShouldQueue
                 }
 
                 // add reminder detail
-                $this->reminder->addDetail($nasabah->id);
+                $this->reminder->addDetail($nasabah->id, $kredit);
 
             }
         }        

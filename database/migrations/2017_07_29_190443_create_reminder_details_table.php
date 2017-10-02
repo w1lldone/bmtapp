@@ -17,6 +17,8 @@ class CreateReminderDetailsTable extends Migration
             $table->increments('id');
             $table->integer('reminder_id')->unsigned();
             $table->integer('nasabah_id')->unsigned();
+            $table->integer('cicilan_ke')->nullable();
+            $table->integer('nominal')->nullable();
             $table->timestamps();
         });
     }
