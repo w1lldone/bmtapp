@@ -10,12 +10,13 @@ use App\Nasabah;
 class SaldoController extends Controller
 {
     public function show(Nasabah $nasabah){
-
+    	$tabung = new TabungBU($nasabah->cabang->connection);
+    	$saldo = $tabung->where('NO_REKENING', $nasabah->no_rekening)->first()->SALDO_AKHIR;
 
        	return [
     		'error' => false,
     		'status' => 'success',
-    		'saldo' => 14000,
+    		'saldo' => $saldo,
 		];
     }
 }
