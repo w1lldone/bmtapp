@@ -64,10 +64,13 @@ class Order extends Model
         foreach ($this->orderDetail as $orderDetail) {
             $orderDetail->selesaiNotification();
         }
+        event(new \App\Events\OrderNotification($this, 'Pesanan selesai'));
         return $this->update(['status' => 'finished', 'status_kode' => 5]);
     }
 
     public function statusCanceled($pesan = ''){
+        event(new \App\Events\OrderNotification($this, 'Pesanan dibatalkan'));
+        $this->penjualNotification('Pesanan dibatalkan');
         return $this->update([
             'status' => 'canceled', 
             'status_kode' => 6,
