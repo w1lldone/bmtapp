@@ -51,7 +51,7 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
-        return parent::render($request, $exception);
+        // return parent::render($request, $exception);
 
         if(!$this->isApiCall($request)) return parent::render($request, $exception);
 
@@ -76,9 +76,11 @@ class Handler extends ExceptionHandler
                 break;
 
             default:
+                return parent::render($request, $exception);
                 return response()->json([
                     'error' => true,
                     'message' => 'bad request',
+                    'details' => $exception->getMessage(),
                 ], 400);
                 break;
         }
