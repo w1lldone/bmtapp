@@ -77,6 +77,10 @@ class Nasabah extends Authenticatable
     	return $this->hasMany('App\AdminChat');
     }
 
+    public function review(){
+    	$this->hasMany('App\Review');
+    }
+
     public function getDeviceId()
     {
         return $this->device()->pluck('device_id')->all();
@@ -215,10 +219,6 @@ class Nasabah extends Authenticatable
 		return $orders;
 	}
 
-	public function review(){
-		$this->hasMany('App\Review');
-	}
-
 	public function addLayanan(){
 		$layanan = $this->layanan()->create([
 			'status' => 'pending',
@@ -268,8 +268,15 @@ class Nasabah extends Authenticatable
 		}
 	}
 
+	/*CUSTOM ATTRIBUTE*/
+	public function getUnreadRemindersAttribute()
+	{
+		return $this->reminder_detail()->whereNull('read_at')->count();
+	}
+
     protected $guarded=['id'];
     protected $hidden = [
         'password', 'cabang_id', 'device_token', 'remember_token', 'mku_id'
     ];
+    protected $appends = ['unread_reminders'];
 }
