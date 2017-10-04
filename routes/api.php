@@ -14,6 +14,7 @@ Route::group(['prefix' => 'nasabah'], function(){
 	Route::get('/{nasabah}/private', 'Api\PrivateRoomController@index');
 	Route::get('/{nasabah}/saldo', 'Api\SaldoController@show');
 	Route::get('/{nasabah}/reminder', 'Api\KreditReminderController@index');
+	Route::get('/{nasabah}/unreadReminders', 'Api\KreditReminderController@unread');
 });
 
 Route::group(['prefix' => 'lapak'], function(){

@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\ReminderDetail;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Nasabah;
 
 class KreditReminderController extends Controller
 {
@@ -15,7 +16,7 @@ class KreditReminderController extends Controller
      */
     public function index($id)
     {
-        return $this->tempIndex();
+        // return $this->tempIndex();
         $reminders = ReminderDetail::where('nasabah_id', $id)->latest()->get();
 
         $val = [
@@ -66,27 +67,6 @@ class KreditReminderController extends Controller
     }
 
     /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
      * Display the specified resource.
      *
      * @param  \App\ReminderDetail  $reminderDetail
@@ -95,9 +75,11 @@ class KreditReminderController extends Controller
     public function show(ReminderDetail $reminderDetail)
     {
         return $this->tempShow();
+
         $reminderDetail->read();
         $val = [
-            'reminder_detail' => $reminderDetail->load('reminder')
+            'reminder_detail' => $reminderDetail->load('reminder'),
+            'unread_reminders' => $reminderDetail->nasabah()->first()->unread_reminders,
         ];
         return $val;
     }
@@ -121,42 +103,19 @@ class KreditReminderController extends Controller
                     'updated_at' => "2017-07-30 09:36:23",
                 ],
             ],
+            'unread_reminders' => 13,
         ];
 
         return $val;
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\ReminderDetail  $reminderDetail
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(ReminderDetail $reminderDetail)
+    public function unread(Nasabah $nasabah)
     {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\ReminderDetail  $reminderDetail
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, ReminderDetail $reminderDetail)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\ReminderDetail  $reminderDetail
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(ReminderDetail $reminderDetail)
-    {
-        //
+        $val = [
+            'error' => false,
+            'status' => 'success',
+            'unread_reminders' => $nasabah->unread_reminders,
+        ];
+        return $val;
     }
 }
