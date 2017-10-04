@@ -19,5 +19,17 @@ class ReminderDetail extends Model
         return $this->belongsTo('App\Nasabah');
     }
 
+    /*CUSTOM METHOD SECTION*/
+    public function read()
+    {
+        if ($this->read_at == null) {
+            $this->update([
+                'read_at' => \Carbon\Carbon::now()
+            ]);
+        }
+
+        return true;
+    }
+
     protected $guarded = ['id'];
 }

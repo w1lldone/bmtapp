@@ -26,7 +26,7 @@ class Reminder extends Model
     {
         return $this->detail()->create([
                 'nasabah_id' => $nasabahId,
-                'cicilan_ke' => $kredit->CICILAN_KE,
+                'angsuran_ke' => $kredit->ANGSURAN_KE,
                 'nominal' => $kredit->BUNGA+$kredit->POKOK,
             ]);
     }

@@ -13,6 +13,7 @@ Route::group(['prefix' => 'nasabah'], function(){
 	Route::get('/{nasabah}/lapak', 'Api\NasabahController@lapak');
 	Route::get('/{nasabah}/private', 'Api\PrivateRoomController@index');
 	Route::get('/{nasabah}/saldo', 'Api\SaldoController@show');
+	Route::get('/{nasabah}/reminder', 'Api\KreditReminderController@index');
 });
 
 Route::group(['prefix' => 'lapak'], function(){
@@ -126,4 +127,8 @@ Route::post('/admin_chat', 'Api\AdminChatController@store');
 
 Route::group(['prefix' => 'feedback'], function(){
 	Route::post('/', 'Api\FeedbackController@store');
+});
+
+Route::group(['prefix' => 'reminder'], function(){
+	Route::get('/{reminderDetail}', 'Api\KreditReminderController@show');
 });
