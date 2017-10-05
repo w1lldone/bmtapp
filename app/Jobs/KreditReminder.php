@@ -40,6 +40,7 @@ class KreditReminder implements ShouldQueue
     public function handle()
     {
         $kretrans = new KretransBU($this->con);
+        // $kretrans = new KretransBU('bmtbufake');
         $kredits = $kretrans->where('TGL_TRANS', $this->reminder->tanggal->toDateString())->where('MY_KODE_TRANS', 200)->get();
         $tanggal = Carbon::createFromFormat('Y-m-d', $this->reminder->tanggal->toDateString())->formatLocalized('%d %B %Y');
         $template = \App\Template::find(1);
@@ -48,28 +49,29 @@ class KreditReminder implements ShouldQueue
 
             // check registered nasabah
             $nasabah = Nasabah::where('no_rekening_kredit', $kredit->NO_REKENING)->first();
-
-            // GENERATE DATA
-            if (!empty($nasabah)) {
-                $kredit->NASABAH = $nasabah->name;
-            }
-            $data = [
-                'kode' => 8,
-                'data' => [
-                    'pesan' => $template,
-                    'kredit' => $kredit,
-                ],
-            ];
             
             if (!empty($nasabah)) {
+
+                $kredit->NASABAH = $nasabah->name;
+
+                // add reminder detail
+                $detail = $this->reminder->addDetail($nasabah->id, $kredit);
+
+                // GENERATE DATA
+                $data = [
+                    'kode' => 8,
+                    'data' => [
+                        'id' => $detail->id,
+                        'pesan' => $template,
+                        'kredit' => $kredit,
+                    ],
+                ];
 
                 // send notification
                 foreach ($nasabah->device as $device) {
                     dispatch(new SendFirebaseNotification('BMT Mobile App', 'Pengingat cicilan kredit', $data, $device->device_id));
                 }
 
-                // add reminder detail
-                $this->reminder->addDetail($nasabah->id, $kredit);
 
             }
         }        

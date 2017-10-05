@@ -74,7 +74,7 @@ class KreditReminderController extends Controller
      */
     public function show(ReminderDetail $reminderDetail)
     {
-        return $this->tempShow();
+        // return $this->tempShow();
 
         $reminderDetail->read();
         $val = [

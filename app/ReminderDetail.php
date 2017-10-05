@@ -31,5 +31,18 @@ class ReminderDetail extends Model
         return true;
     }
 
+
+    /*CUSTOM ATTRIBUTE*/
+    public function getHeadAttribute()
+    {
+        return \App\Template::find(1)->head;
+    }
+
+    public function getFootAttribute()
+    {
+        return \App\Template::find(1)->foot;
+    }
+
     protected $guarded = ['id'];
+    protected $appends= ['head', 'foot'];
 }
