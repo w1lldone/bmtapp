@@ -264,7 +264,7 @@ class Nasabah extends Authenticatable
 	public function sendNotification($message = 'notifikasi', $data = array())
 	{
 		foreach ($this->device as $device) {
-			dispatch(new SendFirebaseNotification('BMT Mobile App', $message, $data, $device->device_id));
+			dispatch(new SendFirebaseNotification('Bi-Mobile App', $message, $data, $device->device_id));
 		}
 	}
 

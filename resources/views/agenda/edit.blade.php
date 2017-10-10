@@ -17,7 +17,7 @@
         	<div class="row">
         		<div class="col-xs-12">
         			<h4 class="title">Form edit agenda MKU</h4>
-                <p class="category">BMT mobile app</p>
+                <p class="category">Bi-Mobile app</p>
         		</div>
         	</div>
         </div>

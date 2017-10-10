@@ -1,0 +1,283 @@
+[30-Sep-2017 04:55:58 UTC] PHP Parse error:  syntax error, unexpected '.', expecting '&' or variable (T_VARIABLE) in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 444
+[30-Sep-2017 04:56:09 UTC] PHP Parse error:  syntax error, unexpected '.', expecting '&' or variable (T_VARIABLE) in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 444
+[30-Sep-2017 04:56:50 UTC] PHP Parse error:  syntax error, unexpected '.', expecting '&' or variable (T_VARIABLE) in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 444
+[30-Sep-2017 04:56:50 UTC] PHP Parse error:  syntax error, unexpected '.', expecting '&' or variable (T_VARIABLE) in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 444
+[30-Sep-2017 04:57:51 UTC] PHP Parse error:  syntax error, unexpected '.', expecting '&' or variable (T_VARIABLE) in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 444
+[30-Sep-2017 04:57:51 UTC] PHP Parse error:  syntax error, unexpected '.', expecting '&' or variable (T_VARIABLE) in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 444
+[30-Sep-2017 04:57:53 UTC] PHP Parse error:  syntax error, unexpected '.', expecting '&' or variable (T_VARIABLE) in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 444
+[30-Sep-2017 04:57:53 UTC] PHP Parse error:  syntax error, unexpected '.', expecting '&' or variable (T_VARIABLE) in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 444
+[30-Sep-2017 04:57:55 UTC] PHP Parse error:  syntax error, unexpected '.', expecting '&' or variable (T_VARIABLE) in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 444
+[30-Sep-2017 04:57:56 UTC] PHP Parse error:  syntax error, unexpected '.', expecting '&' or variable (T_VARIABLE) in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 444
+[30-Sep-2017 04:58:10 UTC] PHP Parse error:  syntax error, unexpected '.', expecting '&' or variable (T_VARIABLE) in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 444
+[30-Sep-2017 04:58:11 UTC] PHP Parse error:  syntax error, unexpected '.', expecting '&' or variable (T_VARIABLE) in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php on line 444
+[30-Sep-2017 11:58:30 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 11:58:33 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 11:58:34 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 11:58:36 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 11:58:39 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 11:58:40 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 11:58:49 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 11:59:32 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 11:59:34 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 11:59:38 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 11:59:40 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 12:00:00 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 12:00:01 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 12:00:02 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 05:00:22 UTC] PHP Fatal error:  Uncaught ReflectionException: Class config does not exist in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/ in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 05:01:46 UTC] PHP Fatal error:  Uncaught ReflectionException: Class config does not exist in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/ in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 15:40:00 Asia/Jakarta] PHP Warning:  require(/home/binaumma/public_html/bmtapp/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /home/binaumma/public_html/bmtapp/bootstrap/autoload.php on line 17
+[30-Sep-2017 15:40:00 Asia/Jakarta] PHP Warning:  require(/home/binaumma/public_html/bmtapp/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /home/binaumma/public_html/bmtapp/bootstrap/autoload.php on line 17
+[30-Sep-2017 15:40:00 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/binaumma/public_html/bmtapp/bootstrap/../vendor/autoload.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/binaumma/public_html/bmtapp/bootstrap/autoload.php on line 17
+[30-Sep-2017 15:40:08 Asia/Jakarta] PHP Warning:  require(/home/binaumma/public_html/bmtapp/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /home/binaumma/public_html/bmtapp/bootstrap/autoload.php on line 17
+[30-Sep-2017 15:40:08 Asia/Jakarta] PHP Warning:  require(/home/binaumma/public_html/bmtapp/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /home/binaumma/public_html/bmtapp/bootstrap/autoload.php on line 17
+[30-Sep-2017 15:40:08 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/binaumma/public_html/bmtapp/bootstrap/../vendor/autoload.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/binaumma/public_html/bmtapp/bootstrap/autoload.php on line 17
+[30-Sep-2017 15:40:09 Asia/Jakarta] PHP Warning:  require(/home/binaumma/public_html/bmtapp/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /home/binaumma/public_html/bmtapp/bootstrap/autoload.php on line 17
+[30-Sep-2017 15:40:09 Asia/Jakarta] PHP Warning:  require(/home/binaumma/public_html/bmtapp/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /home/binaumma/public_html/bmtapp/bootstrap/autoload.php on line 17
+[30-Sep-2017 15:40:09 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/binaumma/public_html/bmtapp/bootstrap/../vendor/autoload.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/binaumma/public_html/bmtapp/bootstrap/autoload.php on line 17
+[30-Sep-2017 15:40:42 Asia/Jakarta] PHP Warning:  require(/home/binaumma/public_html/bmtapp/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /home/binaumma/public_html/bmtapp/bootstrap/autoload.php on line 17
+[30-Sep-2017 15:40:42 Asia/Jakarta] PHP Warning:  require(/home/binaumma/public_html/bmtapp/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /home/binaumma/public_html/bmtapp/bootstrap/autoload.php on line 17
+[30-Sep-2017 15:40:42 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/binaumma/public_html/bmtapp/bootstrap/../vendor/autoload.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/binaumma/public_html/bmtapp/bootstrap/autoload.php on line 17
+[30-Sep-2017 15:41:42 Asia/Jakarta] PHP Warning:  require(/home/binaumma/public_html/bmtapp/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /home/binaumma/public_html/bmtapp/bootstrap/autoload.php on line 17
+[30-Sep-2017 15:41:42 Asia/Jakarta] PHP Warning:  require(/home/binaumma/public_html/bmtapp/bootstrap/../vendor/autoload.php): failed to open stream: No such file or directory in /home/binaumma/public_html/bmtapp/bootstrap/autoload.php on line 17
+[30-Sep-2017 15:41:42 Asia/Jakarta] PHP Fatal error:  require(): Failed opening required '/home/binaumma/public_html/bmtapp/bootstrap/../vendor/autoload.php' (include_path='.:/opt/alt/php56/usr/share/pear:/opt/alt/php56/usr/share/php') in /home/binaumma/public_html/bmtapp/bootstrap/autoload.php on line 17
+[30-Sep-2017 16:09:12 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 16:09:16 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 16:09:18 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 16:10:04 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 16:10:05 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 16:11:38 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 16:22:04 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 16:22:07 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 16:22:07 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 16:22:53 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 09:23:19 UTC] PHP Fatal error:  Uncaught ReflectionException: Class config does not exist in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/ in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 09:23:21 UTC] PHP Fatal error:  Uncaught ReflectionException: Class config does not exist in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/ in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 09:25:16 UTC] PHP Fatal error:  Uncaught ReflectionException: Class config does not exist in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/ in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 16:43:20 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 16:44:51 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729
+[30-Sep-2017 16:47:43 Asia/Jakarta] PHP Fatal error:  Uncaught exception 'ReflectionException' with message 'Class config does not exist' in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php:729
+Stack trace:
+#0 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(729): ReflectionClass->__construct('config')
+#1 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(608): Illuminate\Container\Container->build('config')
+#2 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php(575): Illuminate\Container\Container->resolve('config')
+#3 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(728): Illuminate\Container\Container->make('config')
+#4 /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(106): Illuminate\Foundation\Application->make('config')
+#5 /home/binaumma/public_html/bmtapp/vendor/laravel in /home/binaumma/public_html/bmtapp/vendor/laravel/framework/src/Illuminate/Container/Container.php on line 729

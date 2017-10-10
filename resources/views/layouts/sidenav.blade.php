@@ -8,7 +8,7 @@
       <div class="logo">
         <a href="/home" class="simple-text">
           <img src="/uploads/images/logo/logo.svg" style="height: 70px; width: auto; margin: auto; display: block;">
-          BMT Mobile App
+          Bi-Mobile App
         </a>
       </div>
 

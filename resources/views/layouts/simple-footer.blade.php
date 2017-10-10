@@ -20,7 +20,7 @@
         </p>
       </div>
       <div class="col-md-3">
-        <h5><b>BMT Mobile Apps</b></h5>
+        <h5><b>Bi-Mobile Apps</b></h5>
         <p style="line-height: 2;">
           <a href="/aturan-penggunaan">Aturan penggunaan</a> <br>
           <a href="/kebijakan-privasi">Kebijakan privasi</a>
@@ -28,7 +28,7 @@
       </div>
       <div class="col-md-3">
         <p class="text-center"> <img src="/assets/img/logo/logo.svg" height="70px"></p>
-        <p class="text-center">BMT Mobile App</p>
+        <p class="text-center">Bi-Mobile App</p>
         <p class="text-center"> <img src="/assets/img/logo/google-play-badge.png" height="70px"></p>
       </div>
     </div>
@@ -36,7 +36,7 @@
       <div class="container">
         <hr class="mx-auto my-3" style="border-color: #e3e3f3; width: 80%;">
         <p class="text-muted">
-          BMT Mobile App &copy; <a href="http://binaummah.org">BMT Bina Ummah</a> dikembangkan oleh <a href="http://patpatstudio.com">Patpat</a>. Logo BMT Mobile App &copy; <a href="https://www.facebook.com/romdon.well.allways">Mujahid Ramadan</a>. Website &copy; 2017 <a href="https://www.facebook.com/Wildan.ar.rahman">Wildan Ainurrahman</a> dengan lisensi <a href="https://github.com/w1lldone/bmtapp/blob/master/LICENSE">MIT</a>, dibuat dengan <a href="https://laravel.com/">Laravel</a> 5.4, <a href="http://getbootstrap.com/">Bootstrap</a> v4.0.0-beta
+          Bi-Mobile App &copy; <a href="http://binaummah.org">BMT Bina Ummah</a> dikembangkan oleh <a href="http://patpatstudio.com">Patpat</a>. Logo Bi-Mobile App &copy; <a href="https://www.facebook.com/romdon.well.allways">Mujahid Ramadan</a>. Website &copy; 2017 <a href="https://www.facebook.com/Wildan.ar.rahman">Wildan Ainurrahman</a> dengan lisensi <a href="https://github.com/w1lldone/bmtapp/blob/master/LICENSE">MIT</a>, dibuat dengan <a href="https://laravel.com/">Laravel</a> 5.4, <a href="http://getbootstrap.com/">Bootstrap</a> v4.0.0-beta
         </p>
       </div>
     </div>

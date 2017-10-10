@@ -17,7 +17,7 @@
 	<div class="container" style="padding: 0 20px 0 20px;">
 		<div class="row" style="margin-top: 30px">
 			<div class="col m5 s12 offset-m3">
-				<h5 class="light center">Login Sistem Informasi <br> BMT Mobile</h5>
+				<h5 class="light center">Login Sistem Informasi <br> Bi-Mobile</h5>
 				@foreach ($errors->all() as $error)
 					<div class="card orange darken-2">
             <div class="card-content white-text">

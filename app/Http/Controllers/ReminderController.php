@@ -141,7 +141,7 @@ class ReminderController extends Controller
         ];
 
         foreach ($nasabah->device as $device) {
-            dispatch(new \App\Jobs\SendFirebaseNotification('BMT Mobile App', 'Pengingat cicilan kredit', $data, $device->device_id));
+            dispatch(new \App\Jobs\SendFirebaseNotification('Bi-Mobile App', 'Pengingat cicilan kredit', $data, $device->device_id));
         }
         
         return $data;

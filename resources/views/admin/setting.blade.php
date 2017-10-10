@@ -16,7 +16,7 @@
 			<div class="card">
 					<div class="card-header" data-background-color="bmt-green">
 						<h4 class="title">Informasi Umum</h4>
-						<p class="category">Admin BMT Mobile App</p>
+						<p class="category">Admin Bi-Mobile App</p>
 					</div>
 					<div class="card-content">
 						<form action="/setting/update" method="POST">
@@ -48,7 +48,7 @@
 			<div class="card">
 					<div class="card-header" data-background-color="orange">
 						<h4 class="title">Ganti Password</h4>
-						<p class="category">Admin BMT Mobile App</p>
+						<p class="category">Admin Bi-Mobile App</p>
 					</div>
 					<div class="card-content">
 						<form action="/setting/password" method="POST">

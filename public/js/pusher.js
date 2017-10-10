@@ -24,6 +24,7 @@
     chat.bind('App\\Events\\AdminChatSent', function(data) {
         var messages = '<div class="talk-bubble tri-right left-top left-side"><div class="talktext"><p>'+data.chat.message+'</p></div></div>'
         $('#chat-room-'+data.chat.admin_room_id).append(messages);
+        playSound();
     });
 
     // Bind to Layanan notification channel
@@ -55,7 +56,7 @@
                 </a>`
       $('#layanan-list').prepend(wrapper);
       $('#layan-empty').hide();  
-
+      playSound();
     });
 
     // bind to transaksi notificaiton channel
@@ -87,4 +88,6 @@
                   </a>`
         $('#transaksi-list').prepend(wrapper);
         $('#trans-empty').hide();
+
+        playSound();
     });

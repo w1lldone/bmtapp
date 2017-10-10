@@ -31,6 +31,7 @@
                         <div class="items"><i background="orange" style="box-shadow: none" class="material-icons circle">mms</i></div>
                         <div class="items"><h4>Tambah News</h4></div>
                       </a>
+                      <button class="btn btn-info" onclick="playSound()">Sound</button>
                     </div>
                 </div>
             </div>
