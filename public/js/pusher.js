@@ -24,6 +24,7 @@
     chat.bind('App\\Events\\AdminChatSent', function(data) {
         var messages = '<div class="talk-bubble tri-right left-top left-side"><div class="talktext"><p>'+data.chat.message+'</p></div></div>'
         $('#chat-room-'+data.chat.admin_room_id).append(messages);
+        $('#adminChat').append('<span style="margin-left: 7rem" id="count-layan" class="badge badge-warning">New</span>');
         playSound();
     });
 

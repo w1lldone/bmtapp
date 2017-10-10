@@ -24,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
             $view->with('count', \App\Order::actCount());
             $view->with('count_l', \App\Layanan::where('status', 'pending')->count());
             $view->with('user', Auth::user());
+            $view->with('unreadChat', \App\AdminChat::unreadChat());
         });
 
         Carbon::setLocale('id');

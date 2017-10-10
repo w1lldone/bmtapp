@@ -29,6 +29,11 @@ class AdminChat extends Model
 		}
 		
 	}
+
+	public static function unreadChat()
+	{
+		return static::whereNull('read_at')->count();
+	}
 	    
     protected $guarded = ['id'];
     protected $touches = ['admin_room'];

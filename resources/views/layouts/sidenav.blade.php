@@ -41,7 +41,13 @@
                   <li class="@if (substr(Route::currentRouteName(),0 ,4) == 'chat'){{ 'active' }} @endif">
                     <a href="/chat">
                         <i class="material-icons">message</i>
-                        <p>Chat</p>
+                        <p id="adminChat">
+                          Chat
+                          @if ($unreadChat != 0)
+                             <span style="margin-left: 7rem" id="count-layan" class="badge badge-warning">{{ $unreadChat }}</span>
+                           @endif 
+                        </p>
+
                     </a>
                   </li>
                   <li class="@if (substr(Route::currentRouteName(),0 ,8) == 'reminder'){{ 'active' }} @endif">
