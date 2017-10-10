@@ -33,6 +33,7 @@ class PrivateRoomController extends Controller
 
         // Append admin chat to private message
         $data = AdminRoom::where('nasabah_id', $nasabah)->first();
+        $lastMessage = count($data->admin_chat) ? [array('message' => $data->admin_chat()->latest()->first()->message, 'created_at' => $data->admin_chat()->latest()->first()->created_at->toDateTimeString())] : [];
         $adminRoom = [
             'private_room_id' => $data->id,
             'admin_chat' => true,
@@ -41,9 +42,8 @@ class PrivateRoomController extends Controller
                 'foto' => '/assets/img/logo/logo.png'
             ],
             'private_room' => [
-                'last_message' => [
-                    array('message' => $data->admin_chat()->latest()->first()->message, 'created_at' => $data->admin_chat()->latest()->first()->created_at->toDateTimeString())
-                ]
+                'created_at' => $data->created_at->toDateTimeString(),
+                'last_message' => $lastMessage,
             ],
         ];
 
