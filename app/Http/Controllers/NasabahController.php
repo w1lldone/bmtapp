@@ -41,13 +41,13 @@ class NasabahController extends Controller
                 'mku_id' => $request->mku_id,
             ]);
 
+        $nasabah->addLapak($nasabah->id);
+        \App\AdminRoom::firstOrCreate(['nasabah_id' => $nasabah->id]);
+        
         Storage::disk('uploads')->copy('default.png', "/$nasabah->id/default.png");
         Storage::disk('uploads')->copy('tokoDefault.jpg', "/$nasabah->id/tokoDefault.jpg");
 
         $nasabah->update(['foto' => "/uploads/$nasabah->id/default.png"]);
-
-        $nasabah->addLapak($nasabah->id);
-        \App\AdminRoom::firstOrCreate(['nasabah_id' => $nasabah->id]);
 
         return redirect('/nasabah')->with('status', 'Nasabah berhasil didaftarkan!');
 
@@ -63,6 +63,10 @@ class NasabahController extends Controller
     }
 
     public function destroy(Nasabah $nasabah){
+        $nasabah->admin_room()->delete();
+        $nasabah->admin_chat()->delete();
+        $nasabah->device()->delete();
+        
         $nasabah->delete();
         return redirect('/nasabah')->with('status', 'Nasabah berhasil dihapus!');
     }

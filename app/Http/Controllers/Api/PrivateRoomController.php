@@ -36,6 +36,7 @@ class PrivateRoomController extends Controller
         $lastMessage = count($data->admin_chat) ? [array('message' => $data->admin_chat()->latest()->first()->message, 'created_at' => $data->admin_chat()->latest()->first()->created_at->toDateTimeString())] : [];
         $adminRoom = [
             'private_room_id' => $data->id,
+            'last_updated' => $data->updated_at->toDateTimeString(),
             'admin_chat' => true,
             'reciever' => [
                 'name' => 'Administrator',
@@ -47,7 +48,7 @@ class PrivateRoomController extends Controller
             ],
         ];
 
-        return $rooms->push($adminRoom);
+        return $rooms->push($adminRoom)->sortByDesc('last_updated')->values()->all();
 
     }
 

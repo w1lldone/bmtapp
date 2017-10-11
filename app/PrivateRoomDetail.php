@@ -16,7 +16,7 @@ class PrivateRoomDetail extends Model
         'id'
     ];
 
-    protected $appends = ['admin_chat'];
+    protected $appends = ['admin_chat', 'last_updated'];
 
     public function private_room(){
     	return $this->belongsTo('App\PrivateRoom');
@@ -36,6 +36,11 @@ class PrivateRoomDetail extends Model
     public function getAdminChatAttribute()
     {
         return false;
+    }
+
+    public function getlastUpdatedAttribute()
+    {
+        return $this->private_room->updated_at->toDateTimeString();
     }
 
 }

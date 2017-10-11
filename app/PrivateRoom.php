@@ -18,7 +18,6 @@ class PrivateRoom extends Model
 
     protected $appends = ['last_message'];
 
-
     public function private_message(){
     	return $this->hasMany('App\PrivateMessage');
     }
