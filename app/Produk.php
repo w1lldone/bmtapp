@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Produk extends Model
 {
+    /*RELATION SECTION*/
 
     public function lapak(){
     	return $this->belongsTo('App\Lapak');
@@ -27,6 +28,17 @@ class Produk extends Model
         return $this->hasMany('App\OrderDetail');
     }
 
+    public function satuan(){
+        return $this->belongsTo('App\Satuan');
+    }
+
+    /*MUTATOR SECTION*/
+
+    public function getUnitAttribute()
+    {
+        return $this->satuan->name;
+    }
+
     public function getTerjualAttribute()
     {
         return $this->orderDetail()->count();
@@ -36,6 +48,8 @@ class Produk extends Model
     {
         return $this->review()->count();
     }
+
+    /*CUSTOM METHOD SECTION*/
 
     public function addReview(){
         $review = $this->review()
