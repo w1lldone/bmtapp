@@ -66,6 +66,7 @@ class NasabahController extends Controller
         $nasabah->admin_room()->delete();
         $nasabah->admin_chat()->delete();
         $nasabah->device()->delete();
+        $nasabah->lapak->produk()->delete();
         
         $nasabah->delete();
         return redirect('/nasabah')->with('status', 'Nasabah berhasil dihapus!');

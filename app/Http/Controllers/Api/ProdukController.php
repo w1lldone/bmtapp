@@ -32,12 +32,10 @@ class ProdukController extends Controller
     }
 
     public function view(Produk $produk){
-        $produk->lapak;
-        $produk->kategori_produk;
-        $produk->terjual();
-        $reviews = $produk->review->load('nasabah');
+        // $produk->lapak;
+        // $produk->kategori_produk;
         return response()->json([
-            'produk' => $produk, 
+            $produk->load(['lapak', 'kategori_produk', 'review.nasabah']), 
         ]);
     }
 

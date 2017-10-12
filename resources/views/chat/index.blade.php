@@ -62,7 +62,7 @@
 				</div>
 			</div>
 			<div class="text-center">
-				{{-- {{ $feedbacks->links() }} --}}
+				{{ $rooms->links() }}
 			</div>
 		</div>
 	</div>

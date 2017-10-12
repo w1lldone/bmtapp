@@ -90,7 +90,7 @@ class Nasabah extends Authenticatable
 		return $this->lapak()->create([
 			'name' => 'Toko saya',
 			'alamat' => 'Alamat toko',
-			'foto' => "/storage/$id/tokoDefault.jpg",
+			'foto' => "/uploads/$id/tokoDefault.jpg",
 		]);
 	}
 

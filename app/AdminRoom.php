@@ -52,7 +52,7 @@ class AdminRoom extends Model
 			$keyword = request('keyword');
 			$rooms = $rooms->whereHas('nasabah', function($query) use($keyword)
 			{
-				$query->where('name', 'LIKE', "%$keyword%");
+				$query->where('name', 'LIKE', "%$keyword%")->orWhere('username', 'LIKE', "%$keyword%");
 			})->orWhereHas('admin_chat', function($query) use($keyword)
 			{
 				$query->where('message', 'LIKE', "%$keyword%");
