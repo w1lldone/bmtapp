@@ -117,5 +117,5 @@ class Produk extends Model
 
     // protected $hidden=['nasabah_id'];
     protected $guarded=['id'];
-    protected $appends = ['total_review', 'terjual'];
+    protected $appends = ['total_review', 'terjual', 'unit'];
 }

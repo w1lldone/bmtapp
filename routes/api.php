@@ -133,3 +133,5 @@ Route::group(['prefix' => 'feedback'], function(){
 Route::group(['prefix' => 'reminder'], function(){
 	Route::get('/{reminderDetail}', 'Api\KreditReminderController@show');
 });
+
+Route::get('/satuan', 'Api\SatuanController@index');
