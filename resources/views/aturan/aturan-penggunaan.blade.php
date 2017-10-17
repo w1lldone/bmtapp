@@ -179,7 +179,7 @@
 	    <ul>
 				<li>Aturan Penggunaan ini dilaksanakan dan tunduk pada Peraturan Peundang-undangan Republik Indonesia.</li>
 				<li>Apabila terjadi perseslisihan, sebelum berali ke alternatif lain, Pengguna wajib terlebih dahulu menghubungi BMT Bina Ummah secara langsung agar dapat melakukan perundingan atau musyawarah untuk mencapai solusi bagi kedua belah pihak.</li>
-				<li>Sebelum mengubungi BMT BIna Ummah secara langsung untuk melakukan perundingan penyelesaian masalah atau sengketa, pengguna setuju untuk tidak mengumumkan, membuat tulisan-tulisan di media online mauoun cetak terkait pemasalahan yang dapat menyudutkan BMT Bina Ummah (termasuk petuas, direktur, karyawan dan agen).</li>
+				<li>Sebelum mengubungi BMT BIna Ummah secara langsung untuk melakukan perundingan penyelesaian masalah atau sengketa, pengguna setuju untuk tidak mengumumkan, membuat tulisan-tulisan di media online maupun cetak terkait pemasalahan yang dapat menyudutkan BMT Bina Ummah (termasuk petuas, direktur, karyawan dan agen).</li>
 				<li>Apabila dalam waktu 1 (satu) bulan setela dimulainya perundingan atau musyawarah ridak mencapai solusi, maka para pihak akan menyelesaikan permasalahan tersebut melalui Pengadilan.</li>
 				<li>Selama perselisihan dalam proses penyelesaian, pengguna wajib untuk tetap melaksanakan kewajiban-kewajiban lainnya menurut Aturan Penggunaan Bi-Mobile.</li>
 	    </ul>
