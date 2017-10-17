@@ -36,7 +36,7 @@ class Produk extends Model
 
     public function getUnitAttribute()
     {
-        return $this->satuan->name;
+        return $this->satuan()->first()->name;
     }
 
     public function getTerjualAttribute()
