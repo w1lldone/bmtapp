@@ -38,7 +38,7 @@ Route::group(['prefix' => 'produk'], function(){
 	Route::get('/{produk}/edit', 'Api\ProdukController@edit');
 	Route::get('/{produk}/addview', 'Api\ProdukViewController@show');
 	Route::post('/{produk}/edit', 'Api\ProdukController@update');
-	Route::get('/view/{produk}', 'Api\ProdukController@view');
+	Route::get('/{produk}/view', 'Api\ProdukController@view');
 	Route::put('/{produk}/aktif', 'Api\ProdukAktifController@update');
 });
 

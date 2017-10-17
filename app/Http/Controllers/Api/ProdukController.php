@@ -34,9 +34,7 @@ class ProdukController extends Controller
     public function view(Produk $produk){
         // $produk->lapak;
         // $produk->kategori_produk;
-        return response()->json([
-            $produk->load(['lapak', 'kategori_produk', 'review.nasabah']), 
-        ]);
+        return $produk->load(['lapak', 'kategori_produk', 'review.nasabah']);
     }
 
     public function edit(Produk $produk){
