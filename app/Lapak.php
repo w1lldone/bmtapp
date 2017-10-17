@@ -27,7 +27,7 @@ class Lapak extends Model
     	$produk = $this->produk()->create([
     		'name' => request('name'), 
     		'kategori_produk_id' => request('kategori_produk_id'), 
-    		'unit' => request('unit'), 
+    		'satuan_id' => request('satuan_id'), 
     		'harga' => request('harga'),
     		'deskripsi' => request('deskripsi'),
     		'stok' => request('stok'),
