@@ -26,13 +26,13 @@
       		<li>Sistem pengiriman barang dalam transaksi jual beli antar nasabah, bisa ditentukan secara internal oleh manajemen BMT maupun kesepakatan bersama Nasabah Pelapak.</li>
       		<li>Barang-barang yang dapat diperdagangkan melalui Bi-Mobile merupakan barang yang tidak tercantum di daftar “Barang Terlarang”.</li>
       		<li>BMT tidak bertanggung jawab atas kualitas barang yang diperdagangkan dan atau segala bentuk perselisihan yang dapat terjadi antar Pengguna (Nasabah Pelapak dan Nasabah Pembeli).</li>
-      		<li>BMT memliki kewenangan memberikan peringatan dan/ atau mengambil tindakan yang dianggap perlu terhadap akun yang diduga dan/ atau terindikasi melakukan kecurangan, penyalahgunaan, manipulasi dan/ atau melanggat Aturan Penggunaan di Bi-Mobile, mulai dari melakukan moderasi, menghentikan layanan “Jual Barang”, membatasi atau mengakhiri hak Pengguna untuk menggunakan layanan maupun menutup akun tersebut.</li>
+      		<li>BMT memliki kewenangan memberikan peringatan dan/ atau mengambil tindakan yang dianggap perlu terhadap akun yang diduga dan/ atau terindikasi melakukan kecurangan, penyalahgunaan, manipulasi dan/ atau melanggar Aturan Penggunaan di Bi-Mobile, mulai dari melakukan moderasi, menghentikan layanan “Jual Barang”, membatasi atau mengakhiri hak Pengguna untuk menggunakan layanan maupun menutup akun tersebut.</li>
       		<li>BMT memiliki kewenangan untuk mengambil keputusan atas permasalahan yang terjadi pada setiap transaksi.</li>
       		<li>JIka pengguna melanggar setiap ketentuan yang telah ada setelah pemberitahuan peringatan, BMT berhak untuk melakukan langkah hukum selanjutnya jika dianggap perlu.</li>
       		<li>Bi-Mobile Payment System bersifat mengikat Pengguna Bi-Mobile dan hanya menjamin dana Nasabah Pembeli tetap aman jika proses transaksi dilakukan dengan Nasabah Pelapak yang terdaftar di dalam sistem atau anggota nasabah BMT. Kerugian yang diakibatkan keterlibatan pihak lain di luar Nasabah Pembeli, Nasabah Pelapak dan BMT, tidak menjadi tanggung jawab BMT. </li>
       		<li>BMT berhak meminta data-data pribadi Pengguna jika diperlukan.</li>
       		<li>Aturan penggunaan Bi-Mobile dapat berubah sewaktu-waktu atau diperbarui dari waktu ke waktu tanpa pemberitahuan terlebih dahulu. Dengan mengakses Bi-Mobile, Pengguna dianggap menyetujui Aturan Penggunaan Bi-Mobile dan perubahan-perubahan didalamnya.</li>
-      		<li>Hati-hati terhadap penipuan yang mengatasnamakan BMT. Untuk informasi Panduan Keamanan silahkan klik disini.</li>
+      		<li>Hati-hati terhadap penipuan yang mengatasnamakan BMT.</li>
       	  </ul>
       </div>
 	  
@@ -46,8 +46,8 @@
           <li>Data rekening bank yang bisa digunakan dalam transaksi Jual Beli di Bi-Mobile hanya data rekening BMT.</li>
           <li>Penggunaan fasilitas apapun yang disediakan oleh Bi-Mobile mengindikasikan bahwa Pengguna telah memahami dan menyetujui segala aturan yang diberlakukan oleh BMT.</li>
           <li>Selama berada dalam platform Bi-Mobile, Pengguna dilarang keras menyampaikan setiap jenis konten apapun yang menyesatkan, memfitnah, atau mencemarkan nama baik, mengandung atau bersinggungan dengan unsur SARA, diskriminasi, dan/ atau meyudutkan pihak lain.</li>
-          <li>Pengguna tidak diperbolehkan menggunakan Bi-Mobile untuk melanggar peraturan yang ditetapkan oleh hokum di Indonesia maupun di Negara lainnya.</li>
-          <li>Pengguna bertanggung jawab atas segala risiko yang timbul di kemudian hari atas informasi yang diberikannya kedalam Bi-Mobile, termasuk hal-hal yang berkaitan dengan hak cipta, merek, desain industri, desain tata letak industry dan hak paten atas suatu produk.</li>
+          <li>Pengguna tidak diperbolehkan menggunakan Bi-Mobile untuk melanggar peraturan yang ditetapkan oleh hukum di Indonesia maupun di Negara lainnya.</li>
+          <li>Pengguna bertanggung jawab atas segala risiko yang timbul di kemudian hari atas informasi yang diberikannya kedalam Bi-Mobile, termasuk hal-hal yang berkaitan dengan hak cipta, merek, desain industri, desain tata letak industri dan hak paten atas suatu produk.</li>
           <li>Pengguna diwajibkan menghargai hak-hak Pengguna lainnya dengan tidak memberikan informasi pribadi ke pihak lain tanpa izin yang bersangkutan.</li>
           <li>Pengguna tidak diperkenankan mengirimkan pesan gangguan dengan merujuk ke bagian apapun dari BMT.</li>
           <li>Administrator Bi-Mobile berhak menyesuaikan dan/ atau menghapus informasi barang, dan menonaktifkan Pengguna.</li>
@@ -74,7 +74,7 @@
 	  	  <li>Nasabah Pelapak tidak diperkenankan mencantumkan alamat, nomor, kontak, alamat e-mail, situs, forum username media social dan nomor rekening bank selain pada kolom yang telah disediakan.</li>
 	  	  <li>Nasabah Pelapak dilarang menjual barang yang identik atau sama (multiple posting) dengan yang sudah ada di lapaknya.</li>
 	  	  <li>Nasabah Pelapak dilarang melakukan duplikasi penjualan barang dengan menyalin atau menggunakan gambar dari Nasabah Pelapak lain.</li>
-	  	  <li>Nasabah Pelapak tidak diperkenankan memberikan informasi alamat, nomor kontak, alamat e-mail, situs, forum, username media social melalui fitur pesan.</li>
+	  	  <li>Nasabah Pelapak tidak diperkenankan memberikan informasi alamat, nomor kontak, alamat e-mail, situs, forum, username media sosial melalui fitur pesan.</li>
 	  	  <li>Nasabah Pelapak wajib memperbarui (update) ketersediaan dan status barang yang dijual.</li>
 	  	  <li>Catatan Pelapak diperuntukkan bagi Nasabah Pelapak yang ingin memberikan catatan tambahan yang tidak terkait dengan deskripsi barang kepada calon Pembeli. Catatan Pelapak tetap tunduk terhadap Aturan Penggunaan Bi-Mobile.</li>
 	  	  <li>Nasabah Pelapak wajib mengisi kolom Deskripsi Barang seusai dengan Aturan Penggunaan di Bi-Mobile.</li>
@@ -93,7 +93,6 @@
 				<li>Nasabah Pembeli wajib transfer sesuai dengan nominal total belanja dari transaksi dalam waktu 1 x 10 jam (dengan asumsi Nasabah Pembeli telah mempelajari informasi barang yang telah dipesannya). JIka dalam waktu 1 x 10 jam barang dipesan tetapi Nasabah Pembeli tidak mentransfer dana maka transaksi akan dibatalkan secara otomatis.</li>
 				<li>Setiap transaksi di Bi-Mobile akan dikenakan biaya administrasi yang telah ditentukan, yaitu sebesar Rp 1000,- yang ditanggung oleh Nasabah Pembeli.</li>
 				<li>Nasabah Pembeli tidak dapat membatalkan transaksi setelah melunasi pembayaran.</li>
-				<li>Nasabah Pelapak wajib mengirimkan barang dan mendaftarkan nomor resi pengiriman yang benar dan asli setelah status transaksi “Dibayar”. Satu nomor resi hanya berlaku untuk satu nomor transaksi di Bi-Mobile.</li>
 				<li>Jika Nasabah Pelapak tidak mengirimkan barang dalam batas waktu pengiriman sejak pembayaran (2x24 jam kerja untuk biaya pengiriman reguler atau 2x24 jam untuk biaya pengiriman kilat), maka Nasabah Pelapak dianggap telah menolak pesanan. Sehingga sistem secara otomatis memberikan feedback negatif dan reputasi tolak pesanan, serta mengembalikan seluruh dana (refund) ke Nasabah Pembeli.</li>
 				<li>Pengembalian dana transaksi dilakukan dengan menambahkan saldo ke rekening Nasabah Pembeli.</li>
 				<li>Sistem Bi-Mobile secara otomatis mengecek status pengiriman barang melalui nomor resi yang diberikan Nasabah Pelapak. Apabila nomor resi terdeteksi tidak valid dan Nasabah Pelapak tidak melakukan ubah resi valid dalam 1x24 jam, maka seluruh dana akan dikembalikan ke Nasabah Pembeli. Jika Nasabah Pelapak memasukkan nomor resi tidak valid lebih dari satu kali maka Bi-Mobile akan mengembalikan seluruh dana transaksi kepada Nasabah Pembeli dan Nasabah Pelapak mendapatkan feedback yang fnegatif.</li>
@@ -136,7 +135,7 @@
 				<li>Segala jenis binatang atau hewan peliharaan.</li>
 				<li>Jasa, donasi, sewa menyewa, promo event dan sejenisnya terkecuali ada kerja sama resmi dengan pihak BMT.</li>
 				<li>Merek dagang.</li>
-				<li>Properti (Rumah, Tanah dan lain-lain)</li>
+				<li>Properti (rumah, tanah dan lain-lain)</li>
 				<li>Produk non-fisik yang tidak dapat dikirimkan melalui jasa kurir terdaftar/ tidak terdaftar, namun tidak terbatas pada akun BMT, e-book, akun game, pulsa elektrik maupun pulsa fisik/voucher, voucher kota internet, voucher game, voucher aplikasi, dan lainnya; terkecuali ada kerja sama resmi dengan pihak BMT.</li>
 				<li>Produk yang bukan produk asli dengan merek, atau berkaitan dengan merek terdaftar.</li>
 				<li>Gadget replika atau berasal dari pasar gelap (black market).</li>
@@ -160,13 +159,13 @@
 	  	<h2 class="mb-4">Pembatasan tanggung jawab</h2>
 	  	<ol>
 				<li>BMT tidak bertanggung jawab atas segala risiko dan kerugian yang timbul dari dan dalam kaitannya dengan informasi yang dituliskan oleh pengguna Bi-Mobile.</li>
-				<li>BMT tidak bertanggungjawab atas segala pelanggaran hak cipta, merek, desain industry, desain tata letak sirkuit, hak paten, atau hak-hak pribadi lain yang melekat atas suatu barang, berkenaan dengan segal informasi yang dibuat oleh Nasaba Pelapak. Untuk melaporkan pelanggaran hak cipta, merek, desain industry, desain tata letak sirkuit, hak paten atau hak-hak pribadi lain.</li>
+				<li>BMT tidak bertanggungjawab atas segala pelanggaran hak cipta, merek, desain industry, desain tata letak sirkuit, hak paten, atau hak-hak pribadi lain yang melekat atas suatu barang, berkenaan dengan segal informasi yang dibuat oleh Nasaba Pelapak. Untuk melaporkan pelanggaran hak cipta, merek, desain industri, desain tata letak sirkuit, hak paten atau hak-hak pribadi lain.</li>
 				<li>BMT tidak bertanggung jawab atas segala risiko dan kerugian yang timbul berkenaan dengan penggunaan barang yang dibeli melalui Bi-Mobile, dalam hal terjadi pelanggaran peraturan perundang-undangan.</li>
 				<li>Bi-Mobile tidak bertanggung jawab atas segala risiko dan kerugian yang timbul berkenaan dengan diaksesnya akun Pengguna oleh pihak lain.</li>
-				<li>BMT tidak bertanggung jawab atas segala risiko dan kerugian yang timbul akibatggga transaksi di luar Bi-Mobile payment system.</li>
+				<li>BMT tidak bertanggung jawab atas segala risiko dan kerugian yang timbul akibat transaksi di luar Bi-Mobile payment system.</li>
 				<li>BMT tidak bertanggungjawab atas segala risiko dan kerugian yang timbul akibat kesalahan atau perbedaan nominal yang seharusnya ditransfer ke rekening atas nama BMT Bina Ummah.</li>
-				<li>BMT tidak bertanggung jawab atas segala risiko dan kerugian yang timbul apabila transaksi telah selesai secara sistem (dana tela masuk ke rekening Nasabah Pelapak ataupun Nasabah Pembeli).</li>
-				<li>BMT tidak bertanggungjawab atas segala risiko dan kerugian yang timbul akibat kehilangan barang ketika proses transaksi berjalan dan/ atau selesai.</li>
+				<li>BMT tidak bertanggung jawab atas segala risiko dan kerugian yang timbul apabila transaksi telah selesai secara sistem (dana telah masuk ke rekening Nasabah Pelapak ataupun Nasabah Pembeli).</li>
+				<li>BMT tidak bertanggungjawab atas segala risiko dan kerugian yang timbul akibat kehilangan barang ketika proses transaksi berjalan dan atau selesai.</li>
 				<li>BMT tidak bertanggung jawab atas segala risiko dan kerugian yang timbul akibat kesalahan Pengguna ataupun piak lain dalam transfer dana ke rekening BMT Bina Ummah.</li>
 				<li>BMT tidak bertanggung jawab atas segala risiko dan kerugian yang timbul apabila akun dalam kedaan dibekukan dan/ atau dinonaktifkan.</li>
 				<li>BMT tidak bertanggung jawab atas segala risiko dan kerugian yang timbul akibat penyalahgunaan nomor kontak dan/ atau alamat e-mail milik pengguna maupun pihak lainnya.</li>
@@ -178,7 +177,7 @@
 	    <ul>
 				<li>Aturan Penggunaan ini dilaksanakan dan tunduk pada Peraturan Peundang-undangan Republik Indonesia.</li>
 				<li>Apabila terjadi perseslisihan, sebelum berali ke alternatif lain, Pengguna wajib terlebih dahulu menghubungi BMT Bina Ummah secara langsung agar dapat melakukan perundingan atau musyawarah untuk mencapai solusi bagi kedua belah pihak.</li>
-				<li>Sebelum mengubungi BMT BIna Ummah secara langsung untuk melakukan perundingan penyelesaian masalah atau sengketa, pengguna setuju untuk tidak mengumumkan, membuat tulisan-tulisan di media online maupun cetak terkait pemasalahan yang dapat menyudutkan BMT Bina Ummah (termasuk petuas, direktur, karyawan dan agen).</li>
+				<li>Sebelum mengubungi BMT Bina Ummah secara langsung untuk melakukan perundingan penyelesaian masalah atau sengketa, pengguna setuju untuk tidak mengumumkan, membuat tulisan-tulisan di media online maupun cetak terkait pemasalahan yang dapat menyudutkan BMT Bina Ummah (termasuk petuas, direktur, karyawan dan agen).</li>
 				<li>Apabila dalam waktu 1 (satu) bulan setela dimulainya perundingan atau musyawarah ridak mencapai solusi, maka para pihak akan menyelesaikan permasalahan tersebut melalui Pengadilan.</li>
 				<li>Selama perselisihan dalam proses penyelesaian, pengguna wajib untuk tetap melaksanakan kewajiban-kewajiban lainnya menurut Aturan Penggunaan Bi-Mobile.</li>
 	    </ul>
