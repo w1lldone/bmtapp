@@ -28,7 +28,7 @@
       		<li>BMT tidak bertanggung jawab atas kualitas barang yang diperdagangkan dan atau segala bentuk perselisihan yang dapat terjadi antar Pengguna (Nasabah Pelapak dan Nasabah Pembeli).</li>
       		<li>BMT memliki kewenangan memberikan peringatan dan/ atau mengambil tindakan yang dianggap perlu terhadap akun yang diduga dan/ atau terindikasi melakukan kecurangan, penyalahgunaan, manipulasi dan/ atau melanggar Aturan Penggunaan di Bi-Mobile, mulai dari melakukan moderasi, menghentikan layanan “Jual Barang”, membatasi atau mengakhiri hak Pengguna untuk menggunakan layanan maupun menutup akun tersebut.</li>
       		<li>BMT memiliki kewenangan untuk mengambil keputusan atas permasalahan yang terjadi pada setiap transaksi.</li>
-      		<li>JIka pengguna melanggar setiap ketentuan yang telah ada setelah pemberitahuan peringatan, BMT berhak untuk melakukan langkah hukum selanjutnya jika dianggap perlu.</li>
+      		<li>Jika pengguna melanggar setiap ketentuan yang telah ada setelah pemberitahuan peringatan, BMT berhak untuk melakukan langkah hukum selanjutnya jika dianggap perlu.</li>
       		<li>Bi-Mobile Payment System bersifat mengikat Pengguna Bi-Mobile dan hanya menjamin dana Nasabah Pembeli tetap aman jika proses transaksi dilakukan dengan Nasabah Pelapak yang terdaftar di dalam sistem atau anggota nasabah BMT. Kerugian yang diakibatkan keterlibatan pihak lain di luar Nasabah Pembeli, Nasabah Pelapak dan BMT, tidak menjadi tanggung jawab BMT. </li>
       		<li>BMT berhak meminta data-data pribadi Pengguna jika diperlukan.</li>
       		<li>Aturan penggunaan Bi-Mobile dapat berubah sewaktu-waktu atau diperbarui dari waktu ke waktu tanpa pemberitahuan terlebih dahulu. Dengan mengakses Bi-Mobile, Pengguna dianggap menyetujui Aturan Penggunaan Bi-Mobile dan perubahan-perubahan didalamnya.</li>
@@ -40,8 +40,8 @@
       <div class="section">
         <h2 class="mb-4">Pengguna</h2>
         <ol>
-          <li>Pengguna (Nasabah Pembeli dan Pelapak) wajib mengisi data pribadi secara lengkap dan jujur di halaman akun (profil)</li>
-          <li>Pengguna wajib mencantumkan alamat, nomor kontak, alamat e-mail, situs, forum, dan username media social di foto profil, header lapak, nama akun (username), nama lapak dan deskripsi lapak.</li>
+          <li>Pengguna (Nasabah, Pembeli dan Pelapak) wajib mengisi data pribadi secara lengkap dan jujur di halaman akun (profil)</li>
+          <li>Pengguna wajib mencantumkan alamat, nomor kontak, alamat e-mail, situs, forum, dan username media sosial di foto profil, header lapak, nama akun (username), nama lapak dan deskripsi lapak.</li>
           <li>Pengguna bertanggungjawab atas keamanan dari akun termasuk penggunaan username dan kata sandi.</li>
           <li>Data rekening bank yang bisa digunakan dalam transaksi Jual Beli di Bi-Mobile hanya data rekening BMT.</li>
           <li>Penggunaan fasilitas apapun yang disediakan oleh Bi-Mobile mengindikasikan bahwa Pengguna telah memahami dan menyetujui segala aturan yang diberlakukan oleh BMT.</li>
