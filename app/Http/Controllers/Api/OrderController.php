@@ -53,12 +53,13 @@ class OrderController extends Controller
 	    		'total' => $request->quantity*$produk->harga,
 	    		'antar' => $request->antar,
 	    		'catatan' => $request->catatan,
-	            'kadaluarsa_at' => Carbon::now()->addHours(36),
+	            'kadaluarsa_at' => Carbon::now()->addHours(12),
 			]);
 
     	}
 
-		$job = (new OrderKadaluarsa($order->id))->delay(Carbon::now()->addHours(12));
+		// $job = (new OrderKadaluarsa($order->id))->delay(Carbon::now()->addHours(12));
+		$job = (new OrderKadaluarsa($order->id))->delay(Carbon::now()->addMinutes(2));
 		dispatch($job);
 
 		$order->pesanNotification();

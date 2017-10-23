@@ -33,7 +33,7 @@ class Order extends Model
     		'sedia' => null,
             'catatan' => $keranjang->catatan,
     		'antar' => $keranjang->antar,
-            'kadaluarsa_at' => Carbon::now()->addHours(36),
+            'kadaluarsa_at' => Carbon::now()->addHours(12),
 		]);
     }
 
