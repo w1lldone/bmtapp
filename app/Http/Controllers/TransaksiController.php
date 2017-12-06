@@ -60,6 +60,6 @@ class TransaksiController extends Controller
 
         $transaksi->statusFinished();
         
-        return redirect()->route('transaksi')->with('status', 'Transaksi berhasil');
+        return redirect('/transaksi/diproses')->with('status', 'Transaksi berhasil');
     }
 }

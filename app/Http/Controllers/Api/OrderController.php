@@ -59,7 +59,7 @@ class OrderController extends Controller
     	}
 
 		// $job = (new OrderKadaluarsa($order->id))->delay(Carbon::now()->addHours(12));
-		$job = (new OrderKadaluarsa($order->id))->delay(Carbon::now()->addMinutes(2));
+		$job = (new OrderKadaluarsa($order->id))->delay(Carbon::now()->addHour());
 		dispatch($job);
 
 		$order->pesanNotification();
