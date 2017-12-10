@@ -29,8 +29,8 @@
     <link rel="stylesheet" type="text/css" href="/css/notification.css">
 
     <!--     Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
 
     <!--	ADDITIONAL STYLE -->
     @yield('style')
@@ -69,7 +69,7 @@
 </body>
 
 	<!--   Core JS Files   -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 	{{-- <script src="{{ asset('/assets/js/jquery-3.1.0.min.js')}}" type="text/javascript"></script> --}}
 	<script src="{{ asset('/assets/js/bootstrap.min.js')}}" type="text/javascript"></script>
 	<script src="{{ asset('/assets/js/material.min.js')}}" type="text/javascript"></script>
@@ -90,7 +90,7 @@
 	<script src="{{ asset('/assets/js/bootstrap-timepicker.js')}}"></script>
 
 	{{-- pusher library --}}
-	<script src="//js.pusher.com/3.1/pusher.min.js"></script>
+	<script src="https://js.pusher.com/3.1/pusher.min.js"></script>
 
 	<script src="{{ asset('/js/pusher.js')}}"></script>
 
