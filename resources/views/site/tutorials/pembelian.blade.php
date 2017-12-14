@@ -3,17 +3,17 @@
 @section('breadcrumb')
 	<ol class="breadcrumb">
 	  <li class="breadcrumb-item"><a href="/home">Beranda</a></li>
-	  <li class="breadcrumb-item"><a href="/tutorials">Tutorial</a></li>
-	  <li class="breadcrumb-item active">Petunjuk pembelian</li>
+	  <li class="breadcrumb-item"><a href="/panduan">Panduan</a></li>
+	  <li class="breadcrumb-item active">Panduan pembelian</li>
 	</ol>
 @endsection
 
 @section('title')
-	Petunjuk pembelian
+	Panduan pembelian
 @endsection
 
 @section('content')
-	<h1 class="text-center">Petunjuk pembelian</h1>
+	<h1 class="text-center">Panduan pembelian</h1>
 	<section class="py-5 tutorial">
 		<div class="row">
 			<div class="col-lg-3 col-md-6 mb-3">
