@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #48b550 ;box-shadow: 0 10px 20px -12px rgba(0, 0, 0, 0.42), 0 3px 20px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);">
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #48b550 ;">
   <div class="container">
     <a class="navbar-brand" href="#">
       <img src="/assets/img/logo/logo-white-stroke.svg" style="height: 40px; width: auto; margin: auto;">
