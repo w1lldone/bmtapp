@@ -10,3 +10,12 @@ h1, h2, h3, h4, h5, h6, p, li, .h1, .h2, .h3, .h4, .h5, .h6{
 .section{
 	padding-top: 50px;
 }
+
+.tutorial-list li {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.tutorial-list img {
+	margin-top: 15px;
+}
