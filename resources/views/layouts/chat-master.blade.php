@@ -31,8 +31,8 @@
     {{-- <link rel="stylesheet" type="text/css" href="/css/notification.css"> --}}
 
     <!--     Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300|Material+Icons' rel='stylesheet' type='text/css'>
 
     <!--	ADDITIONAL STYLE -->
     @yield('style')
@@ -97,7 +97,7 @@
 	{{-- <script src="{{ asset('/assets/js/bootstrap-timepicker.js')}}"></script> --}}
 
 	{{-- pusher library --}}
-	<script src="//js.pusher.com/3.1/pusher.min.js"></script>
+	<script src="https://js.pusher.com/3.1/pusher.min.js"></script>
 
 	<script src="{{ asset('/js/pusher.js')}}"></script>
 
