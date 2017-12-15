@@ -149,3 +149,5 @@ Route::group(['prefix' => 'panduan'], function(){
     Route::get('/pembelian', 'SiteController@pembelian');
     Route::get('/layanan', 'SiteController@layanan');
 });
+
+Route::get('/site', 'SiteController@index');
