@@ -35,6 +35,11 @@ Route::group(['prefix' => 'setting', 'middleware' => 'auth'], function(){
     Route::put('/password', 'SettingController@password');
 });
 
+Route::get('/download-panduan', function()
+{
+    return response()->file('assets/docs/panduan-admin-bi-mobile.pdf');
+})->middleware('auth');
+
 Route::group(['prefix' =>  'nasabah', 'middleware' => 'auth'], function(){
 	Route::get('/', 'NasabahController@index')->name('nasabah');
 	// Route::post('/cek', 'TabungBUController@view');

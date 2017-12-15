@@ -100,6 +100,7 @@
           <ul class="dropdown-menu">
             <li><a href="/setting">Pengaturan</a></li>
             <li><a href="/logout">Logout</a></li>
+            <li><a href="/download-panduan">Download panduan</a></li>
           </ul>
         </li>
 
