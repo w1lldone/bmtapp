@@ -7,6 +7,10 @@ h1, h2, h3, h4, h5, h6, p, li, .h1, .h2, .h3, .h4, .h5, .h6{
 	font-weight: 300;
 }
 
+.breadcrumb {
+	background-color: inherit;
+}
+
 .section{
 	padding-top: 50px;
 }
@@ -16,6 +20,15 @@ h1, h2, h3, h4, h5, h6, p, li, .h1, .h2, .h3, .h4, .h5, .h6{
 	padding-bottom: 20px;
 }
 
+.tutorial .card {
+	height: 100%;
+}
+
 .tutorial-list img {
 	margin-top: 15px;
+}
+
+.bg-bmt {
+	background-color: #48b550 ;
+	color: white;
 }

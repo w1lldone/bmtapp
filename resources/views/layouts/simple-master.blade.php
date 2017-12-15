@@ -9,20 +9,20 @@
 	<title>@yield('title') - Bi-Mobile App</title>
 
 	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="viewport" content="width=device-width" />
+  <meta name="viewport" content="width=device-width" />
 
-    <!-- Bootstrap core CSS     -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+  <!-- Bootstrap core CSS     -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
-    <!-- CUSTOM CSS -->
-    <link href="{{ asset('/css/custom.css')}}" rel="stylesheet"/>
+  <!-- CUSTOM CSS -->
+  <link href="{{ asset('/css/custom.css')}}" rel="stylesheet"/>
 
-    <!--     Fonts and icons     -->
-    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+  <!--     Fonts and icons     -->
+  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
-    <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/uploads/images/favicon/apple-touch-icon.png">
+  <!-- Favicon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/uploads/images/favicon/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/uploads/images/favicon/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/uploads/images/favicon/favicon-16x16.png">
 	<link rel="manifest" href="/uploads/images/favicon/manifest.json">
@@ -39,10 +39,9 @@
 	@if (request('view') != 'plain')
 		@include('layouts.simple-nav')
 	@endif
-  <div class="page-header header-filter" style="height: 10vh;">
-  </div>
 	<div class="main">
 	  <div class="container container-fluid">
+	  	@yield('breadcrumb')
 	    @yield('content')
 	  </div>
 	</div>
