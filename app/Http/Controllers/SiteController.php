@@ -10,4 +10,9 @@ class SiteController extends Controller
     {
     	return view('site.tutorials.pembelian');
     }
+
+    public function layanan()
+    {
+    	return view('site.tutorials.layanan');
+    }
 }

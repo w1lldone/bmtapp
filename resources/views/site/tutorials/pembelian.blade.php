@@ -45,7 +45,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-9 col-md-6 mb-3">
+			<div class="col-lg-6 col-md-6 mb-3">
 				<div class="card">
 					<div class="card-body">
 						<div class="text-center">
@@ -59,6 +59,7 @@
 			<div class="col-lg-3 col-md-6 mb-3">
 				<div class="card">
 					<div class="card-body">
+						<img src="/assets/img/pembelian/konfirmasi.png" class="img-fluid mb-3">
 						<h3 class="text-center"><span class="badge bg-bmt">5</span></h3>
 						Konfirmasi terima produk dan tulis review untuk penjual (<a href="" data-toggle="modal" data-target="#konfirmasi">selengkapnya</a>). 
 					</div>
