@@ -26,10 +26,10 @@
           <a href="/kebijakan-privasi">Kebijakan privasi</a>
         </p>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-3" class="text-center">
         <p class="text-center"> <img src="/assets/img/logo/logo.svg" height="70px"></p>
         <p class="text-center">Bi-Mobile App</p>
-        <p class="text-center"> <img src="/assets/img/logo/google-play-badge.png" height="70px"></p>
+        <p class="text-center"><a class="text-center" href="https://play.google.com/store/apps/details?id=com.patpat.mirzaadr.bmtmobile"> <img src="/assets/img/logo/google-play-badge.png" height="70px"></a></p>
       </div>
     </div>
     <div class="row">
