@@ -151,9 +151,10 @@ Route::group(['prefix' => 'chat'], function(){
 Route::post('/admin_chat', 'AdminChatController@store');
 
 Route::group(['prefix' => 'panduan'], function(){
-    Route::get('/pembelian', 'SiteController@pembelian');
-    Route::get('/layanan', 'SiteController@layanan');
-    Route::get('/penjualan', 'SiteController@penjualan');
+    Route::get('/pembelian', 'SiteController@pembelian')->name('panduan.pembelian');
+    Route::get('/layanan', 'SiteController@layanan')->name('panduan.layanan');
+    Route::get('/penjualan', 'SiteController@penjualan')->name('panduan.penjualan');
+    Route::get('/transaksi', 'SiteController@transaksi')->name('panduan.transaksi');
 });
 
 Route::get('/site', 'SiteController@index');

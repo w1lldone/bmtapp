@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #48b550 ;">
   <div class="container">
     <a class="navbar-brand" href="/site">
-      <img src="/assets/img/logo/logo-white-stroke.svg" style="height: 40px; width: auto; margin: auto;">
+      <img src="/assets/img/logo/logo-white-stroke.svg" style="height: 30px; width: auto; margin: auto;">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
