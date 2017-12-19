@@ -155,6 +155,7 @@ Route::group(['prefix' => 'panduan'], function(){
     Route::get('/layanan', 'SiteController@layanan')->name('panduan.layanan');
     Route::get('/penjualan', 'SiteController@penjualan')->name('panduan.penjualan');
     Route::get('/transaksi', 'SiteController@transaksi')->name('panduan.transaksi');
+    Route::get('/edit-produk', 'SiteController@editProduk')->name('panduan.edit.produk');
 });
 
 Route::get('/site', 'SiteController@index');

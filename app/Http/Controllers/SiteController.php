@@ -30,4 +30,9 @@ class SiteController extends Controller
     {
     	return view('site.tutorials.transaksi');
     }
+
+    public function editProduk()
+    {
+        return view('site.tutorials.edit-produk');
+    }
 }
