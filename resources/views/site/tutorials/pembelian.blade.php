@@ -12,11 +12,10 @@
 @endsection
 
 @section('content')
-	<h1 class="text-center">Panduan pembelian</h1>
-	<section class="py-5 tutorial">
+	<section class="tutorial">
 		<div class="container container-fluid">
-			
-			<div class="row">
+			<h1 class="text-center">Panduan pembelian</h1>
+			<div class="row py-5">
 				<div class="col-lg-3 col-md-6 mb-3">
 					<div class="card">
 						<div class="card-body">

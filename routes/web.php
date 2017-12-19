@@ -153,6 +153,7 @@ Route::post('/admin_chat', 'AdminChatController@store');
 Route::group(['prefix' => 'panduan'], function(){
     Route::get('/pembelian', 'SiteController@pembelian');
     Route::get('/layanan', 'SiteController@layanan');
+    Route::get('/penjualan', 'SiteController@penjualan');
 });
 
 Route::get('/site', 'SiteController@index');
