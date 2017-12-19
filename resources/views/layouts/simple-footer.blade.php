@@ -1,5 +1,5 @@
 <!-- FOOTER -->
-<footer class="footer mt-5 pt-4" style="background-color: #f5f5f5">
+<footer class="footer pt-4" style="background-color: #f5f5f5">
   <div class="container py-4">
     <div class="row pt-2">
       <div class="col-md-3">
