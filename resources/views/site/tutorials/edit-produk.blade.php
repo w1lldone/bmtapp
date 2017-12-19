@@ -94,7 +94,7 @@
         <div class="col-lg-8">
           <div class="card tutorial-card">
             <div class="card-header">
-              <h3 class="text-center"><span class="badge bg-bmt">5</span></h3>
+              <h3 class="text-center"><span class="badge bg-bmt">6</span></h3>
             </div>
             <div class="card-body">
               Apabila kamu yakin dengan informasi yang telah kamu ubah, kamu dapat menekan tombol <button class="btn btn-success btn-sm">Ubah informasi produk</button>.
