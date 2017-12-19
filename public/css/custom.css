@@ -53,3 +53,24 @@ section.tutorial {
 .tutorial-card .card-header h3 {
 	margin: 0;
 }
+
+.tutorial-card .nav-item {
+	color: #48b550;
+}
+
+.tutorial-card .nav-item.active {
+	background-color: #48b550;
+	color: white;
+}
+
+.sticky-top.tutorial-nav {
+	top: 80px;
+	z-index: 1010;
+}
+
+@media(max-width: 576px) {
+	.sticky-top.tutorial-nav {
+		position: inherit !important;
+	}
+}
+

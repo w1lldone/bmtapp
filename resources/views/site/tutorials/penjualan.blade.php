@@ -8,12 +8,14 @@
 
   <section class="pt-5 tutorial">
     <div class="container container-fluid">
-      <h1 class="text-center m-0">Penjualan produk</h1>
+      <h1 class="text-center m-0">Panduan jual produk</h1>
     </div>
   </section>
 
   <section class="py-5 tutorial">
     <div class="container container-fluid">
+      @include('site.tutorials.penjualan-nav')
+      {{-- 1 --}}
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="card tutorial-card">
@@ -29,6 +31,7 @@
           </div>
         </div>
       </div>
+      {{-- 2 --}}
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="card tutorial-card">
@@ -44,6 +47,7 @@
           </div>
         </div>
       </div>
+      {{-- 3 --}}
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="card tutorial-card">
@@ -59,6 +63,7 @@
           </div>
         </div>
       </div>
+      {{-- 4 --}}
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="card tutorial-card">
@@ -74,6 +79,7 @@
           </div>
         </div>
       </div>
+      {{-- next --}}
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="card tutorial-card">
@@ -89,11 +95,11 @@
   {{-- NEXT PAGE  --}}
   <section class="py-5 tutorial">
     <div class="container container-fluid">
-      <div class="row">
-        <div class="col-12">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-11">
           <div class="clear-fix">
             <a class="btn btn-success float-left" href="/panduan/layanan"><i class="fa fa-arrow-left fa-fw"></i> Sebelumnya</a>
-            <a class="btn btn-success float-right" href="/panduan/kelola-transaksi">Selanjutnya <i class="fa fa-arrow-right fa-fw"></i></a>
+            <a class="btn btn-success float-right" href="/panduan/transaksi">Selanjutnya <i class="fa fa-arrow-right fa-fw"></i></a>
           </div>
         </div>
       </div>
