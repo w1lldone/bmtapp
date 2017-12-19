@@ -99,7 +99,7 @@
         <div class="col-lg-10 col-md-11">
           <div class="clear-fix">
             <a class="btn btn-success float-left" href="/panduan/layanan"><i class="fa fa-arrow-left fa-fw"></i> Sebelumnya</a>
-            <a class="btn btn-success float-right" href="/panduan/transaksi">Selanjutnya <i class="fa fa-arrow-right fa-fw"></i></a>
+            <a class="btn btn-success float-right" href="/panduan/edit-produk">Selanjutnya <i class="fa fa-arrow-right fa-fw"></i></a>
           </div>
         </div>
       </div>

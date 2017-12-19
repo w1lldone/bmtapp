@@ -63,6 +63,10 @@ section.tutorial {
 	color: white;
 }
 
+.tutorial-card .card-footer button {
+	font-size: 80%;
+}
+
 .sticky-top.tutorial-nav {
 	top: 60px;
 	z-index: 1010;

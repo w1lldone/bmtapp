@@ -81,12 +81,49 @@
           </div>
         </div>
       </div>
-      {{-- next --}}
+      {{-- 4 --}}
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="card tutorial-card">
+            <div class="card-header">
+              <h3 class="text-center"><span class="badge bg-bmt">4</span></h3>
+            </div>
+            <div class="card-body text-center">
+              <img src="/assets/img/background/shopping-grey.svg" class="img-fluid mb-3">
+            </div>
+            <div class="card-footer">
+              Jika pembeli sudah melakukan konfirmasi penerimaan barang, Admin akan meneruskan dana penjualan ke rekening BMT Anda.
+            </div>
+          </div>
+        </div>
+      </div>
+      {{-- Note --}}
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card tutorial-card">
+            <div class="card-header  text-center">
+              Status transaksi
+            </div>
             <div class="card-body">
-              Selamat! Anda telah berhasil menjual barang di Bi-Mobile. Klik selanjutnya untuk membaca panduan <strong>kelola transaksi</strong>
+              Pelajari mengenai status transaksi. Status transaksi terdiri dari Belum dikonfirm, Tersedia, Terbayar, Terkirim, Selesai, dan Batal.
+              <ul>
+                <li><b>Belum dikonfirm</b>. Barang telah dipesan oleh pembeli dan menunggu konfirmasimu apakah barang masih tersedia atau tidak.</li>
+                <li><b>Tersedia</b>. Barang terlah tersedia dan menunggu pembayaran serta persetujuan oleh admin Bi-Mobile.</li>
+                <li><b>Terbayar</b>. Admin Bi-Mobile telah membayar dan menyetujui transaksi. Silahkan persiapkan barang yang dipesan oleh pembeli, lalu lakukan konfirmasi barang siap diambil/diantar.</li>
+                <li><b>Terkirim</b>. Barang telah diterima oleh pembeli dalam keadaan baik.</li>
+                <li><b>Selesai</b>. Uang yang dari pembeli telah masuk ke dalam rekening BMT Bina Ummahmu.</li>
+                <li><b>Batal</b>. Barang batal untuk dibeli. Beberapa hal yang membuat barang batal adalah jika kamu mengkonfirmasi bahwa barang <b>tidak tersedia</b> atau jika admin Bi-Mobile tidak menyetujui pembelian karena <b>saldo pembeli kurang</b> dari jumlah yang harus dibayarkan atau hal lainnya.</li>
+              </ul>
+            </div>
+          </div> 
+        </div>
+      </div>
+      {{-- End --}}
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card tutorial-card bg-bmt">
+            <div class="card-body">
+              Proses jual barang sudah selesai. Mudah, kan? Segera dapatkan Bi-Mobile dan daftarkan akun anda di BMT Binaummah terdekat.
             </div>
           </div> 
         </div>
@@ -100,8 +137,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-10 col-md-11">
           <div class="clear-fix">
-            <a class="btn btn-success float-left" href="/panduan/penjualan"><i class="fa fa-arrow-left fa-fw"></i> Sebelumnya</a>
-            <a class="btn btn-success float-right" href="/panduan/edit-produk">Selanjutnya <i class="fa fa-arrow-right fa-fw"></i></a>
+            <a class="btn btn-success float-left" href="/panduan/edit-produk"><i class="fa fa-arrow-left fa-fw"></i> Sebelumnya</a>
           </div>
         </div>
       </div>
