@@ -25,6 +25,11 @@
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="/panduan/pembelian">Pembelian produk</a>
             <a class="dropdown-item" href="/panduan/layanan">Layanan pembayaran</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item disabled" href="#">Penjualan</a>
+            <a class="dropdown-item" href="/panduan/penjualan">Penjualan produk</a>
+            <a class="dropdown-item" href="/panduan/edit-produk">Ubah info produk</a>
+            <a class="dropdown-item" href="/panduan/transaksi">Kelola transaksi</a>
           </div>
         </li>
       </ul>

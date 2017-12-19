@@ -23,7 +23,7 @@
               <h3 class="text-center"><span class="badge bg-bmt">1</span></h3>
             </div>
             <div class="card-body text-center">
-              <img src="/assets/img/background/shopping-grey.svg" class="img-fluid mb-3">
+              <img src="/assets/img/penjualan/toko.png" class="img-fluid mb-3">
             </div>
             <div class="card-footer">
               Jual produkmu dengan menekan tombol jual barang <span class="badge badge-pill badge-success">+</span> pada menu <b>Toko</b>
@@ -84,7 +84,7 @@
         <div class="col-lg-8">
           <div class="card tutorial-card">
             <div class="card-body">
-              Selamat! Anda telah berhasil menjual barang di Bi-Mobile. Klik selanjutnya untuk membaca panduan <strong>kelola transaksi</strong>
+              Selamat! Anda telah berhasil menjual barang di Bi-Mobile. Klik selanjutnya untuk membaca panduan <strong>Ubah informasi produk</strong>
             </div>
           </div> 
         </div>
