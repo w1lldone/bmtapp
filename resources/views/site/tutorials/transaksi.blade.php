@@ -1,7 +1,7 @@
 @extends ('layouts.simple-master')
 
 @section('title')
-  Penjualan produk
+  Kelola transaksi
 @endsection
 
 @section('content')
