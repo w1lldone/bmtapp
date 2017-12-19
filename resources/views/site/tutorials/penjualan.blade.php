@@ -93,7 +93,7 @@
   </section>
 
   {{-- NEXT PAGE  --}}
-  <section class="py-5 tutorial">
+  <section class="pb-5 tutorial">
     <div class="container container-fluid">
       <div class="row justify-content-center">
         <div class="col-lg-10 col-md-11">
