@@ -21,7 +21,7 @@ h1, h2, h3, h4, h5, h6, p, li, .h1, .h2, .h3, .h4, .h5, .h6{
 }
 
 .tutorial .card {
-	height: 100%;
+	/*height: 100%;*/
 }
 
 .tutorial-list img {
@@ -31,4 +31,25 @@ h1, h2, h3, h4, h5, h6, p, li, .h1, .h2, .h3, .h4, .h5, .h6{
 .bg-bmt {
 	background-color: #48b550 ;
 	color: white;
+}
+
+/*TUTORIAL CARD*/
+section.tutorial {
+	/*background-color: #f8f8f8;*/
+}
+
+.tutorial-card {
+	margin-bottom: 2rem;
+	box-shadow: 3px 2px 1px rgba(204,204,204,.5);
+	-webkit-box-shadow: 3px 2px 1px rgba(204,204,204,.5);
+	-moz-box-shadow: 3px 2px 1px rgba(204,204,204,.5);
+}
+
+.tutorial-card .card-footer {
+	background-color: white;
+	padding: 1.5rem;
+}
+
+.tutorial-card .card-header h3 {
+	margin: 0;
 }
