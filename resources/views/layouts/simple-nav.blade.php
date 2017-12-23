@@ -11,15 +11,6 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Aturan
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/aturan-penggunaan">Aturan penggunaan</a>
-            <a class="dropdown-item" href="/kebijakan-privasi">Kebijakan privasi</a>
-          </div>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Panduan
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -30,6 +21,15 @@
             <a class="dropdown-item" href="/panduan/penjualan">Penjualan produk</a>
             <a class="dropdown-item" href="/panduan/edit-produk">Ubah info produk</a>
             <a class="dropdown-item" href="/panduan/transaksi">Kelola transaksi</a>
+          </div>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Aturan
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="/aturan-penggunaan">Aturan penggunaan</a>
+            <a class="dropdown-item" href="/kebijakan-privasi">Kebijakan privasi</a>
           </div>
         </li>
       </ul>
