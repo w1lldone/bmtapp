@@ -1,60 +1,108 @@
 @extends ('layouts.simple-master')
 
-@section('breadcrumb')
-	<ol class="breadcrumb">
-	  <li class="breadcrumb-item"><a href="/site">Beranda</a></li>
-	  <li class="breadcrumb-item active">Pembayaran layanan</li>
-	</ol>
-@endsection
-
 @section('title')
-	Pembayaran layanan
+	Panduan layanan pembayaran
 @endsection
 
 @section('content')
-  <div class="container container-fluid">
-    <h1 class="text-center">Layanan pembayaran</h1>
-    <span>Bi-Mobile menyediakan layanan pembayaran untuk Kamu, yaitu pembelian Pulsa Token Listrik, Pembayaran Listrik Pascabayar, dan Pembelian Pulsa.</span>
-  </div>
+  <section class="pt-5">
+    <div class="container">
+      <h1 class="text-center m-0">Panduan layanan pembayaran</h1>
+    </div>
+  </section>
+
   <section class="py-5 tutorial">
-    <div class="container container-fluid">
-      <div class="row">
-        <div class="col-lg-6 col-md-6 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <div class="text-center">
-                <img src="/assets/img/pembayaran/layanan-awal.png" class="img-fluid mb-3">
-              </div>
+    <div class="container">
+      {{-- 1 --}}
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card tutorial-card">
+            <div class="card-header">
               <h3 class="text-center"><span class="badge bg-bmt">1</span></h3>
-              Buka pembelian layanan pada halaman kategori. 
+            </div>
+            <div class="card-body text-center">
+              <img src="/assets/img/pembayaran/layanan-awal.png" class="img-fluid mb-3">
+            </div>
+            <div class="card-footer">
+              Buka pembelian layanan pada halaman kategori. Bi-Mobile menyediakan tiga layanan pembayaran untuk Kamu, yaitu:
+              <ul>
+                <li>Pembelian pulsa token listrik</li>
+                <li>Pembayaran listrik pascabayar</li>
+                <li>Pembelian pulsa</li>
+              </ul>
             </div>
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="/assets/img/pembayaran/form-layanan.png" class="img-fluid mb-3">
+      </div>
+      {{-- 2 --}}
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card tutorial-card">
+            <div class="card-header">
               <h3 class="text-center"><span class="badge bg-bmt">2</span></h3>
+            </div>
+            <div class="card-body text-center">
+              <img src="/assets/img/pembayaran/form-layanan.png" class="img-fluid mb-3">
+            </div>
+            <div class="card-footer">
               Isi informasi pembelian layanan yang dibutuhkan, lalu klik <button class="btn btn-success">Bayar</button> atau <button class="btn btn-success">Beli</button> 
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 mb-3">
-          <div class="card">
-            <div class="card-body">
-              <img src="/assets/img/pembayaran/layanan-password.png" class="img-fluid mb-3">
+      </div>
+      {{-- 3 --}}
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card tutorial-card">
+            <div class="card-header">
               <h3 class="text-center"><span class="badge bg-bmt">3</span></h3>
+            </div>
+            <div class="card-body text-center">
+              <img src="/assets/img/pembayaran/layanan-password.png" class="img-fluid mb-3">
+            </div>
+            <div class="card-footer">
               Pastikan saldo BMT Bina Ummahmu mencukupi, bayar dengan memasukkan password dan tekan OK. 
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6 mb-3">
-          <div class="card">
-            <div class="card-body">
+      </div>
+      {{-- 4 --}}
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card tutorial-card">
+            <div class="card-header">
+              <h3 class="text-center"><span class="badge bg-bmt">4</span></h3>
+            </div>
+            <div class="card-body text-center">
               <img src="/assets/img/pembayaran/riwayat-layanan.png" class="img-fluid mb-3">
-              <h3 class="text-center"><span class="badge bg-bmt">5</span></h3>
+            </div>
+            <div class="card-footer">
               Kamu bisa cek riwayat dan proses pembelian layanan pada halaman layanan di dalam menu Transaksi. (<a href="" data-toggle="modal" data-target="#detail">Selengkapnya</a>) 
             </div>
+          </div>
+        </div>
+      </div>
+      {{-- NOTES --}}
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card tutorial-card">
+            <div class="card-body">
+              Jual produk anda di Bi-Mobile! Dapatkan lebih banyak konsumen dan keuntungan berlipat. Klik selanjutnya untuk melihat panduan penjualan.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {{-- NEXT PAGE  --}}
+  <section class="pb-5 tutorial">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 col-md-11">
+          <div class="clear-fix">
+            <a class="btn btn-success float-left" href="/panduan/pembelian"><i class="fa fa-arrow-left fa-fw"></i> Sebelumnya</a>
+            <a class="btn btn-success float-right" href="/panduan/penjualan">Selanjutnya <i class="fa fa-arrow-right fa-fw"></i></a>
           </div>
         </div>
       </div>

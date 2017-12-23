@@ -6,14 +6,14 @@
 
 @section('content')
 
-  <section class="pt-5 tutorial">
-    <div class="container container-fluid">
+  <section class="pt-5">
+    <div class="container">
       <h1 class="text-center m-0">Panduan jual produk</h1>
     </div>
   </section>
 
   <section class="py-5 tutorial">
-    <div class="container container-fluid">
+    <div class="container">
       @include('site.tutorials.penjualan-nav')
       {{-- 1 --}}
       <div class="row justify-content-center">
@@ -94,7 +94,7 @@
 
   {{-- NEXT PAGE  --}}
   <section class="pb-5 tutorial">
-    <div class="container container-fluid">
+    <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-10 col-md-11">
           <div class="clear-fix">

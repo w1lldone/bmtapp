@@ -6,7 +6,7 @@
 
 @section('content')
 	<section class="py-5">
-		<div class="container container-fluid">
+		<div class="container">
 			<div class="row">
 				<div class="col-md-4 text-center">
 					<img src="/assets/img/background/shopping.svg" class="img-fluid mb-3">
@@ -18,7 +18,7 @@
 		</div>
 	</section>
 	<section class="py-5">
-		<div class="container container-fluid">
+		<div class="container">
 			<div class="row justify-content-md-center">
 				<div class="col-lg-4 col-md-6 mb-3">
 					<div class="card">

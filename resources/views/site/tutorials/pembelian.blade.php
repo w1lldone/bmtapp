@@ -1,10 +1,10 @@
 @extends ('layouts.simple-master')
 
 @section('breadcrumb')
-	<ol class="breadcrumb">
+	{{-- <ol class="breadcrumb">
 	  <li class="breadcrumb-item"><a href="/site">Beranda</a></li>
 	  <li class="breadcrumb-item active">Panduan pembelian</li>
-	</ol>
+	</ol> --}}
 @endsection
 
 @section('title')
@@ -12,61 +12,118 @@
 @endsection
 
 @section('content')
-	<section class="tutorial">
-		<div class="container container-fluid">
-			<h1 class="text-center">Panduan pembelian</h1>
-			<div class="row py-5">
-				<div class="col-lg-3 col-md-6 mb-3">
-					<div class="card">
-						<div class="card-body">
-							<img src="/assets/img/pembelian/cari-produk.png" class="img-fluid mb-3">
-							<h3 class="text-center"><span class="badge bg-bmt">1</span></h3>
-							Cari produk sesuai kategori atau dari pencarian produk. 
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 mb-3">
-					<div class="card">
-						<div class="card-body">
-							<img src="/assets/img/pembelian/klik-beli.png" class="img-fluid mb-3">
-							<h3 class="text-center"><span class="badge bg-bmt">2</span></h3>
-							Klik beli  
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-6 mb-3">
-					<div class="card">
-						<div class="card-body">
-							<div class="text-center">
-								<img src="/assets/img/pembelian/masuk-keranjang.png" class="img-fluid mb-3">
-							</div>
-							<h3 class="text-center"><span class="badge bg-bmt">3</span></h3>
-							Lengkapi informasi pembelian produkmu. Kamu bisa membeli produk lebih dari satu dengan menggunakan keranjang belanja (<a href="" data-toggle="modal" data-target="#keranjang">selengkapnya</a>). Selain itu, kamu dapat menunggu produkmu tiba dengan menggunakan fitur antar* (<a href="" data-toggle="modal" data-target="#antar">selengkapnya</a>). 
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-6 mb-3">
-					<div class="card">
-						<div class="card-body">
-							<div class="text-center">
-								<img src="/assets/img/pembelian/input-password.png" class="img-fluid mb-3 text-center">
-							</div>
-							<h3 class="text-center"><span class="badge bg-bmt">4</span></h3>
-							Pastikan saldo BMT Bina Ummahmu mencukupi, bayar dengan memasukkan password dan tekan OK. Kamu bisa cek saldo dengan menu fitur cek saldo (<a href="" data-toggle="modal" data-target="#cekSaldo">selengkapnya</a>). 
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 mb-3">
-					<div class="card">
-						<div class="card-body">
-							<img src="/assets/img/pembelian/konfirmasi.png" class="img-fluid mb-3">
-							<h3 class="text-center"><span class="badge bg-bmt">5</span></h3>
-							Konfirmasi terima produk dan tulis review untuk penjual (<a href="" data-toggle="modal" data-target="#konfirmasi">selengkapnya</a>). 
-						</div>
-					</div>
-				</div>
+	<section class="pt-5">
+	  <div class="container">
+	    <h1 class="text-center m-0">Panduan pembelian produk</h1>
+	  </div>
+	</section>
+
+	<section class="py-5 tutorial">
+		<div class="container">
+			{{-- 1 --}}
+			<div class="row justify-content-center">
+			  <div class="col-lg-8">
+			    <div class="card tutorial-card">
+			      <div class="card-header">
+			        <h3 class="text-center"><span class="badge bg-bmt">1</span></h3>
+			      </div>
+			      <div class="card-body text-center">
+			        <img src="/assets/img/pembelian/cari-produk.png" class="img-fluid mb-3">
+			      </div>
+			      <div class="card-footer">
+			      	Cari produk sesuai kategori atau dari pencarian produk. 
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			{{-- 2 --}}
+			<div class="row justify-content-center">
+			  <div class="col-lg-8">
+			    <div class="card tutorial-card">
+			      <div class="card-header">
+			        <h3 class="text-center"><span class="badge bg-bmt">2</span></h3>
+			      </div>
+			      <div class="card-body text-center">
+			        <img src="/assets/img/pembelian/klik-beli.png" class="img-fluid mb-3">
+			      </div>
+			      <div class="card-footer">
+			      	Klik beli.
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			{{-- 3 --}}
+			<div class="row justify-content-center">
+			  <div class="col-lg-8">
+			    <div class="card tutorial-card">
+			      <div class="card-header">
+			        <h3 class="text-center"><span class="badge bg-bmt">3</span></h3>
+			      </div>
+			      <div class="card-body text-center">
+			        <img src="/assets/img/pembelian/masuk-keranjang.png" class="img-fluid mb-3">
+			      </div>
+			      <div class="card-footer">
+			      	Lengkapi informasi pembelian produkmu. Kamu bisa membeli produk lebih dari satu dengan menggunakan keranjang belanja (<a href="" data-toggle="modal" data-target="#keranjang">selengkapnya</a>). Selain itu, kamu dapat menunggu produkmu tiba dengan menggunakan fitur antar* (<a href="" data-toggle="modal" data-target="#antar">selengkapnya</a>).
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			{{-- 4 --}}
+			<div class="row justify-content-center">
+			  <div class="col-lg-8">
+			    <div class="card tutorial-card">
+			      <div class="card-header">
+			        <h3 class="text-center"><span class="badge bg-bmt">4</span></h3>
+			      </div>
+			      <div class="card-body text-center">
+			      	<img src="/assets/img/pembelian/input-password.png" class="img-fluid mb-3 text-center">
+			      </div>
+			      <div class="card-footer">
+			      	Pastikan saldo BMT Bina Ummahmu mencukupi, bayar dengan memasukkan password dan tekan OK. Kamu bisa cek saldo dengan menu fitur cek saldo (<a href="" data-toggle="modal" data-target="#cekSaldo">selengkapnya</a>).
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			{{-- 5 --}}
+			<div class="row justify-content-center">
+			  <div class="col-lg-8">
+			    <div class="card tutorial-card">
+			      <div class="card-header">
+			        <h3 class="text-center"><span class="badge bg-bmt">5</span></h3>
+			      </div>
+			      <div class="card-body text-center">
+			      	<img src="/assets/img/pembelian/konfirmasi.png" class="img-fluid mb-3">
+			      </div>
+			      <div class="card-footer">
+			      	Konfirmasi terima produk dan tulis review untuk penjual (<a href="" data-toggle="modal" data-target="#konfirmasi">selengkapnya</a>).
+			      </div>
+			    </div>
+			  </div>
+			</div>
+			{{-- NOTES --}}
+			<div class="row justify-content-center">
+			  <div class="col-lg-8">
+			    <div class="card tutorial-card">
+			      <div class="card-body">
+			      	Selain belanja produk sesama nasabah, Bi-Mobile juga menyediakan banya fasilitas pembayaran, seperti bayar listrik dan beli pulsa. Klik selanjutnya untuk membaca panduan layanan pembayaran.
+			      </div>
+			    </div>
+			  </div>
 			</div>
 		</div>
+	</section>
+
+	{{-- NEXT PAGE  --}}
+	<section class="pb-5 tutorial">
+	  <div class="container">
+	    <div class="row justify-content-center">
+	      <div class="col-lg-10 col-md-11">
+	        <div class="clear-fix">
+	          <a class="btn btn-success float-right" href="/panduan/layanan">Selanjutnya <i class="fa fa-arrow-right fa-fw"></i></a>
+	        </div>
+	      </div>
+	    </div>
+	  </div>
 	</section>
 
 	{{-- Modal section --}}
