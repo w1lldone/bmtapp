@@ -15,6 +15,10 @@ class User extends Authenticatable
         return new Channel('notifications');
     }
 
+    public function findForPassport($username) {
+        return $this->where('username', $username)->first();
+    }
+
     public function cabang()
     {
         return $this->belongsTo('App\Cabang');
